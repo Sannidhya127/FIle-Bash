@@ -52,8 +52,9 @@ def bugFixer():
         print("Thanks a lot! Your every word matters!!!!!\nWe are mailing to our system managers about this issue")
         sendEmail(f"{name} found a bug!", "shubhradasgupta8@gmail.com", fixes)
         print("Mail sent!")
-    else: 
+    else:
         print("Action Aborted!")
+
 
 def Reccomed():
     reccomendation = input("Please enter your reccomandation here: ")
@@ -130,4 +131,4 @@ if __name__ == "__main__":
             # elif "bash --config.email" in comd:
             #     LogUserEmail(comd)
             else:
-                print(f"{fg('red_1')}Invalid Command{attr('reset')}")
+                print(f"{fg('red_1')}fatal: Invalid Command '{comd}'{attr('reset')}")

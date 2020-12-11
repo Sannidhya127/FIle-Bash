@@ -202,11 +202,11 @@ def CreateDir(input):
     '''
     breaker = input.split(" ")
     try:
-        existion = os.path.exists(breaker[1])
+        existion = os.path.exists(input[3::])
         if existion == False:
-            os.makedirs(breaker[1])
+            os.makedirs(input[5::])
         elif existion == True:
-            print(f"{fg('red')}{breaker[1]} already exists{attr('reset')}")
+            print(f"{fg('red')}{input[4::]} already exists{attr('reset')}")
         else:
             print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
     except Exception:
@@ -226,14 +226,12 @@ def cwdChange(data):
     '''
     Changes the current working directory
     '''
-    mainPathForCd = input("Enter path: ")
-    pathExist = os.path.exists(mainPathForCd)
-    if pathExist == True:
-        os.chdir(mainPathForCd)
-    elif pathExist == False:
-        print(f'"{mainPathForCd}": No such file or directory')
-    else:
-        print("File Handler Crashed!")
+    try:
+        path = data[3::]
+        os.chdir(path)
+    except Exception:
+        print(
+            f"{fg('red_1')}fatal: System cannot find the specified file: '{path}'{attr('reset')}")
 
 
 def checker():
@@ -359,7 +357,7 @@ if __name__ == '__main__':
             About(comd)
         elif comd == "cd":
             cwdPrint()
-        elif comd == "cd --to":
+        elif "cd" in comd:
             cwdChange(comd)
         elif comd == "ls --check":
             checker()
@@ -385,13 +383,15 @@ if __name__ == '__main__':
             status()
         elif comd == "bash --a":
             add()
+        elif comd == "":
+            pass
         elif comd == "bash --q" or comd == "exit":
             print("Exit Bash")
             t.sleep(0.50)
             exit()
         else:
             items = get_close_matches(comd, commands, n=1, cutoff=0.5)
-            print(fg('red_1'), f"Invalid command", attr('reset'))
+            print(f"{fg('red_1')}fatal: Invalid Command '{comd}'{attr('reset')}")
             for i in items:
                 data = i
                 print(
