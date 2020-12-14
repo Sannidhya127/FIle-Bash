@@ -4,9 +4,7 @@ import os
 import webbrowser
 import colored
 from colored import fg, bg, attr
-
-global userName
-global userEmail
+from urllib.request import urlopen
 
 
 def sendEmail(sub, to, message):

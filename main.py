@@ -39,7 +39,7 @@ def AllFiles():
     '''
     listOfAll = os.listdir()
     for i in listOfAll:
-        print(f"{i}")
+        print(f"{i}", end="     ")
 
     # ! response = win32ui.MessageBox("Binary Files Detected", "Uncode Error", win32con.MB_ICONERROR)
 
@@ -134,7 +134,7 @@ def DelDir(input):
         input.split(" ")
         existion = os.path.exists(input[5::])
         if existion == True:
-            shutil.rmtree(input[5::])
+            shutil.rmtree(input[5::])  # deld dl
         elif existion == False:
             if input[5::] == "" or input[5::] == " " or input[5::] == "  " or input[5::] == "   ":
                 print(
@@ -170,41 +170,66 @@ def CreateFile(input):
             f"{fg('red_1')}fatal: no name mentioned{attr('reset')}")
 
 
-def FileRename(input):
+def FileRename(cmd):
     '''
     renames a file or a folder
     '''
-    file = input.split(" ")
-    existion = os.path.exists(file[1])
-    if existion == True:
-        os.rename(file[1], file[2])
-    elif existion == False:
-        print(
-            f'{fg("red_1")}fatal==="{attr("reset")}{fg("red")}{file[1]}": No Such file or directory{attr("reset")}')
-        try:
-            creatTh = input("Do you want to create it?[y/n]: ")
-            if creatTh.lower() == "y":
-                open(file[1], "a")
-            elif creatTh.lower() == "n":
-                print("Ok")
+    while True:
+        structure = input(">>")
+        if ">" not in structure:
+            print(
+                f"{fg('yellow_1')}I=Undefined Command: {structure}\tEnter like this: Oldname||NewName{attr('reset')}")
+            continue
+        else:
+            file = structure.split(">")
+            existion = os.path.exists(file[0])
+            if existion == True:
+                os.rename(file[0], file[1])
+                break
+            elif existion == False:
+                print(
+                    f'{fg("red_1")}fatal==="{attr("reset")}{fg("red")}{file[0]}": No Such file or directory{attr("reset")}')
+                # break
+                try:
+                    creatTh = input("Do you want to create it?[y/n]: ")
+                    if creatTh.lower() == "y":
+                        dirF = input('Do you want a directory or file?[d/f]')
+                        if dirF.lower() == "d":
+                            os.mkdir(file[1])
+                            break
+                        elif dirF.lower() == "f":
+                            open(file[1], "a")
+                            break
+                        else:
+                            print(
+                                f"{fg('red_1')}fatal: unexpected command '{dirF}'{attr('reset')}")
+                        break
+                    elif creatTh.lower() == "n":
+                        print("Ok")
+                        break
+                    else:
+                        print(
+                            f"File Bash expects 'y' or 'n' as yes or no respectively. {creatTh} is not a command")
+                        break
+
+                except Exception:
+                    pass
+                    break
             else:
                 print(
-                    f"File Bash expects y or n as yes or no respectively. {creatTh} is not a command")
-        except Exception:
-            pass
-    else:
-        print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
+                    "File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
+                break
 
 
 def CreateDir(input):
     '''
     creates a directory. To create a directory tree type `crd dir1/dir2/........`
     '''
-    breaker = input.split(" ")
+    breaker = input[4::]
     try:
         existion = os.path.exists(input[3::])
         if existion == False:
-            os.makedirs(input[5::])
+            os.makedirs(breaker)
         elif existion == True:
             print(f"{fg('red')}{input[4::]} already exists{attr('reset')}")
         else:
@@ -289,7 +314,24 @@ def About(command):
         print(f"{fg('yellow_1')}Welcome to File Bash!\nFile Bash is an interactive bash or terminal which not only helps you manage your files but helps you process tasks like powershell and Git commands.\nFile Bash was created by Sannidhya. This project started on the Tue Nov 17 2020.\nSince then it has been going through a lot of updates and bug fixes. You can get the source code of this bash in Github/Sannidhya127!\nSome Code Details of File Bash are listed below\n\tVersion ------------- NIL (Not Yet in Production)\n\tWritten In ------------- Python Programming Language\n\tCreated By ------------- Sannidhya Dasgupta\n\tProject Started On ------------- Tue Nov 17 2020\n\tExtra Assets ------------- BashApi (A smart terminal to interact and help File Bash grow)\n\nThank You for using File Bash! Visit our GitHub repo and contribute or download BashApi from our website now!{attr('reset')}")
 
 
+def bashGui():
+    def GuiDelDir(cmd):
+        os.mkdir(cmd[13::])
+    cwd = os.getcwd()
+    print(f"{fg('yellow_1')}Hello My Friend! Need some help :-) ?? Type help me and I will nbe there for you!!! Or else not :D")
+    while True:
+        print(f"{fg('magenta_1')}********************************{cwd}********************************{attr('reset')}")
+        remote = input(f"{fg('green')}Here you go:{attr('reset')}")
+        if "help me" in remote:
+            print(f"{fg('indian_red_1d')}I knew you will need some help! here you go with the super easy sommands that I understand:\ni) list all (I list all the items in this folder)\tii)create folder 'foldername'\niii)create file 'filename'\tiv)rename 'fileOrFoldername'(I ask for the new name if you type this)\nv) delete 'fileorfoldername'\thome (I return to traditional terminal based File Bash)")
+        elif remote == "list all":
+            AllFiles()
+        elif "create folder" in remote:
+            GuiDelDir(remote)
+
+
 if __name__ == '__main__':
+    print(os.path.exists(" ardms"))
     try:
         # Get path of current working directory and python.exe
         cwd = r"C:\Users\KAUSTAV\Desktop\File Bash\dist\main.exe"
@@ -327,7 +369,8 @@ if __name__ == '__main__':
     commands = ["ls", "ls --docs", "ls --imgs", "ls --aud", "ls --med", "ls --progs", "delf filename", "deld foldername", "mv name1  name2'", "crf 'filename'", "crd 'foldername'", "cd",
                 "cd --to", "ls --check", "git status", "git init", "git add --a", "git commit -m", "git log", "git log --oneline", "git push origin branch name", "comp 'filename1' 'filename2'", "bash --q"]
     while True:
-        print(fg('green_1'), os.getcwd(), attr('reset'), end='')
+        d = os.getcwd()
+        print(f"{fg('green_1')}\n{d}{attr('reset')}", end='')
         comd = input(": ")
         if comd == "bash --help":
             print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Emil us at filebash45@gmail.com")
@@ -383,10 +426,12 @@ if __name__ == '__main__':
             status()
         elif comd == "bash --a":
             add()
+        elif comd == "bash -i --gui":
+            bashGui()
         elif comd == "":
             pass
         elif comd == "bash --q" or comd == "exit":
-            print("Exit Bash")
+            print("Logout Bash")
             t.sleep(0.50)
             exit()
         else:
