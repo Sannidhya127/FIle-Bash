@@ -1,6 +1,6 @@
-import os
+import os  # The most important module of this code. Almost every function uses it
 import sys
-import shutil
+import shutil # Used in deld
 import time as t
 import pathlib
 from colored import fg, bg, attr
@@ -29,29 +29,8 @@ import plyer
 from plyer import notification
 import win32ui
 import win32con
-# import readline
 # subprocess.run(
 #     "runas /user:KAUSTAV\Desktop\File Bash\dist\main\main.exe")
-
-
-# class MyCompleter(object):  # Custom completer
-
-#     def __init__(self, options):
-#         self.options = sorted(options)
-
-#     def complete(self, text, state):
-#         if state == 0:  # on first trigger, build possible matches
-#             if text:  # cache matches (entries that start with entered text)
-#                 self.matches = [s for s in self.options
-#                                 if s and s.startswith(text)]
-#             else:  # no text entered, all matches possible
-#                 self.matches = self.options[:]
-
-#         # return match indexed by state
-#         try:
-#             return self.matches[state]
-#         except IndexError:
-# return None
 
 
 def AllFiles():
@@ -404,10 +383,6 @@ if __name__ == '__main__':
                 "cd --to", "ls --check", "git status", "git init", "git add --a", "git commit -m", "git log", "git log --oneline", "git push origin branch name", "comp 'filename1' 'filename2'", "bash --q"]
 
     while True:
-        # completer = MyCompleter(commands)
-        # readline.set_completer(completer.complete)
-        # readline.parse_and_bind('tab: complete')
-
         d = os.getcwd()
         # print(f"{fg('green_1')}\n{d}{attr('reset')}",end='')
         comd = input(f"{fg('green_1')}{d}: {attr('reset')}")
