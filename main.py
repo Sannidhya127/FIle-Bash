@@ -29,8 +29,29 @@ import plyer
 from plyer import notification
 import win32ui
 import win32con
+# import readline
 # subprocess.run(
 #     "runas /user:KAUSTAV\Desktop\File Bash\dist\main\main.exe")
+
+
+# class MyCompleter(object):  # Custom completer
+
+#     def __init__(self, options):
+#         self.options = sorted(options)
+
+#     def complete(self, text, state):
+#         if state == 0:  # on first trigger, build possible matches
+#             if text:  # cache matches (entries that start with entered text)
+#                 self.matches = [s for s in self.options
+#                                 if s and s.startswith(text)]
+#             else:  # no text entered, all matches possible
+#                 self.matches = self.options[:]
+
+#         # return match indexed by state
+#         try:
+#             return self.matches[state]
+#         except IndexError:
+# return None
 
 
 def AllFiles():
@@ -116,7 +137,8 @@ def DelFile(command):
             print(
                 f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[1]}{attr('reset')}")
         else:
-            print(f"{fg('red_1')}{command[5::]} does not exist{attr('reset')}")
+            print(
+                f"{fg('red_1')}{command[5::]} does not exist{attr('reset')}")
         # print(f"{command[1]}")
     else:
         print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
@@ -316,7 +338,7 @@ def About(command):
 
 def bashGui():
     def GuiDelDir(cmd):
-        os.mkdir(cmd[13::])
+        os.mkdir(cmd[14::])
     cwd = os.getcwd()
     print(f"{fg('yellow_1')}Hello My Friend! Need some help :-) ?? Type help me and I will nbe there for you!!! Or else not :D")
     while True:
@@ -328,10 +350,16 @@ def bashGui():
             AllFiles()
         elif "create folder" in remote:
             GuiDelDir(remote)
+        elif remote == "exit":
+            return "exit"
+
+    return 0
 
 
 if __name__ == '__main__':
-    print(os.path.exists(" ardms"))
+
+    # print(f"You entered {data}")
+
     try:
         # Get path of current working directory and python.exe
         cwd = r"C:\Users\KAUSTAV\Desktop\File Bash\dist\main.exe"
@@ -368,10 +396,15 @@ if __name__ == '__main__':
     added = False
     commands = ["ls", "ls --docs", "ls --imgs", "ls --aud", "ls --med", "ls --progs", "delf filename", "deld foldername", "mv name1  name2'", "crf 'filename'", "crd 'foldername'", "cd",
                 "cd --to", "ls --check", "git status", "git init", "git add --a", "git commit -m", "git log", "git log --oneline", "git push origin branch name", "comp 'filename1' 'filename2'", "bash --q"]
+
     while True:
+        # completer = MyCompleter(commands)
+        # readline.set_completer(completer.complete)
+        # readline.parse_and_bind('tab: complete')
+
         d = os.getcwd()
-        print(f"{fg('green_1')}\n{d}{attr('reset')}", end='')
-        comd = input(": ")
+        # print(f"{fg('green_1')}\n{d}{attr('reset')}",end='')
+        comd = input(f"{fg('green_1')}{d}: {attr('reset')}")
         if comd == "bash --help":
             print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Emil us at filebash45@gmail.com")
         elif comd == "ls":
