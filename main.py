@@ -60,7 +60,13 @@ def AllFiles():
     '''
     listOfAll = os.listdir()
     for i in listOfAll:
-        print(f"{i}", end="     ")
+        diri = os.path.isdir(i)
+        if diri == True:
+            print(f"{fg('blue')}\{i}{attr('reset')}\n")
+        elif diri == False:
+            print(f"{i}\n")
+        else:
+            pass
 
     # ! response = win32ui.MessageBox("Binary Files Detected", "Uncode Error", win32con.MB_ICONERROR)
 
