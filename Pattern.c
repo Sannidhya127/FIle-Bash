@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+// #include <graphics.h>
+#include <conio.h>
 // !Star patter n programm in C Language made by Sannidhya Dasgupta
 void starPattern(int rows)
 {
@@ -28,6 +30,10 @@ void reverseStarPattern(int rows)
 int main(int argc, char const *argv[])
 {
 	/* Start Pattern Ex */
+	textcolor(4); // You could type "4" instead of "RED", but it is not as readable
+	printf("Hello, World!");
+
+	// getch();
 	int rows, opt, numW = 10;
 	// int w = true;
 	int x;
@@ -38,7 +44,7 @@ int main(int argc, char const *argv[])
 		switch (opt)
 		{
 		case 0:
-			printf("How many rows do you want: ");
+			printf("[38;5;46mC: How many rows do you want: [0m");
 			scanf("%d", &rows);
 			starPattern(rows);
 			break;
