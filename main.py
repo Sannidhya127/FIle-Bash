@@ -1,6 +1,6 @@
 import os  # The most important module of this code. Almost every function uses it
 import sys
-import shutil # Used in deld
+import shutil  # Used in deld
 import time as t
 import pathlib
 from colored import fg, bg, attr
@@ -185,8 +185,8 @@ def FileRename(cmd):
         structure = input(">>")
         if ">" not in structure:
             print(
-                f"{fg('yellow_1')}I=Undefined Command: {structure}\tEnter like this: Oldname||NewName{attr('reset')}")
-            continue
+                f"{fg('yellow_1')}Error =Undefined Command: {structure}\tEnter like this: Oldname>NewName{attr('reset')}")
+            break
         else:
             file = structure.split(">")
             existion = os.path.exists(file[0])
@@ -200,6 +200,7 @@ def FileRename(cmd):
                 try:
                     creatTh = input("Do you want to create it?[y/n]: ")
                     if creatTh.lower() == "y":
+                        creatTh = "yes"
                         dirF = input('Do you want a directory or file?[d/f]')
                         if dirF.lower() == "d":
                             os.mkdir(file[1])
