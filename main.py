@@ -264,7 +264,7 @@ def cwdChange(data):
         os.chdir(path)
     except Exception:
         print(
-            f"{fg('red_1')}fatal: System cannot find the specified file: '{path}'{attr('reset')}")
+            f"{fg('red_1')}fatal: System cannot find the specified path: '{path}'{attr('reset')}")
 
 
 def checker():
