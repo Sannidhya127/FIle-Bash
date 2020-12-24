@@ -267,6 +267,25 @@ def cwdChange(data):
             f"{fg('red_1')}fatal: System cannot find the specified path: '{path}'{attr('reset')}")
 
 
+def note_input(comd, defaultvalue):
+    # Create a textfile
+    fileIO = comd[5::]
+    txtfile = open(fileIO, "w")
+    # populate it with the default value
+    txtfile.write(defaultvalue)
+    txtfile.close()
+    #
+    # call Notepad
+    os.system("notepad.exe txtfile.txt")
+    # input("Just holding until notepad is close : ") (did not need this line)
+    # get the Value Entered/Changed in Notepad
+    txtfile = open("txtfile.txt", "r")
+    func_value = txtfile.read()
+    txtfile.close()
+    return func_value
+    # END DEF
+
+
 def checker():
 
     path = input(
@@ -337,7 +356,13 @@ def readFile(filename):
         print(
             f"{fg('red_1')}Fatal: incorrect path or '{name}' does not exist{attr('reset')}")
 
-# def editFile
+
+def editFile(IO):
+    # try:
+    file = IO[5::]
+    os.system(f"notepad.exe {file}")
+    # except Exception:
+    #     print("")
 
 
 def bashGui():
@@ -403,7 +428,6 @@ if __name__ == '__main__':
 
     while True:
         d = os.getcwd()
-        # print(f"{fg('green_1')}\n{d}{attr('reset')}",end='')
         comd = input(f"{fg('green_1')}{d}: {attr('reset')}")
         if comd == "bash --help":
             print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Email us at filebash45@gmail.com")
@@ -435,6 +459,8 @@ if __name__ == '__main__':
             cwdPrint()
         elif "cd" in comd:
             cwdChange(comd)
+        elif "write" in comd:
+            editFile(comd)
         elif comd == "ls --check":
             checker()
         elif comd == "git status":
