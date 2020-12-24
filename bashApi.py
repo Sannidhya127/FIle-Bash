@@ -5,6 +5,11 @@ import webbrowser
 import colored
 from colored import fg, bg, attr
 from urllib.request import urlopen
+import itertools
+import threading
+import time
+import sys
+sending = False
 
 
 def sendEmail(sub, to, message):
@@ -106,7 +111,7 @@ if __name__ == "__main__":
                 print(f"{fg('red_1')}Invalid Command{attr('reset')}")
 
         else:
-            print(f"{fg('yellow_1')}You are not logged in to BashApi.\nPlease sue the command user--config to use BashApi and help develop File Bash{attr('reset')}")
+            print(f"{fg('yellow_1')}You are not logged in to BashApi.\nPlease use the command user --config to use BashApi and help develop File Bash{attr('reset')}")
             print(f"{fg('green_1')}", os.getcwd(), f"{attr('reset')}", end='')
             comd = input(": ")
             if comd == "user --config":
@@ -118,10 +123,27 @@ if __name__ == "__main__":
                 f.write(f"{userEmail}")
                 f.close()
                 l.close()
+                while sending == True:
+                    print("Loading:")
+                    # animation = ["1%", "2%", "3%", "40%",
+                    #              "50%", "64%", "70%", "80%", "99%", "100%"]
+                    animation = [".", "..", "...", "....", ".....",
+                                 "......", ".......", "........", ".........", ".........."]
+
+                    for i in range(len(animation)):
+                        time.sleep(0.2)
+                        sys.stdout.write("\r" + animation[i % len(animation)])
+                        sys.stdout.flush()
+
+                    print("\n")
+
                 sendEmail(f"Welcome To The Bash Family! {userName}", userEmail,
                           f"Welcome to File Bash {userName}. We are overwhelmed to have you with us. If you get this email it signifies that you are interested in making File Bash reach its super heights. We can't wait for your contributions to be included in this legit bash system.\nFor high level code changes please visit https://github.com/Sannidhya127/FIle-Bash---Truly-Legit-. You can open this link by typeing edit bash in the BashApi terminal. We await for you!!!")
+                sending = True
                 sendEmail(f"{userName} has logged in!", "shubhradasgupta8@gmail.com",
                           f"Congratulations! A new user with the name {userName} just logged in!")
+                sending = False
+
             elif comd == "exit":
                 exit()
             # if "bash --config.user" in comd:

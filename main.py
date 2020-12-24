@@ -322,6 +322,24 @@ def About(command):
         print(f"{fg('yellow_1')}Welcome to File Bash!\nFile Bash is an interactive bash or terminal which not only helps you manage your files but helps you process tasks like powershell and Git commands.\nFile Bash was created by Sannidhya. This project started on the Tue Nov 17 2020.\nSince then it has been going through a lot of updates and bug fixes. You can get the source code of this bash in Github/Sannidhya127!\nSome Code Details of File Bash are listed below\n\tVersion ------------- NIL (Not Yet in Production)\n\tWritten In ------------- Python Programming Language\n\tCreated By ------------- Sannidhya Dasgupta\n\tProject Started On ------------- Tue Nov 17 2020\n\tExtra Assets ------------- BashApi (A smart terminal to interact and help File Bash grow)\n\nThank You for using File Bash! Visit our GitHub repo and contribute or download BashApi from our website now!{attr('reset')}")
 
 
+def readFile(filename):
+    name = filename[5::]
+    ex = os.path.exists(name)
+    if ex == True:
+        try:
+
+            fileIO = open(name, "r")
+            data = fileIO.read()
+            print(data)
+        except Exception:
+            print(f"{fg('red_1')}UNICODE Characters detected: Cannot read UNICODE Characters. Binary reader required{attr('reset')}")
+    else:
+        print(
+            f"{fg('red_1')}Fatal: incorrect path or '{name}' does not exist{attr('reset')}")
+
+# def editFile
+
+
 def bashGui():
     def GuiDelDir(cmd):
         os.mkdir(cmd[14::])
@@ -388,7 +406,7 @@ if __name__ == '__main__':
         # print(f"{fg('green_1')}\n{d}{attr('reset')}",end='')
         comd = input(f"{fg('green_1')}{d}: {attr('reset')}")
         if comd == "bash --help":
-            print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Emil us at filebash45@gmail.com")
+            print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Email us at filebash45@gmail.com")
         elif comd == "ls":
             AllFiles()
         elif comd == "ls --docs":
@@ -443,6 +461,8 @@ if __name__ == '__main__':
             add()
         elif comd == "bash -i --gui":
             bashGui()
+        elif "read" in comd:
+            readFile(comd)
         elif comd == "":
             pass
         elif comd == "bash --q" or comd == "exit":
