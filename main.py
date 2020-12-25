@@ -483,8 +483,11 @@ if __name__ == '__main__':
             bean()
         elif comd == "bash stat":
             status()
+            
         elif comd == "bash --a":
             add()
+        elif "pip" in comd:
+            subprocess.run(comd)
         elif comd == "bash -i --gui":
             bashGui()
         elif "read" in comd:
