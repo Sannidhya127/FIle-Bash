@@ -4,9 +4,9 @@ import time
 import sys
 
 # done = False
-# # here is the animation
+#  here is the animation
 
-
+#From Stackoverflow
 # def animate():
 #     for c in itertools.cycle(['|', '/', '-', '\\']):
 #         if done:
@@ -36,4 +36,4 @@ for i in range(len(animation)):
     sys.stdout.write("\r" + animation[i % len(animation)])
     sys.stdout.flush()
 
-print("\n")
+print("\n") #Can be skipped

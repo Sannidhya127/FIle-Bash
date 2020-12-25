@@ -361,7 +361,6 @@ def readFile(filename):
 
 
 def editFile(IO):
-    # try:
     print("OPENING FILE:")
 
     # animation = ["1%", "33%",
@@ -375,10 +374,33 @@ def editFile(IO):
     #     sys.stdout.flush()
 
     # print("\n")
-    file = IO[5::]
+    file = IO[6::]
+    f = open(file, "r")
+    t = f.read()
+    text = t.splitlines()
+    f.close()
     os.system(f"notepad.exe {file}")
-    # except Exception:
-    #     print("")
+    nf = open(file, "r")
+    nt = nf.read()
+    ntext = nt.splitlines()
+    dif = Differ()
+    df = list(dif.compare(text, ntext))
+
+    # newLine = "\n"
+    # if newLine in df:
+    #     newLine = ""
+    # pprint(df)
+    for i in df:
+        if i[0] == "+":
+            print(f"{fg('green')}{i}{attr('reset')}")
+            # print(f"{len(df)} additions")
+        elif i[0] == "-":
+            print(f"{fg('red_1')}{i}{attr('reset')}")
+            # print(f"-{len(df)} Deletions")
+        else:
+            # print(i)
+            pass
+    print("Succesfully edited with exit code 0")
 
 
 def bashGui():
