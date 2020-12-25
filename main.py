@@ -289,9 +289,6 @@ def diffChecker(file):
     txt2 = file2.read().splitlines()
     dif = Differ()
     df = list(dif.compare(txt1, txt2))
-    # newLine = "\n"
-
-    # pprint(df)
     for i in df:
         if i[0] == "+":
             print(f"{fg('green')}{i}{attr('reset')}")
