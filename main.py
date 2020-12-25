@@ -270,25 +270,6 @@ def cwdChange(data):
             f"{fg('red_1')}fatal: System cannot find the specified path: '{path}'{attr('reset')}")
 
 
-def note_input(comd, defaultvalue):
-    # Create a textfile
-    fileIO = comd[5::]
-    txtfile = open(fileIO, "w")
-    # populate it with the default value
-    txtfile.write(defaultvalue)
-    txtfile.close()
-    #
-    # call Notepad
-    os.system("notepad.exe txtfile.txt")
-    # input("Just holding until notepad is close : ") (did not need this line)
-    # get the Value Entered/Changed in Notepad
-    txtfile = open("txtfile.txt", "r")
-    func_value = txtfile.read()
-    txtfile.close()
-    return func_value
-    # END DEF
-
-
 def checker():
 
     path = input(
@@ -362,18 +343,6 @@ def readFile(filename):
 
 def editFile(IO):
     print("OPENING FILE:")
-
-    # animation = ["1%", "33%",
-    #              "50%", "64%",  "99%", "100%"]
-    # # animation = [".", "..", "...", "....", ".....",
-    # #             "......", ".......", "........", ".........", ".........."]
-
-    # for i in range(len(animation)):
-    #     t.sleep(0.2)
-    #     sys.stdout.write("\r" + animation[i % len(animation)])
-    #     sys.stdout.flush()
-
-    # print("\n")
     file = IO[6::]
     f = open(file, "r")
     t = f.read()
@@ -385,18 +354,11 @@ def editFile(IO):
     ntext = nt.splitlines()
     dif = Differ()
     df = list(dif.compare(text, ntext))
-
-    # newLine = "\n"
-    # if newLine in df:
-    #     newLine = ""
-    # pprint(df)
     for i in df:
         if i[0] == "+":
             print(f"{fg('green')}{i}{attr('reset')}")
-            # print(f"{len(df)} additions")
         elif i[0] == "-":
             print(f"{fg('red_1')}{i}{attr('reset')}")
-            # print(f"-{len(df)} Deletions")
         else:
             # print(i)
             pass
