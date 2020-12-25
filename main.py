@@ -467,17 +467,11 @@ if __name__ == '__main__':
             subprocess.run(comd)
         elif "comp" in comd:
             diffChecker(comd)
-        elif comd == "bean bash":
-            bean()
-        elif comd == "bash stat":
-            status()
 
-        elif comd == "bash --a":
-            add()
         elif "pip" in comd:
             subprocess.run(comd)
-        elif comd == "bash -i --gui":
-            bashGui()
+        # elif comd == "bash -i --gui":
+        #     bashGui()
         elif "read" in comd:
             readFile(comd)
         elif comd == "":
