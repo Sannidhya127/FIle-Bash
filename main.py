@@ -349,7 +349,6 @@ def editFile(IO):
         elif i[0] == "-":
             print(f"{fg('red_1')}{i}{attr('reset')}")
         else:
-            # print(i)
             pass
     print("Succesfully edited with exit code 0")
 
