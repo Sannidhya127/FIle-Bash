@@ -3,6 +3,7 @@ import sys
 import shutil  # Used in deld
 import time as t
 import pathlib
+import time
 from colored import fg, bg, attr
 import pyttsx3
 from datetime import date
@@ -26,6 +27,8 @@ import tkinter as tk
 from tkinter import simpledialog
 import PyQt5
 import plyer
+import itertools
+import threading
 from plyer import notification
 import win32ui
 import win32con
@@ -139,9 +142,9 @@ def DelDir(input):
     '''
     try:
         input.split(" ")
-        existion = os.path.exists(input[5::])
+        existion = os.path.exists(input[5::])  # Checking if the path exists
         if existion == True:
-            shutil.rmtree(input[5::])  # deld dl
+            shutil.rmtree(input[5::])  # Deleting it
         elif existion == False:
             if input[5::] == "" or input[5::] == " " or input[5::] == "  " or input[5::] == "   ":
                 print(
@@ -359,6 +362,19 @@ def readFile(filename):
 
 def editFile(IO):
     # try:
+    print("OPENING FILE:")
+
+    # animation = ["1%", "33%",
+    #              "50%", "64%",  "99%", "100%"]
+    # # animation = [".", "..", "...", "....", ".....",
+    # #             "......", ".......", "........", ".........", ".........."]
+
+    # for i in range(len(animation)):
+    #     t.sleep(0.2)
+    #     sys.stdout.write("\r" + animation[i % len(animation)])
+    #     sys.stdout.flush()
+
+    # print("\n")
     file = IO[5::]
     os.system(f"notepad.exe {file}")
     # except Exception:
@@ -483,7 +499,7 @@ if __name__ == '__main__':
             bean()
         elif comd == "bash stat":
             status()
-            
+
         elif comd == "bash --a":
             add()
         elif "pip" in comd:
