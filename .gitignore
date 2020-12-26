@@ -2,3 +2,4 @@
 /dist
 /static
 *.exe
+*.tolls

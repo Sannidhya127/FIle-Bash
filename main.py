@@ -465,6 +465,14 @@ if __name__ == '__main__':
             readFile(comd)
         elif comd == "":
             pass
+        elif "python" in comd:
+            try:
+                subprocess.run(comd)
+            except Exception:
+                print("Failed to execute script main\n\tstdin<python>")
+        elif "python2" in comd or "python1" in comd:
+            print(
+                f"{fg('red_1')}Python versions prior to version 3.0 not supported by file bash{attr('reset')}")
         elif comd == "bash --q" or comd == "exit":
             print("Logout Bash")
             t.sleep(0.50)
