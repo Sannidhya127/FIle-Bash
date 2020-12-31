@@ -477,6 +477,8 @@ if __name__ == '__main__':
             readFile(comd)
         elif comd == "":
             pass
+        elif "git" in comd:
+            subprocess.run(comd)
         elif "python" in comd:
             try:
                 subprocess.run(comd)
