@@ -53,6 +53,16 @@ def AllFiles():
     # ! response = win32ui.MessageBox("Binary Files Detected", "Uncode Error", win32con.MB_ICONERROR)
 
 
+def lsdirs():
+    items = os.listdir()
+    for i in items:
+        dirs = os.path.isdir(i)
+        if dirs == True:
+            print(f"{fg('blue')}{i}\n{attr('reset')}")
+        else:
+            pass
+
+
 def printDocs():
     '''
     Prints only documents from the directory
@@ -440,6 +450,8 @@ if __name__ == '__main__':
             editFile(comd)
         elif comd == "ls --check":
             checker()
+        elif comd == "ls --dir" or comd == "ls --dirs":
+            lsdirs()
         elif comd == "git status":
             subprocess.run("git status")
         elif comd == "git init":
