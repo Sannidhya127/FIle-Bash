@@ -372,6 +372,10 @@ def bashGui():
     return 0
 
 
+def BashApi():
+    os.system("bashApi.py")
+
+
 if __name__ == '__main__':
 
     # print(f"You entered {data}")
@@ -444,6 +448,8 @@ if __name__ == '__main__':
             About(comd)
         elif comd == "cd":
             cwdPrint()
+        elif comd == "gui":
+            BashApi()
         elif "cd" in comd:
             cwdChange(comd)
         elif "write" in comd:
