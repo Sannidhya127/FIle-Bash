@@ -135,13 +135,8 @@ def DelFile(command):
         else:
             print(
                 f"{fg('red_1')}{command[5::]} does not exist{attr('reset')}")
-        # print(f"{command[1]}")
     else:
         print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
-        # notification.notify(title="Succesfully Completed ls command",
-        #                     message="The ls command was successfull",
-        #                     timeout=5
-        #                     )
 
 
 def DelDir(input):
@@ -192,52 +187,69 @@ def FileRename(cmd):
     '''
     renames a file or a folder
     '''
-    while True:
-        structure = input(">>")
-        if ">" not in structure:
-            print(
-                f"{fg('yellow_1')}Error =Undefined Command: {structure}\tEnter like this: Oldname>NewName{attr('reset')}")
-            break
+    try:
+        files = cmd.split(" ")
+        # initial = files[1]
+        just = os.path.exists(files[1])
+        if just == True:
+            os.rename(files[1], files[2])
         else:
-            file = structure.split(">")
-            existion = os.path.exists(file[0])
-            if existion == True:
-                os.rename(file[0], file[1])
-                break
-            elif existion == False:
-                print(
-                    f'{fg("red_1")}fatal==="{attr("reset")}{fg("red")}{file[0]}": No Such file or directory{attr("reset")}')
-                # break
-                try:
-                    creatTh = input("Do you want to create it?[y/n]: ")
-                    if creatTh.lower() == "y":
-                        creatTh = "yes"
-                        dirF = input('Do you want a directory or file?[d/f]')
-                        if dirF.lower() == "d":
-                            os.mkdir(file[1])
-                            break
-                        elif dirF.lower() == "f":
-                            open(file[1], "a")
-                            break
-                        else:
-                            print(
-                                f"{fg('red_1')}fatal: unexpected command '{dirF}'{attr('reset')}")
-                        break
-                    elif creatTh.lower() == "n":
-                        print("Ok")
-                        break
-                    else:
-                        print(
-                            f"File Bash expects 'y' or 'n' as yes or no respectively. {creatTh} is not a command")
-                        break
-
-                except Exception:
-                    pass
-                    break
+            if files[1] == " " or files[1] == "  " or files[1] == "   " or files[1] == "    ":
+                print(f"{fg('red_1')}fatal: No name mentioned{attr('reset')}")
             else:
                 print(
-                    "File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
-                break
+                    f"{fg('red_1')}fatal: '{files[1]}': No such file in directory{attr('reset')}")
+    except Exception:
+        # print(
+        #     f"{fg('red_1')}Failed to load file rename script. Exit code -1{attr('reset')}")
+        print(f"{fg('red_1')}incomplete command{attr('reset')}")
+
+    # while True:
+    #     structure = input(">>")
+    #     if ">" not in structure:
+    #         print(
+    #             f"{fg('yellow_1')}Error =Undefined Command: {structure}\tEnter like this: Oldname>NewName{attr('reset')}")
+    #         break
+    #     else:
+    #         file = structure.split(">")
+    #         existion = os.path.exists(file[0])
+    #         if existion == True:
+    #             os.rename(file[0], file[1])
+    #             break
+    #         elif existion == False:
+    #             print(
+    #                 f'{fg("red_1")}fatal==="{attr("reset")}{fg("red")}{file[0]}": No Such file or directory{attr("reset")}')
+    #             # break
+    #             try:
+    #                 creatTh = input("Do you want to create it?[y/n]: ")
+    #                 if creatTh.lower() == "y":
+    #                     creatTh = "yes"
+    #                     dirF = input('Do you want a directory or file?[d/f]')
+    #                     if dirF.lower() == "d":
+    #                         os.mkdir(file[1])
+    #                         break
+    #                     elif dirF.lower() == "f":
+    #                         open(file[1], "a")
+    #                         break
+    #                     else:
+    #                         print(
+    #                             f"{fg('red_1')}fatal: unexpected command '{dirF}'{attr('reset')}")
+    #                     break
+    #                 elif creatTh.lower() == "n":
+    #                     print("Ok")
+    #                     break
+    #                 else:
+    #                     print(
+    #                         f"File Bash expects 'y' or 'n' as yes or no respectively. {creatTh} is not a command")
+    #                     break
+
+    #             except Exception:
+    #                 pass
+    #                 break
+    #         else:
+    #             print(
+    #                 "File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
+    #             break
 
 
 def CreateDir(input):
@@ -253,9 +265,10 @@ def CreateDir(input):
             print(f"{fg('red')}{input[4::]} already exists{attr('reset')}")
         else:
             print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
-    except Exception:
-        print(
-            f"{fg('red_1')}Empty Index Error: Please enter a directory name.\nEg: crd testFolder{attr('reset')}")
+    except FileExistsError as e:
+        # print(
+        #     f"{fg('red_1')}File already exists{attr('reset')}")
+        print(e)
 
 
 def cwdPrint():
