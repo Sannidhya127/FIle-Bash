@@ -322,8 +322,8 @@ def readFile(filename):
             fileIO = open(name, "r")
             data = fileIO.read()
             print(data)
-        except Exception:
-            print(f"{fg('red_1')}UNICODE Characters detected(): Cannot read UNICODE Characters. Binary reader required{attr('reset')}")
+        except UnicodeDecodeError:
+            print(f"{fg('red_1')}UNICODE Characters detected(): Cannot decode UNICODE Characters. Binary reader required{attr('reset')}")
     else:
         print(
             f"{fg('red_1')}Fatal: incorrect path or '{name}' does not exist{attr('reset')}")
