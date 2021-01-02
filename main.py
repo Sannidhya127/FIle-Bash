@@ -323,7 +323,7 @@ def readFile(filename):
             data = fileIO.read()
             print(data)
         except Exception:
-            print(f"{fg('red_1')}UNICODE Characters detected: Cannot read UNICODE Characters. Binary reader required{attr('reset')}")
+            print(f"{fg('red_1')}UNICODE Characters detected(): Cannot read UNICODE Characters. Binary reader required{attr('reset')}")
     else:
         print(
             f"{fg('red_1')}Fatal: incorrect path or '{name}' does not exist{attr('reset')}")
@@ -332,24 +332,30 @@ def readFile(filename):
 def editFile(IO):
     print("OPENING FILE:")
     file = IO[6::]
-    f = open(file, "r")
-    t = f.read()
-    text = t.splitlines()
-    f.close()
+    try:
+        f = open(file, "r")
+        t = f.read()
+        text = t.splitlines()
+        f.close()
+    except Exception:
+        print("failed to read file")
     os.system(f"notepad.exe {file}")
-    nf = open(file, "r")
-    nt = nf.read()
-    ntext = nt.splitlines()
-    dif = Differ()
-    df = list(dif.compare(text, ntext))
-    for i in df:
-        if i[0] == "+":
-            print(f"{fg('green')}{i}{attr('reset')}")
-        elif i[0] == "-":
-            print(f"{fg('red_1')}{i}{attr('reset')}")
-        else:
-            pass
-    print("Succesfully edited with exit code 0")
+    try:
+        nf = open(file, "r")
+        nt = nf.read()
+        ntext = nt.splitlines()
+        dif = Differ()
+        df = list(dif.compare(text, ntext))
+        for i in df:
+            if i[0] == "+":
+                print(f"{fg('green')}{i}{attr('reset')}")
+            elif i[0] == "-":
+                print(f"{fg('red_1')}{i}{attr('reset')}")
+            else:
+                pass
+        print("Succesfully edited with exit code 0")
+    except FileNotFoundError:
+        print("Could not load file changes (file unexistent)")
 
 
 def bashGui():
