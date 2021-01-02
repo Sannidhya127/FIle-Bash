@@ -50,8 +50,6 @@ def AllFiles():
         else:
             pass
 
-    # ! response = win32ui.MessageBox("Binary Files Detected", "Uncode Error", win32con.MB_ICONERROR)
-
 
 def lsdirs():
     items = os.listdir()
