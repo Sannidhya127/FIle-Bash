@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['C:\\Users\\KAUSTAV\\Desktop\\FIle-Bash--Truly-Legit-'],
+             pathex=['C:\\Users\\KAUSTAV\\Desktop\\File Bash'],
              binaries=[],
              datas=[],
              hiddenimports=[],
