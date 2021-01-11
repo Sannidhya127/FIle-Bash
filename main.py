@@ -322,6 +322,17 @@ def editFile(IO):
         print("Could not load file changes (file unexistent)")
 
 
+def searchDir(query):
+    srchstr = query[2::]
+    AllofDir = os.listdir()
+    for i in AllofDir:
+        if i == srchstr:
+            print("I found the following result(s):\n{i}")
+        else:
+            print(
+                "No items in the current directory match your search query: '{srchstr}'")
+
+
 def bashGui():
     def GuiDelDir(cmd):
         os.mkdir(cmd[14::])
@@ -348,7 +359,7 @@ def BashApi():
 
 if __name__ == '__main__':
 
-    # print(f"You entered {data}")
+   
 
     try:
         # Get path of current working directory and python.exe
@@ -390,6 +401,7 @@ if __name__ == '__main__':
     while True:
         d = os.getcwd()
         comd = input(f"{fg('green_1')}{d}: {attr('reset')}")
+        print(comd[::1])
         if comd == "bash --help":
             print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Email us at filebash45@gmail.com")
         elif comd == "ls":
@@ -412,6 +424,8 @@ if __name__ == '__main__':
             FileRename(comd)
         elif "crf" in comd:
             CreateFile(comd)
+        # elif comd[::] == "sr":
+        #     searchDir(comd)
         elif "crd" in comd:
             CreateDir(comd)
         elif "about bash" in comd:
