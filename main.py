@@ -477,7 +477,7 @@ if __name__ == '__main__':
             exit()
         else:
             items = get_close_matches(comd, commands, n=1, cutoff=0.5)
-            #print(f"{fg('red_1')}fatal: Invalid Command '{comd}'{attr('reset')}")
+            # print(f"{fg('red_1')}fatal: Invalid Command '{comd}'{attr('reset')}")
             print(f"bash: no command found: '{comd}'")
             for i in items:
                 data = i
