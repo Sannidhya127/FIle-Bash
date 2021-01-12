@@ -38,4 +38,4 @@ What it can do:
 
 <h2>Other than these all other powershell and Git commnads are supported<br>Please add more features if you have any in your mind</h2>
 <br>
-Do make a pull request before leaving --> -->
+Do make a pull request before leaving --> 
