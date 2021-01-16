@@ -183,6 +183,11 @@ def CreateFile(input):
             f"{fg('red_1')}fatal: no name mentioned{attr('reset')}")
 
 
+def AdministratorPermits():
+    subprocess.run(
+        "runas /user:KAUSTAV\Desktop\File Bash\dist\main\main.exe")
+
+
 def FileRename(cmd):
     '''
     renames a file or a folder
@@ -410,6 +415,8 @@ if __name__ == '__main__':
             printMed()
         elif comd == "ls --progs":
             printProgs()
+        elif comd == "admin --run":
+            AdministratorPermits()
         elif "delf" in comd:
             DelFile(comd)
         elif "deld" in comd:
