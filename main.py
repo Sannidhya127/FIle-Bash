@@ -427,17 +427,17 @@ if __name__ == '__main__':
             CreateFile(comd)
         elif comd[0:2] == "sr":
             searchDir(comd)
-        elif "crd" in comd:
+        elif comd[0:3] == "crd":
             CreateDir(comd)
-        elif "about bash" in comd:
+        elif comd == "about bash":
             About(comd)
         elif comd == "cd":
             cwdPrint()
         elif comd == "udev":
             BashApi()
-        elif "cd" in comd:
+        elif comd[0:2] == "cd":
             cwdChange(comd)
-        elif "write" in comd:
+        elif comd[0:5] == "write":
             editFile(comd)
         elif comd == "ls --check":
             checker()
@@ -457,14 +457,14 @@ if __name__ == '__main__':
             subprocess.run("git log --oneline")
         elif "git push origin" in comd:
             subprocess.run(comd)
-        elif "comp" in comd:
-            diffChecker(comd)
+        # elif "comp" in comd:
+        #     diffChecker(comd)
 
-        elif "pip" in comd:
+        elif comd[0:3] == "pip":
             subprocess.run(comd)
         # elif comd == "bash -i --gui":
         #     bashGui()
-        elif "read" in comd:
+        elif comd[0:4] == "read":
             readFile(comd)
         elif comd == "":
             pass
