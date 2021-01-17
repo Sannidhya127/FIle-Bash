@@ -417,7 +417,7 @@ if __name__ == '__main__':
             printProgs()
         elif comd == "admin --run":
             AdministratorPermits()
-        elif "delf" in comd:
+        elif comd[0:4] == "delf":
             DelFile(comd)
         elif "deld" in comd:
             DelDir(comd)
