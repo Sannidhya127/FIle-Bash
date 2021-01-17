@@ -419,11 +419,11 @@ if __name__ == '__main__':
             AdministratorPermits()
         elif comd[0:4] == "delf":
             DelFile(comd)
-        elif "deld" in comd:
+        elif comd[0:4] == "deld":
             DelDir(comd)
-        elif "mv" in comd:
+        elif comd[0:2] == "mv":
             FileRename(comd)
-        elif "crf" in comd:
+        elif comd[0:3] == "crf":
             CreateFile(comd)
         elif comd[0:2] == "sr":
             searchDir(comd)
