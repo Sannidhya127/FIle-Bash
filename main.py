@@ -443,23 +443,8 @@ if __name__ == '__main__':
             checker()
         elif comd == "ls --dir" or comd == "ls --dirs":
             lsdirs()
-        elif comd == "git status":
-            subprocess.run("git status")
-        elif comd == "git init":
-            subprocess.run("git init")
-        elif comd == "git add --a" or comd == "git add .":
-            subprocess.run("git add --a")
-        elif "git commit -m" in comd:
+        elif comd == "rm -rf":
             subprocess.run(comd)
-        elif comd == "git log":
-            subprocess.run("git log")
-        elif comd == "git log --oneline":
-            subprocess.run("git log --oneline")
-        elif "git push origin" in comd:
-            subprocess.run(comd)
-        # elif "comp" in comd:
-        #     diffChecker(comd)
-
         elif comd[0:3] == "pip":
             subprocess.run(comd)
         # elif comd == "bash -i --gui":
@@ -468,9 +453,9 @@ if __name__ == '__main__':
             readFile(comd)
         elif comd == "":
             pass
-        elif "git" in comd:
+        elif comd[0:3] == "git":
             subprocess.run(comd)
-        elif "python" in comd:
+        elif comd[0:6] == "python":
             try:
                 subprocess.run(comd)
             except Exception:
