@@ -1,0 +1,51 @@
+File Bash commands:
+Explore the items in your dir:
+
+
+ls [lists all files]
+
+ls --dir [lists only directories]
+
+ls --docs [lists all text files like *.txt, *.docs, etc]
+
+ls --med [lists all media files like *.gif, *.mp4, etc]
+
+ls --aud [lists all audio files like *.mp3, *.wav, etc]
+
+ls --imgs [list all images like *.img, *.png, *.jpg, etc]
+
+ls --progs [lists all program files like *.py, *.c, *.c++, *.php, etc]
+
+cd [prints the current working directory]
+
+cd <path> [changes the cwd to path you mention]
+
+sr <FileOrFolderName> [searches for a path in the directory]
+Edit the directory:
+
+crf <filename> [creates a file with the mentioned name]
+
+crd <directoryName> [creates a directory with the mentioned name]
+
+delf <fielname> [deletes a file with the mentioned name]
+
+deld <directoryName> [deleted a folder with the mentioned name]
+
+mv <FileOrFolderName> [deletes the mentioned path]
+
+
+File Editings:
+
+read <filename> [reads a file]
+
+write <helps edit a file. Default editor is notepad>
+
+Extra:
+
+udev [opens BashApi which is a cli for providing feedback to file bash (under development)]
+
+about bash [gives a small info about File Bash]
+
+
+Other than this all git commnads, pip commands, python commands are supported. 
+

@@ -355,6 +355,15 @@ def bashGui():
     return 0
 
 
+def helpText():
+    try:
+        f = open("commands.txt", "r")
+        txt = f.read()
+        print(txt)
+    except FileNotFoundError:
+        print(f"{fg('red_1')}File Bash is unable to find commands.txt.\nThis might be the result of interruptions caused while installing file bash. We reccomend you updating file bash{attr('reset')}")
+
+
 def BashApi():
     os.system("bashApi.py")
 
@@ -447,8 +456,8 @@ if __name__ == '__main__':
             subprocess.run(comd)
         elif comd[0:3] == "pip":
             subprocess.run(comd)
-        # elif comd == "bash -i --gui":
-        #     bashGui()
+        elif comd == "help" or comd == "Help" or comd == "bash --help" or comd == "help me":
+            helpText()
         elif comd[0:4] == "read":
             readFile(comd)
         elif comd == "":
