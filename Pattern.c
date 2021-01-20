@@ -55,12 +55,10 @@ int main(int argc, char const *argv[])
 			reverseStarPattern(rows);
 			break;
 		case 5:
-			exit(0);
 
 		default:
 			printf("Your input is invalid!\n");
 			break;
-			exit(0);
 		}
 	}
 

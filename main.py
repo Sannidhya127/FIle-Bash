@@ -21,11 +21,6 @@ import win32con
 import win32api
 import winreg as reg
 from playsound import playsound
-import pyautogui
-from tkinter import messagebox
-import tkinter as tk
-from tkinter import simpledialog
-import PyQt5
 import plyer
 import itertools
 import threading
