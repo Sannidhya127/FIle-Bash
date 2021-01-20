@@ -21,6 +21,8 @@ cd [prints the current working directory]
 cd <path> [changes the cwd to path you mention]
 
 sr <FileOrFolderName> [searches for a path in the directory]
+
+
 Edit the directory:
 
 crf <filename> [creates a file with the mentioned name]

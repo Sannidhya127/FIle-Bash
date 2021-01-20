@@ -17,4 +17,4 @@ def sendEmail(sub, to, message):
 
 
 sendEmail("Welcome to File Bash!", "sannidhya127@gmail.com",
-          "Welcome to File Bash. We are overwhelmed to have you with us Sanni Kumar.")
+          "Welcome to File Bash. We are overwhelmed to have you with us Sanni Man.")
