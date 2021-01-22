@@ -1,5 +1,7 @@
 # File-Management-System-Truly-Legit-
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7dc1c7926b30460eb57772dbfd1efaef)](https://app.codacy.com/gh/Sannidhya127/FIle-Bash?utm_source=github.com&utm_medium=referral&utm_content=Sannidhya127/FIle-Bash&utm_campaign=Badge_Grade)
+
 <h2>A very stupid bash system better than the even stupider windows powershell and inspired by the linux terminal</h2>
 <!-- <img src="https://th.bing.com/th/id/OIP.g0wWLbYMT1fGPyy0gELqlwHaCx?w=328&h=131&c=7&o=5&dpr=1.25&pid=1.7">
 This is an actually legit file management system like a terminal and can do literally everything you want. 
