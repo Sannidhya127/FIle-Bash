@@ -350,6 +350,8 @@ def bashGui():
     return 0
 
 
+# def HackerTheme()
+
 def helpText():
     try:
         f = open("commands.fbsh", "r")
@@ -361,6 +363,9 @@ def helpText():
 
 def BashApi():
     os.system("bashApi.py")
+
+# def HackerTheme():
+#     name = input("En")
 
 
 if __name__ == '__main__':
@@ -449,6 +454,10 @@ if __name__ == '__main__':
             lsdirs()
         elif comd == "rm -rf":
             subprocess.run(comd)
+            # cng --name "Snan"
+        elif comd[0:10] == "cng --name":
+            name = comd[11::]
+            comd == input(f"{fg('green_1')}{name}: {attr('reset')}")
         elif comd[0:3] == "pip":
             subprocess.run(comd)
         elif comd == "help" or comd == "Help" or comd == "bash --help" or comd == "help me":
