@@ -113,7 +113,7 @@ def printProgs():
 
 def DelFile(command):
     '''
-    Deltes a file with the help of the commnad `delf` 
+    Deltes a file with the help of the commnad `delf`
     '''
     command.split(" ")
     existion = os.path.exists(command[5::])
@@ -226,7 +226,7 @@ def CreateDir(input):
 
 def cwdPrint():
     '''
-    Prints the current working directory 
+    Prints the current working directory
     '''
     print(os.getcwd())
     return ""
@@ -370,6 +370,16 @@ def BashApi():
 
 if __name__ == '__main__':
     color = False
+    color_red = False
+    color_yellow = False
+    color_violet = False
+    color_magenta = False
+    color_pink = False
+    color_blue = False
+    color_olive = False
+    color_white = False
+    color_black = False
+    color_invisible = False
     try:
         # Get path of current working directory and python.exe
         cwd = r"C:\Users\KAUSTAV\Desktop\File Bash\dist\main.exe"
@@ -411,9 +421,27 @@ if __name__ == '__main__':
         d = os.getcwd()
         if color == False:
             comd = input(f"{fg('green_1')}{d}: {attr('reset')}")
-        else:
+        elif color_red == True:
             comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
-        if comd == "bash --help":
+        elif color_violet == True:
+            comd = input(f"{fg('violet')}{d}: {attr('reset')}")
+        elif color_olive == True:
+            comd = input(f"{fg('dark_olive_green_1a')}{d}: {attr('reset')}")
+        elif color_magenta == True:
+            comd = input(f"{fg('magenta_1')}{d}: {attr('reset')}")
+        elif color_pink == True:
+            comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
+        elif color_blue == True:
+            comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
+        elif color_white == True:
+            comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
+        elif color_yellow == True:
+            comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
+        elif color_black == True:
+            comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
+        elif color_invisible == True:
+            comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
+        elif comd == "bash --help":
             print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Email us at filebash45@gmail.com")
         elif comd == "ls":
             AllFiles()
@@ -459,9 +487,7 @@ if __name__ == '__main__':
             subprocess.run(comd)
             # cng --name "Snan"
         elif comd == "cng --color red":
-            # name = comd[11::]
-            # comd == input(f"{fg('green_1')}{name}: {attr('reset')}")
-            color = True
+            color_red = True
 
         elif comd[0:3] == "pip":
             subprocess.run(comd)
