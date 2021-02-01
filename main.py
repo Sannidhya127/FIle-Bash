@@ -27,8 +27,7 @@ import threading
 from plyer import notification
 import win32ui
 import win32con
-# subprocess.run(
-#     "runas /user:KAUSTAV\Desktop\File Bash\dist\main\main.exe")
+# subprocess.run("runas /user:C:\\Users\KAUSTAV\\Desktop\\File Bash\\main.py")
 
 
 def AllFiles():

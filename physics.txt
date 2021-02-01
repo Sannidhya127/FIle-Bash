@@ -1,0 +1,6 @@
+Current going flowing a conductor is defined as the amount of charge flowing through the conductor in unit time.
+
+In time 'T' charges flows = Q
+In 1 time charge flows = Q/T
+
+SI unit of charge = Coulume
