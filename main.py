@@ -300,8 +300,9 @@ def editFile(IO):
         t = f.read()
         text = t.splitlines()
         f.close()
-    except Exception:
-        print("failed to read file")
+    except Exception as e:
+        # print("failed to read file")
+        print(e)
     os.system(f"notepad.exe {file}")
     try:
         nf = open(file, "r")
