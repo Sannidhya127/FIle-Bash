@@ -363,7 +363,7 @@ def helpText():
 
 
 def BashApi():
-    os.system("bashApi.py")
+    subprocess.run("python bashApi.py")
 
 # def HackerTheme():
 #     name = input("En")
