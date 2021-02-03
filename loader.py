@@ -4,7 +4,6 @@ import time
 import sys
 
 # done = False
-#  here is the animation
 
 #From Stackoverflow
 # def animate():
@@ -37,3 +36,5 @@ for i in range(len(animation)):
     sys.stdout.flush()
 
 print("\n") #Can be skipped
+
+#Was initially coded in python2.

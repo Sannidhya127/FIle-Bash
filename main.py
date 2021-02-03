@@ -295,15 +295,16 @@ def readFile(filename):
 def editFile(IO):
     print("OPENING FILE:")
     file = IO[6::]
+    print(file)
     try:
         f = open(file, "r")
         t = f.read()
         text = t.splitlines()
         f.close()
-    except Exception as e:
-        # print("failed to read file")
-        print(e)
-    os.system(f"notepad.exe {file}")
+    except Exception:
+        print("failed to read file")
+        # print(e)
+    subprocess.run(f"notepad {file}")
     try:
         nf = open(file, "r")
         nt = nf.read()
@@ -518,9 +519,10 @@ if __name__ == '__main__':
         elif comd[0:6] == "python":
             try:
                 subprocess.run(comd)
-            except Exception:
-                print("Failed to execute script main\n\tstdin<python>")
-        elif "python2" in comd or "python1" in comd:
+            except Exception as e:
+                # print("Failed to execute script main\n\tstdin<python>")
+                print(e)
+        elif comd[0:7] == "python1" or comd[0:7] == "python2":
             print(
                 f"{fg('red_1')}Python versions prior to version 3.0 not supported by file bash{attr('reset')}")
         elif comd == "bash --q" or comd == "exit":
