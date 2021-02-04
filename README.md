@@ -1,6 +1,6 @@
 # File-Management-System-Truly-Legit-
 
-<h2>A very stupid bash system better than the even stupider windows powershell and inspired by the linux terminal</h2>
+<h2>A very stupid bash system better than the even stupider windows powershell and inspired by the linux terminal. Check it out or else I will eat YOU!!!</h2>
 <!-- <img src="https://th.bing.com/th/id/OIP.g0wWLbYMT1fGPyy0gELqlwHaCx?w=328&h=131&c=7&o=5&dpr=1.25&pid=1.7">
 This is an actually legit file management system like a terminal and can do literally everything you want. 
 What it can do:
@@ -38,4 +38,4 @@ What it can do:
 
 <h2>Other than these all other powershell and Git commnads are supported<br>Please add more features if you have any in your mind</h2>
 <br>
-Do make a pull request before leaving --> 
+Do make a pull request before leaving -->
