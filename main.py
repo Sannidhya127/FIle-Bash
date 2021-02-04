@@ -466,26 +466,8 @@ if __name__ == '__main__':
             lsdirs()
         elif comd == "rm -rf":
             subprocess.run(comd)
-            # cng --name "Snan"
-        # elif comd == "cng --color red":
-        #     color_red = True
-        # elif comd == "cng --color black":
-        #     color_black = True
-        # elif comd == "cng --color blue":
-        #     color_blue = True
-        # elif comd == "cng --color none":
-        #     color_invisible = True
-        # elif comd == "cng --color magenta":
-        #     color_magenta = True
-        # elif comd == "cng --color pink":
-        #     color_pink = True
-        # elif comd == "cng --color violet":
-        #     color_violet = True
-        # elif comd == "cng --color white":
-        #     color_white = True
-        # elif comd == "cng --color yellow":
-        #     color_yellow = True
-
+        # elif comd == "bash --ui==hacker":
+        #     HackerUi()
         elif comd[0:3] == "pip":
             subprocess.run(comd)
         elif comd == "help" or comd == "Help" or comd == "bash --help" or comd == "help me":
@@ -494,26 +476,7 @@ if __name__ == '__main__':
             readFile(comd)
         elif comd == "":
             pass
-        # elif color_red == True:
-        #     comd = input(f"{fg('red_1')}{d}: {attr('reset')}")
-        # elif color_violet == True:
-        #     comd = input(f"{fg('violet')}{d}: {attr('reset')}")
-        # elif color_olive == True:
-        #     comd = input(f"{fg('dark_olive_green_1a')}{d}: {attr('reset')}")
-        # elif color_magenta == True:
-        #     comd = input(f"{fg('magenta_1')}{d}: {attr('reset')}")
-        # elif color_pink == True:
-        #     comd = input(f"{fg('pink_1')}{d}: {attr('reset')}")
-        # elif color_blue == True:
-        #     comd = input(f"{fg('blue')}{d}: {attr('reset')}")
-        # elif color_white == True:
-        #     comd = input(f"{fg('default')}{d}: {attr('reset')}")
-        # elif color_yellow == True:
-        #     comd = input(f"{fg('yellow_1')}{d}: {attr('reset')}")
-        # elif color_black == True:
-        #     comd = input(f"{fg('grey_3')}{bg('white')}{d}: {attr('reset')}")
-        # elif color_invisible == True:
-        #     comd = input(f"{fg('grey_3')}{d}: {attr('reset')}")
+
         elif comd[0:3] == "git":
             subprocess.run(comd)
         elif comd[0:6] == "python":
