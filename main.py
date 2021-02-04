@@ -355,7 +355,7 @@ def bashGui():
 
 def helpText():
     try:
-        f = open("commands.fbsh", "r")
+        f = open("commands.txt", "r")
         txt = f.read()
         print(txt)
     except FileNotFoundError:
