@@ -27,7 +27,54 @@ import threading
 from plyer import notification
 import win32ui
 import win32con
+import ctypes
+import enum
+import sys
+
+
 # subprocess.run("runas /user:C:\\Users\KAUSTAV\\Desktop\\File Bash\\main.py")
+class SW(enum.IntEnum):
+
+    HIDE = 0
+    MAXIMIZE = 3
+    MINIMIZE = 6
+    RESTORE = 9
+    SHOW = 5
+    SHOWDEFAULT = 10
+    SHOWMAXIMIZED = 3
+    SHOWMINIMIZED = 2
+    SHOWMINNOACTIVE = 7
+    SHOWNA = 8
+    SHOWNOACTIVATE = 4
+    SHOWNORMAL = 1
+
+
+class ERROR(enum.IntEnum):
+
+    ZERO = 0
+    FILE_NOT_FOUND = 2
+    PATH_NOT_FOUND = 3
+    BAD_FORMAT = 11
+    ACCESS_DENIED = 5
+    ASSOC_INCOMPLETE = 27
+    DDE_BUSY = 30
+    DDE_FAIL = 29
+    DDE_TIMEOUT = 28
+    DLL_NOT_FOUND = 32
+    NO_ASSOC = 31
+    OOM = 8
+    SHARE = 26
+
+
+def bootstrap():
+    if ctypes.windll.shell32.IsUserAnAdmin():
+        main()
+    else:
+        hinstance = ctypes.windll.shell32.ShellExecuteW(
+            None, 'runas', sys.executable, sys.argv[0], None, SW.SHOWNORMAL
+        )
+        if hinstance <= 32:
+            raise RuntimeError(ERROR(hinstance))
 
 
 def AllFiles():
@@ -115,21 +162,34 @@ def DelFile(command):
     Deltes a file with the help of the commnad `delf`
     '''
     command.split(" ")
+
     existion = os.path.exists(command[5::])
+
     if existion == True:
+
         if command[1] == "" or command[1] == " " or command[1] == "  " or command[1] == "   ":
+
             print(
                 f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[1]}{attr('reset')}")
+
         else:
+
             os.remove(command[5::])
+
     elif existion == False:
+
         if command[5::] == "" or command[5::] == " " or command[5::] == "  " or command[5::] == "   ":
+
             print(
                 f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[1]}{attr('reset')}")
+
         else:
+
             print(
                 f"{fg('red_1')}{command[5::]} does not exist{attr('reset')}")
+
     else:
+
         print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
 
 
@@ -163,16 +223,26 @@ def CreateFile(input):
     uses command `crf` to create a new file. This function earlier had a hard coding of ls --crfile which when entered would ask the users for the file name and then create a file with the name and extension
     '''
     try:
+
         comd.split(".")
+
         existion = os.path.exists(input[4::])
+
         if existion == False:
+
             open((input[4::]), "a")
+
         elif existion == True:
+
             print(
                 f"{fg('sandy_brown')}fatal: {input[4::]} already exists{attr('reset')}")
+
         else:
+
             print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
+
     except Exception:
+
         print(
             f"{fg('red_1')}fatal: no name mentioned{attr('reset')}")
 
@@ -188,19 +258,32 @@ def FileRename(cmd):
     '''
     try:
         files = cmd.split(" ")
+
         # initial = files[1]
+
         just = os.path.exists(files[1])
+
         if just == True:
+
             os.rename(files[1], files[2])
+
         else:
+
             if files[1] == " " or files[1] == "  " or files[1] == "   " or files[1] == "    ":
+
                 print(f"{fg('red_1')}fatal: No name mentioned{attr('reset')}")
+
             else:
+
                 print(
+
                     f"{fg('red_1')}fatal: '{files[1]}': No such file in directory{attr('reset')}")
+
     except Exception:
+
         # print(
         #     f"{fg('red_1')}Failed to load file rename script. Exit code -1{attr('reset')}")
+
         print(f"{fg('red_1')}incomplete command{attr('reset')}")
 
 
@@ -370,6 +453,7 @@ def BashApi():
 
 
 if __name__ == '__main__':
+    bootstrap()
     # color = False
     color_red = False
     color_yellow = False
