@@ -165,6 +165,10 @@ class ERROR(enum.IntEnum):
     SHARE = 26
 
 
+def main():
+    print(" ")
+
+
 def bootstrap():
     if ctypes.windll.shell32.IsUserAnAdmin():
         main()
@@ -602,6 +606,9 @@ if __name__ == '__main__':
                 "cd --to", "ls --check", "git status", "git init", "git add --a", "git commit -m", "git log", "git log --oneline", "git push origin branch name", "comp 'filename1' 'filename2'", "bash --q"]
 
     while True:
+        # print(os.stat("main.py"))
+        file_stat = os.stat("Bigwave.exe")
+        print(file_stat.st_size / (1024*1024))
         d = os.getcwd()
         # if color == False:
         comd = input(f"{fg('46')}{d}: {attr('reset')}")
