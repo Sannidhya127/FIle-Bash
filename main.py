@@ -297,7 +297,8 @@ def DelFile(command):
     if existion == True:
 
         if command[1] == "" or command[1] == " " or command[1] == "  " or command[1] == "   ":
-
+            logging.warn(
+                f"Failed to delete file. Unexistent name {command[1]}")
             print(
                 f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[1]}{attr('reset')}")
 
@@ -306,7 +307,8 @@ def DelFile(command):
             os.remove(command[5::])
 
     elif existion == False:
-
+        logging.info(
+            f"File {command[5::]} doesnot exist. Proceeding to further checks")
         if command[5::] == "" or command[5::] == " " or command[5::] == "  " or command[5::] == "   ":
 
             print(
