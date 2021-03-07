@@ -39,6 +39,15 @@ import win32event
 import win32process
 from win32com.shell.shell import ShellExecuteEx
 from win32com.shell import shellcon
+import logging
+import math
+
+logging.basicConfig(level=logging.DEBUG,
+                    handlers=[logging.FileHandler('debug.log', 'a', 'utf-8')],
+                    format="%(asctime)s %(levelname)-6s - %(funcName)-8s - %(filename)s - %(lineno)-3d - %(message)s",
+                    datefmt="[%Y-%m-%d] %H:%M:%S - ",
+                    )
+
 # if not admin.isUserAdmin():
 #     admin.runAsAdmin()
 # import win32com.shell.shell as shell
@@ -56,21 +65,36 @@ from win32com.shell import shellcon
 # os.chmod(‘spam.txt’, 0o7s77)
 
 
+def log_warn(file, func, text):
+    f = open(file, 'a')
+    time = datetime.now()
+    f.write("{time} : in function {func} : {text}")
+    f.close()
+
+
 def isUserAdmin():
 
     if os.name == 'nt':
         import ctypes
         # WARNING: requires Windows XP SP2 or higher!
         try:
+            logging.debug("User already admin")
             return ctypes.windll.shell32.IsUserAnAdmin()
+
+            # log_warn("debug.log", "isUserAdmin", "User already admin")
         except:
+            logging.warn("Admin check failed, assuming not an admin.")
             traceback.print_exc()
             print("Admin check failed, assuming not an admin.")
+
             return False
     elif os.name == 'posix':
+        logging.info("Checked root for Posix.")
+
         # Check for root on Posix
         return os.getpid() == 0
     else:
+        logging.error("Unsupported orperating system for the module")
         raise RuntimeError(
             "Unsupported operating system for this module: %s" % (os.name,))
 
@@ -188,8 +212,10 @@ def AllFiles():
     for i in listOfAll:
         diri = os.path.isdir(i)
         if diri == True:
+            logging.info("ls command successfully printed all files")
             print(f"{fg('blue')}\{i}{attr('reset')}\n")
         elif diri == False:
+            logging.info("Succesfully printed all directories with ls")
             print(f"{i}\n")
         else:
             pass
@@ -276,7 +302,7 @@ def DelFile(command):
                 f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[1]}{attr('reset')}")
 
         else:
-
+            logging.info(f"Deleted {command[5::]} from the system")
             os.remove(command[5::])
 
     elif existion == False:
