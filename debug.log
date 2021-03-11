@@ -32,3 +32,12 @@
 [2021-03-07] 09:44:22 -  INFO   - AllFiles - main.py - 215 - ls command successfully printed all files
 [2021-03-07] 09:44:39 -  INFO   - DelFile  - main.py - 305 - Deleted {command[5::]} from the system
 [2021-03-07] 09:46:13 -  INFO   - DelFile  - main.py - 305 - Deleted rest.txt from the system
+[2021-03-08] 01:19:42 -  INFO   - DelDir   - main.py - 338 - deleted {input[5::]} from system
+[2021-03-08] 01:19:43 -  ERROR  - DelDir   - main.py - 354 - Entered wrong info. Failed to load script
+[2021-03-08] 01:20:48 -  INFO   - DelDir   - main.py - 338 - deleted service from system
+[2021-03-11] 23:26:39 -  INFO   - AllFiles - main.py - 218 - ls command successfully printed all files
+[2021-03-11] 23:26:56 -  INFO   - AllFiles - main.py - 218 - ls command successfully printed all files
+[2021-03-11] 23:26:56 -  INFO   - AllFiles - main.py - 221 - Succesfully printed all directories with ls
+[2021-03-11] 23:26:56 -  INFO   - AllFiles - main.py - 221 - Succesfully printed all directories with ls
+[2021-03-11] 23:26:56 -  INFO   - AllFiles - main.py - 218 - ls command successfully printed all files
+[2021-03-11] 23:26:56 -  INFO   - AllFiles - main.py - 221 - Succesfully printed all directories with ls

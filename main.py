@@ -42,8 +42,11 @@ from win32com.shell import shellcon
 import logging
 import math
 
+time = datetime.now()
+
 logging.basicConfig(level=logging.DEBUG,
-                    handlers=[logging.FileHandler('debug.log', 'a', 'utf-8')],
+                    handlers=[logging.FileHandler(
+                        f"debug.log", 'a')],
                     format="%(asctime)s %(levelname)-6s - %(funcName)-8s - %(filename)s - %(lineno)-3d - %(message)s",
                     datefmt="[%Y-%m-%d] %H:%M:%S - ",
                     )
@@ -332,17 +335,23 @@ def DelDir(input):
         input.split(" ")
         existion = os.path.exists(input[5::])  # Checking if the path exists
         if existion == True:
+            logging.info(f"deleted {input[5::]} from system")
             shutil.rmtree(input[5::])  # Deleting it
         elif existion == False:
             if input[5::] == "" or input[5::] == " " or input[5::] == "  " or input[5::] == "   ":
+                logging.warn(f"No name found in command {input[5::]}")
                 print(
                     f"{fg('red')}fatal: couldn't find any directory in command{attr('reset')}")
             else:
+                logging.info(
+                    f"Failed to find any directory with name: {input[5::]}")
                 print(
                     f"{fg('red_1')}fatal : {input[5::]} does not exist{attr('reset')}")
         else:
+            logging.error("The function crashed")
             print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
     except Exception:
+        logging.error(f"Entered wrong info. Failed to load script")
         win32ui.MessageBox(
             f"Function has crashed (reason might be because you have entered a name of a file instead of a directory)", "File error", win32con.MB_ICONERROR)
         print(
@@ -360,11 +369,12 @@ def CreateFile(input):
         existion = os.path.exists(input[4::])
 
         if existion == False:
-
+            logging.info(f"Opened file {input[4::]} in append mode")
             open((input[4::]), "a")
 
         elif existion == True:
-
+            logging.info(
+                f"Tracker has tracked that the mentioned file already exists. ReFileCreationError raised. File: {input[4::]}")
             print(
                 f"{fg('sandy_brown')}fatal: {input[4::]} already exists{attr('reset')}")
 
