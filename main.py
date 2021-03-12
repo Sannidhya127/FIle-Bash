@@ -646,7 +646,7 @@ if __name__ == '__main__':
     while True:
         # print(os.stat("main.py"))
         file_stat = os.stat("Bigwave.exe")
-        print(file_stat.st_size / (1024*1024))
+        #print(file_stat.st_size / (1024*1024))
         d = os.getcwd()
         # if color == False:
         comd = input(f"{fg('46')}{d}: {attr('reset')}")
