@@ -68,11 +68,11 @@ logging.basicConfig(level=logging.DEBUG,
 # os.chmod(‘spam.txt’, 0o7s77)
 
 
-def log_warn(file, func, text):
-    f = open(file, 'a')
-    time = datetime.now()
-    f.write("{time} : in function {func} : {text}")
-    f.close()
+# def log_warn(file, func, text):
+#     f = open(file, 'a')
+#     time = datetime.now()
+#     f.write("{time} : in function {func} : {text}")
+#     f.close()
 
 
 def isUserAdmin():
