@@ -29,6 +29,7 @@ import win32ui
 import win32con
 import ctypes
 import enum
+import getpass
 import sys
 import admin
 import traceback
@@ -698,6 +699,8 @@ if __name__ == '__main__':
             subprocess.run(comd)
         # elif comd == "bash --ui==hacker":
         #     HackerUi()
+        elif comd == "curt user":
+            print(getpass.getuser())
         elif comd[0:3] == "pip":
             subprocess.run(comd)
         elif comd == "help" or comd == "Help" or comd == "bash --help" or comd == "help me":
