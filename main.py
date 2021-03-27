@@ -595,6 +595,7 @@ def BashApi():
 
 
 if __name__ == '__main__':
+    current_user = getpass.getuser()
     bootstrap()
     # color = False
     color_red = False
@@ -609,7 +610,7 @@ if __name__ == '__main__':
     color_invisible = False
     try:
         # Get path of current working directory and python.exe
-        cwd = r"C:\Users\KAUSTAV\Desktop\File Bash\dist\main.exe"
+        cwd = f"C:\\Users\\{current_user}\\Desktop\\File Bash\\dist\\main.exe"
         python_exe = sys.executable
 
         # optional hide python terminal in windows
@@ -646,7 +647,7 @@ if __name__ == '__main__':
 
     while True:
         # print(os.stat("main.py"))
-        file_stat = os.stat("Bigwave.exe")
+        #file_stat = os.stat("Bigwave.exe")
         #print(file_stat.st_size / (1024*1024))
         d = os.getcwd()
         # if color == False:
