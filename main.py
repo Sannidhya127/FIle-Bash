@@ -34,6 +34,7 @@ import sys
 import admin
 import traceback
 import types
+from subprocess import call
 import win32api
 import win32con
 import win32event
@@ -556,6 +557,23 @@ def searchDir(query):
             print(f"I found the following result(s):\n{i}")
 
 
+def hideItems(param):
+    if "\\" in param:
+        folder = param[7::]
+        # print(folder)
+        # call(["attrib", "+h", folder])
+        os.system(f"attrib +h +s +r {folder}")
+        print("Proooo tip: You might see the folder is not hidden on first sight. Refresh the folder and it's done")
+
+        # hide \
+    else:
+        folder = param[5::]
+        print(folder)
+        # call(["attrib", "+h", folder])
+        os.system(f"attrib +h +s +r {folder}")
+        print("Proooo tip: You might see the file is not hidden on first sight. Refresh the folder and it's done")
+
+
 def bashGui():
     def GuiDelDir(cmd):
         os.mkdir(cmd[14::])
@@ -684,6 +702,8 @@ if __name__ == '__main__':
             CreateDir(comd)
         elif comd == "about bash":
             About(comd)
+        elif "hide" in comd:
+            hideItems(comd)
         elif comd == "cd":
             cwdPrint()
         elif comd == "udev":
