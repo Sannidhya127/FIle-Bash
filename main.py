@@ -48,7 +48,7 @@ time = datetime.now()
 
 logging.basicConfig(level=logging.DEBUG,
                     handlers=[logging.FileHandler(
-                        f"debug.log", 'a')],
+                        f"debug.log", 'r+')],
                     format="%(asctime)s %(levelname)-6s - %(funcName)-8s - %(filename)s - %(lineno)-3d - %(message)s",
                     datefmt="[%Y-%m-%d] %H:%M:%S - ",
                     )
@@ -571,7 +571,13 @@ def hideItems(param):
         print(folder)
         # call(["attrib", "+h", folder])
         os.system(f"attrib +h +s +r {folder}")
-        print("Proooo tip: You might see the file is not hidden on first sight. Refresh the folder and it's done")
+        print(
+            f"For issues type {fg('green_1')}'hdh'{attr('reset')} in the bash")
+
+
+def unhide(param):
+    name = param[4::]
+    os.system(f"attrib -h -s -r {name}")
 
 
 def bashGui():
@@ -702,12 +708,14 @@ if __name__ == '__main__':
             CreateDir(comd)
         elif comd == "about bash":
             About(comd)
-        elif "hide" in comd:
+        elif comd[0:4] == "hide":
             hideItems(comd)
         elif comd == "cd":
             cwdPrint()
         elif comd == "udev":
             BashApi()
+        elif comd[0:3] == "uhd":
+            unhide(comd)
         elif comd[0:2] == "cd":
             cwdChange(comd)
         elif comd[0:5] == "write":
