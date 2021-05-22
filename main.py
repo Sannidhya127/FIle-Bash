@@ -9,9 +9,6 @@ import pyttsx3
 from datetime import date
 from datetime import time
 from datetime import datetime
-# from watchdog.observers import Observer
-# import watchdog.events
-# from watchdog.events import PatternMatchingEventHandler
 import subprocess
 import difflib
 from difflib import SequenceMatcher, get_close_matches, Differ
