@@ -1,0 +1,26 @@
+Tried making a system like git. Right now working on a local VSC which is semi-succesful by making a hidden folder for storing data. Later will be using a database
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Mon Nov 23 20:34:43 2020 +0530
+#
+# On branch master
+# Changes to be committed:
+#	new file:   bash---DONOTDELETE/AddREADME.md
+#	new file:   bash---DONOTDELETE/Addbeta.txt
+#	new file:   bash---DONOTDELETE/AdddampFile.txt
+#	new file:   bash---DONOTDELETE/Adddiiflibmod.py
+#	new file:   bash---DONOTDELETE/Addfile2.txt
+#	new file:   bash---DONOTDELETE/Addmain.py
+#	new file:   bash---DONOTDELETE/AddmodAnalyzer.c
+#	new file:   bash---DONOTDELETE/AddtempOut.java
+#	modified:   diiflibmod.py
+#	new file:   lexertrial.py
+#	modified:   main.py
+#	new file:   modAnalyzer.c
+#	new file:   modAnalyzer.exe
+#	modified:   rolls.c
+#	modified:   rolls.exe
+#	new file:   tempCodeRunnerFile.py
+#
