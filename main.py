@@ -1,4 +1,4 @@
-import os  # The most important module of this code. Almost every function uses it
+import os  
 import sys
 import shutil
 import time as t
