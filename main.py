@@ -621,6 +621,8 @@ def helpText():
 def BashApi():
     subprocess.run("python bashApi.py")
 
+def ShutDown():
+    os.system('shutdown -s')
 # def HackerTheme():
 #     name = input("En")
 
@@ -711,6 +713,8 @@ if __name__ == '__main__':
             CreateFile(comd)
         elif comd[0:2] == "sr":
             searchDir(comd)
+        elif comd == "bash --sys 0":
+            ShutDown()
         elif comd[0:3] == "crd":
             CreateDir(comd)
         elif comd == "about bash":
