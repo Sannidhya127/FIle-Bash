@@ -392,7 +392,7 @@ def CreateFile(input):
 #         "runas /user:KAUSTAV\Desktop\File Bash\dist\main\main.exe")
 
 
-def FileRename(cmd):
+def FileRename(cmd  ):
     '''
     renames a file or a folder
     '''

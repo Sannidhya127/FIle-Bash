@@ -15,7 +15,7 @@ sending = False
 def sendEmail(sub, to, message):
 
     msg = EmailMessage()
-
+    
     msg.set_content(message)
     msg['Subject'] = sub
     msg['From'] = "shubhradasgupta8@gmail.com"
