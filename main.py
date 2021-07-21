@@ -446,6 +446,9 @@ def CreateDir(input):
         print(e)
 
 
+def sys_info():
+    os.system("sys_info.py")
+
 def cwdPrint():
     '''
     Prints the current working directory
@@ -707,6 +710,8 @@ if __name__ == '__main__':
             DelFile(comd)
         elif comd[0:4] == "deld":
             DelDir(comd)
+        elif comd == "sys --info":
+            sys_info()
         elif comd[0:2] == "mv":
             FileRename(comd)
         elif comd[0:3] == "crf":
