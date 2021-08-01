@@ -1,3 +1,4 @@
+
 import os  
 import sys
 import shutil
@@ -610,7 +611,22 @@ def bashGui():
     return 0
 
 
-# def HackerTheme()
+def AllProcess():
+    # traverse the software list
+    Data = subprocess.check_output(['wmic', 'process', 'list', 'brief'])
+    a = str(Data)
+    # try block
+    #  arrange the string
+    try:
+        for i in range(len(a)):
+            print(a.split("\\r\\r\\n")[i])
+    except IndexError as e:
+        print("All Done")
+
+def killTask(process):
+    PidProcess = process.split("\\")
+    PidProcess[1] = int(PidProcess[1])
+    os.kill(PidProcess[0], PidProcess[1])
 
 def helpText():
     try:
@@ -722,6 +738,8 @@ if __name__ == '__main__':
             ShutDown()
         elif comd[0:3] == "crd":
             CreateDir(comd)
+        elif comd == "process --uid":
+            AllProcess()
         elif comd == "about bash":
             About(comd)
         elif comd[0:4] == "hide":
@@ -730,6 +748,8 @@ if __name__ == '__main__':
             cwdPrint()
         elif comd == "udev":
             BashApi()
+        elif comd[0:4] == "kill":
+            killTask(comd[4::])
         elif comd[0:3] == "uhd":
             unhide(comd)
         elif comd[0:2] == "cd":
