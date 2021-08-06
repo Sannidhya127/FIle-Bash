@@ -41,6 +41,7 @@ from win32com.shell.shell import ShellExecuteEx
 from win32com.shell import shellcon
 import logging
 import math
+import shutil
 
 time = datetime.now()
 
@@ -610,6 +611,18 @@ def bashGui():
 
     return 0
 
+def Copy(command):
+    try:
+        paths = command[4::]
+        paths.split("      ")
+        current_path = paths[1]
+        print(current_path)
+        specified_path = paths[2]
+        print(specified_path)
+        shutil.copyfile(current_path, specified_path)
+    except Exception as e:
+        print(e)
+
 
 def AllProcess():
     # traverse the software list
@@ -754,6 +767,8 @@ if __name__ == '__main__':
             unhide(comd)
         elif comd[0:2] == "cd":
             cwdChange(comd)
+        elif comd[0:3] == "cpy":
+            Copy(comd)
         elif comd[0:5] == "write":
             editFile(comd)
         elif comd == "ls --check":
