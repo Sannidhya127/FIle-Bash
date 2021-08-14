@@ -1,5 +1,6 @@
-[2021-08-01] 22:55:06 -  INFO   - AllFiles - main.py - 218 - ls command successfully printed all files
-[2021-08-01] 22:55:06 -  INFO   - AllFiles - main.py - 221 - Succesfully printed all directories with ls
+[2021-08-11] 20:42:11 -  INFO   - CreateFile - main.py - 373 - Opened file hola.txt in append mode
+[2021-08-11] 20:42:21 -  INFO   - DelFile  - main.py - 310 - Deleted hola.txt from the system
+ories with ls
 [2021-08-01] 22:55:06 -  INFO   - AllFiles - main.py - 218 - ls command successfully printed all files
 [2021-08-01] 22:55:06 -  INFO   - AllFiles - main.py - 218 - ls command successfully printed all files
 [2021-08-01] 22:55:06 -  INFO   - AllFiles - main.py - 221 - Succesfully printed all directories with ls

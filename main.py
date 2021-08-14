@@ -611,15 +611,14 @@ def bashGui():
 
     return 0
 
-def Copy(command):
+def Copy(paths):
     try:
-        paths = command[4::]
-        paths.split("      ")
-        current_path = paths[1]
-        print(current_path)
-        specified_path = paths[2]
-        print(specified_path)
-        shutil.copyfile(current_path, specified_path)
+        slitted = paths.split(" ")
+        fileName = slitted[1]
+        print(fileName)
+        TargetLocation = slitted[2]
+        print(TargetLocation)
+        shutil.copy(fileName, TargetLocation)
     except Exception as e:
         print(e)
 
@@ -767,7 +766,7 @@ if __name__ == '__main__':
             unhide(comd)
         elif comd[0:2] == "cd":
             cwdChange(comd)
-        elif comd[0:3] == "cpy":
+        elif "cpy" in comd:
             Copy(comd)
         elif comd[0:5] == "write":
             editFile(comd)

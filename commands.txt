@@ -35,7 +35,7 @@ deld <directoryName> [deleted a folder with the mentioned name]
 
 mv <FileOrFolderName> [deletes the mentioned path]
 
-
+hdhdhdh
 File Editings:
 
 read <filename> [reads a file]
