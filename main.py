@@ -42,6 +42,7 @@ from win32com.shell import shellcon
 import logging
 import math
 import shutil
+import multiprocessing
 
 time = datetime.now()
 
@@ -515,12 +516,16 @@ def readFile(filename):
                 data = fileIO.read()
                 print(data)
             except UnicodeDecodeError:
-                print(f"{fg('red_1')}UNICODE Characters detected(): Cannot decode UNICODE Characters. Binary reader required{attr('reset')}")
+                print(f"{fg('red_1')}UNICODe.characters.execeptionError(): Cannot decode UNICODE Characters. Binary reader required{attr('reset')}")
         else:
             print(
                 f"{fg('red_1')}Fatal: incorrect path or '{name}' does not exist{attr('reset')}")
     except Exception:
-        print("READ/WRITE Operation handler failed. I think you eneted a folder name.")
+        DirVal = os.path.isdir(name)
+        if DirVal == True:
+            print("I think you eneted a folder name.")
+        else:
+            print("Seems to be a read-only or executable file, better not try this")
 
 
 def editFile(IO):
@@ -610,6 +615,11 @@ def bashGui():
             return "exit"
 
     return 0
+
+
+def EnvoirmentvariableDisplayer(command):
+    pass
+
 
 def Copy(paths):
     try:
