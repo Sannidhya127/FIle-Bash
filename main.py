@@ -6,7 +6,9 @@ import time as t
 import pathlib
 import time
 from colored import fg, bg, attr
+from colored.colored import colored
 import pyttsx3
+import imp
 from datetime import date
 from datetime import time
 from datetime import datetime
@@ -650,6 +652,10 @@ def killTask(process):
     PidProcess[1] = int(PidProcess[1])
     os.kill(PidProcess[0], PidProcess[1])
 
+def reloadColor():
+    imp.reload(colored)
+    from colored import fg, bg, attr
+
 def helpText():
     try:
         f = open("commands.txt", "r")
@@ -754,6 +760,8 @@ if __name__ == '__main__':
             FileRename(comd)
         elif comd[0:3] == "crf":
             CreateFile(comd)
+        elif comd == "reload --colored":
+            reloadColor()
         elif comd[0:2] == "sr":
             searchDir(comd)
         elif comd == "bash --sys 0":
@@ -801,6 +809,7 @@ if __name__ == '__main__':
 
         elif comd[0:3] == "git":
             subprocess.run(comd)
+            print("If the text colors run out after running this command, type reload --colored in the command line")
         elif comd[0:6] == "python":
             try:
                 subprocess.run(comd)
