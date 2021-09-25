@@ -8,7 +8,7 @@ import time
 from colored import fg, bg, attr
 from colored.colored import colored
 import pyttsx3
-import imp
+import importlib
 from datetime import date
 from datetime import time
 from datetime import datetime
@@ -653,7 +653,7 @@ def killTask(process):
     os.kill(PidProcess[0], PidProcess[1])
 
 def reloadColor():
-    imp.reload(colored)
+    importlib.reload(colored)
     from colored import fg, bg, attr
 
 def helpText():
