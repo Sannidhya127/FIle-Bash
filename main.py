@@ -652,9 +652,10 @@ def killTask(process):
     PidProcess[1] = int(PidProcess[1])
     os.kill(PidProcess[0], PidProcess[1])
 
-def reloadColor():
-    importlib.reload(colored)
-    from colored import fg, bg, attr
+def reloadProgram():
+    os.system("reload.py")
+    exit()
+    # from colored import fg, bg, attr
 
 def helpText():
     try:
@@ -761,7 +762,7 @@ if __name__ == '__main__':
         elif comd[0:3] == "crf":
             CreateFile(comd)
         elif comd == "reload --colored":
-            reloadColor()
+            reloadProgram()
         elif comd[0:2] == "sr":
             searchDir(comd)
         elif comd == "bash --sys 0":
