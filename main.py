@@ -1,4 +1,3 @@
-
 import os  
 import sys
 import shutil
@@ -17,7 +16,10 @@ import difflib
 from difflib import SequenceMatcher, get_close_matches, Differ
 from pprint import pprint
 import re
-import win32con
+import time
+import plyer
+from plyer import notification
+
 import win32api
 import winreg as reg
 from playsound import playsound
@@ -569,6 +571,17 @@ def searchDir(query):
             print(f"I found the following result(s):\n{i}")
 
 
+def Notify(time):
+    time = time.split(" ")
+    seconds = time[1] * 60
+    Title = time[2]
+    Body = time[3]
+    time.sleep(seconds)
+    notification.notify(title=Title,
+                            message=Body,
+                            timeout=5
+                            )
+
 def hideItems(param):
     try:
         if "\\" in param:
@@ -765,6 +778,10 @@ if __name__ == '__main__':
             reloadProgram()
         elif comd[0:2] == "sr":
             searchDir(comd)
+            # notify
+        elif comd[0::6] == "notify":
+            Notify(comd)
+            print("I hope you entered the time in minutes, any other time system like seconds or hours won't work")
         elif comd == "bash --sys 0":
             ShutDown()
         elif comd[0:3] == "crd":
