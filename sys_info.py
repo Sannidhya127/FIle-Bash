@@ -1,3 +1,6 @@
+# coding=utf8
+
+
 from tabulate import tabulate
 import GPUtil
 import psutil
@@ -130,7 +133,7 @@ for gpu in gpus:
     # get total memory
     gpu_total_memory = f"{gpu.memoryTotal}MB"
     # get GPU temperature in Celsius
-    gpu_temperature = f"{gpu.temperature} °C"
+    gpu_temperature = f"{gpu.temperature} �C"
     gpu_uuid = gpu.uuid
     list_gpus.append((
         gpu_id, gpu_name, gpu_load, gpu_free_memory, gpu_used_memory,
