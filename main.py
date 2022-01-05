@@ -85,7 +85,6 @@ def isUserAdmin():
 
     if os.name == 'nt':
         import ctypes
-        # WARNING: requires Windows XP SP2 or higher!
         try:
             logging.debug("User already admin")
             return ctypes.windll.shell32.IsUserAnAdmin()

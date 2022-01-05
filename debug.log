@@ -1,5 +1,5 @@
-[2022-01-05] 12:23:43 -  INFO   - DelFile  - main.py - 335 - Deleted brightness.py from the system
-[2022-01-05] 12:24:05 -  INFO   - DelFile  - main.py - 335 - Deleted array.py from the system
+[2022-01-05] 12:25:29 -  INFO   - DelFile  - main.py - 335 - Deleted sample-2mb-text-file.txt from the system
+] 12:24:05 -  INFO   - DelFile  - main.py - 335 - Deleted array.py from the system
 ories with ls
 [2021-11-22] 00:22:55 -  INFO   - AllFiles - main.py - 224 - ls command successfully printed all files
 [2021-11-22] 00:22:55 -  INFO   - AllFiles - main.py - 224 - ls command successfully printed all files
