@@ -375,11 +375,11 @@ def DelDir(input):
                     f"{fg('red_1')}fatal : {input[5::]} does not exist{attr('reset')}")
         else:
             logging.error("The function crashed")
-            print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
+            print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for reporting")
     except Exception:
         logging.error(f"Entered wrong info. Failed to load script")
-        win32ui.MessageBox(
-            f"Function has crashed (reason might be because you have entered a name of a file instead of a directory)", "File error", win32con.MB_ICONERROR)
+        # win32ui.MessageBox(
+        #     f"Function has crashed (reason might be because you have entered a name of a file instead of a directory)", "File error", win32con.MB_ICONERROR)
         print(
             f"{fg('red')}fatal: Function has crashed (reason might be because you have entered a name of a file instead of a directory){attr('reset')}")
 
