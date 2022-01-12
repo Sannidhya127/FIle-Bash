@@ -414,10 +414,6 @@ def CreateFile(input):
             f"{fg('red_1')}fatal: no name mentioned{attr('reset')}")
 
 
-# def AdministratorPermits():
-#     subprocess.run(
-#         "runas /user:KAUSTAV\Desktop\File Bash\dist\main\main.exe")
-
 
 def FileRename(cmd  ):
     '''
