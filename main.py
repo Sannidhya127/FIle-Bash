@@ -301,7 +301,7 @@ def printMed():
     for i in listOfAll:
         docs = os.path.splitext(i)
         if docs[1] == ".mp4" or docs[1] == ".webm" or docs[1] == ".gif" and docs[1] == ".wmv":
-            print(docs[0]+docs[1])
+            print(docs[0]+docs[1]) 
 
 
 def printProgs():
@@ -415,7 +415,7 @@ def CreateFile(input):
 
 
 
-def FileRename(cmd  ):
+def FileRename(cmd):
     '''
     renames a file or a folder
     '''
