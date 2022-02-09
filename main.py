@@ -858,17 +858,6 @@ print(tabulate(list_gpus, headers=("id", "name", "load", "free memory", "used me
 if __name__ == '__main__':
     current_user = getpass.getuser()
     bootstrap()
-    # color = False
-    color_red = False
-    color_yellow = False
-    color_violet = False
-    color_magenta = False
-    color_pink = False
-    color_blue = False
-    color_olive = False
-    color_white = False
-    color_black = False
-    color_invisible = False
     try:
         # Get path of current working directory and python.exe
         cwd = f"C:\\Users\\{current_user}\\Desktop\\File Bash\\dist\\main.exe"
