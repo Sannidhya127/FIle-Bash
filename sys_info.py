@@ -1,6 +1,4 @@
 # coding=utf8
-
-
 from tabulate import tabulate
 import GPUtil
 import psutil

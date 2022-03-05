@@ -329,7 +329,7 @@ def DelFile(command):
             logging.warning(
                 f"Failed to delete file. Unexistent name {command[1]}")
             print(
-                f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[1]}{attr('reset')}")
+                f"{fg('red_1')}fatal: No file mentioned{command[1]}{attr('reset')}")
 
         else:
             logging.info(f"Deleted {command[5::]} from the system")
