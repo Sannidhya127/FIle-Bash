@@ -1,3 +1,5 @@
+# copyright @github.com/Sannidhya127
+
 import os  
 import sys
 import shutil
@@ -337,11 +339,11 @@ def DelFile(command):
 
     elif existion == False:
         logging.info(
-            f"File {command[5::]} doesnot exist. Proceeding to further checks")
+            f"File {command[5::]} does not exist. Proceeding to further checks")
         if command[5::] == "" or command[5::] == " " or command[5::] == "  " or command[5::] == "   ":
 
             print(
-                f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[1]}{attr('reset')}")
+                f"{fg('red_1')}fatal: could not find any file with the mentioned name {command[5::]}{attr('reset')}")
 
         else:
 
