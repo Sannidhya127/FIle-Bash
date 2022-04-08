@@ -1,6 +1,4 @@
-# File-Management-System-Truly-Legit-
-
-<h2>Some stupid thing u shouldn't do in your life</h2>
+Some stupid thing u shouldn't do in your life
 <!-- <img src="https://th.bing.com/th/id/OIP.g0wWLbYMT1fGPyy0gELqlwHaCx?w=328&h=131&c=7&o=5&dpr=1.25&pid=1.7">
 This is an actually legit file management system like a terminal and can do literally everything you want. 
 What it can do:
