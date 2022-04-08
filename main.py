@@ -21,6 +21,7 @@ import re
 import time
 import plyer
 from plyer import notification
+from requests import delete
 
 import win32api
 import winreg as reg
@@ -354,6 +355,26 @@ def DelFile(command):
 
         print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
 
+
+def Delete(input):
+    try:
+        blank = ""
+        Existence = os.path.exists(input[3::])
+        if Existence == True:
+            fileCheck = os.path.isfile(input[3::])
+            folderCheck = os.path.isdir(input[3::])
+            if input[3::] == blank:
+                print("No file/folder name given")
+            elif fileCheck== True and folderCheck == False:
+                os.remove(input[3::])
+            elif fileCheck == False and folderCheck ==  True:
+                shutil.rmtree(input[3::])
+            else:
+                print("I see no name")
+        else:
+            print(f"{fg('red_1')}The given item does not exist{attr('reset')}")
+    except Exception:
+        print(f"{fg('red_1')}Unable to access file. Might be because it is encrypted{attr('reset')}")
 
 def DelDir(input):
     '''
@@ -935,6 +956,8 @@ if __name__ == '__main__':
             reloadProgram()
         elif comd == "install --check":
             InstallationCheck()
+        elif comd[0:2] == "rm":
+            Delete(comd)
         elif comd[0:2] == "sr":
             searchDir(comd)
             # notify

@@ -1,4 +1,6 @@
-[2022-04-04] 20:22:11 -  INFO   - DelFile  - main.py - 341 - File  does not exist. Proceeding to further checks
+[2022-04-08] 14:13:30 -  INFO   - DelDir   - main.py - 388 - deleted helo from system
+n append mode
+er checks
 [2022-04-04] 20:22:21 -  INFO   - DelFile  - main.py - 341 - File jk does not exist. Proceeding to further checks
 022-04-04] 19:41:59 -  INFO   - DelFile  - main.py - 341 - File kl does not exist. Proceeding to further checks
  - DelFile  - main.py - 341 - File  doesnot exist. Proceeding to further checks
