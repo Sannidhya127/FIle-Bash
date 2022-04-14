@@ -641,7 +641,9 @@ def HelpWeb():
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

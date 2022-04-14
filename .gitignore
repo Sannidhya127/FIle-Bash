@@ -1,4 +1,5 @@
 /build
+/src/bootstrap-5.1.3
 /dist
 /static
 *.exe
