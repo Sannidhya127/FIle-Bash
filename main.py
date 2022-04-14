@@ -1008,7 +1008,8 @@ if __name__ == '__main__':
             readFile(comd)
         elif comd == "":
             pass
-
+        elif comd == "good":
+            print("Thanks :)")
         elif comd[0:3] == "git":
             subprocess.run(comd)
             print("\nIf the text colors run out after running this command, type reload --colored in the command line")
