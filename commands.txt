@@ -1,0 +1,57 @@
+File Bash Commands patch-file-bash-alphaV0.0.1 
+
+ls : lists all items in current directory
+
+ls --docs : lists all items in directory with extensions .docs, .txt, .doc, .docxs, .rtf
+
+ls --dir/dirs : lists all directories
+
+ls --imgs : lists all items in directory with extensions .jpg, .png, .jpeg
+
+ls --aud : lists all items in directory with extensions .wav, .flv, .mp3, .aiff, .mkv
+
+ls --med : lists all items in directory with extensions .mp4, .webm, .gif, .wmv, .wav
+
+ls --progs : lists all items in directory with extensions .py, .c, .c++, .cpp, .exe, .rb, .r, .php, .js, .html, .java, .css
+
+del [file/folder.extension <ignore for directory>] : deletes the file or folder passed to the command
+
+delf [file.extension] : deletes the file name passed to the command
+
+deld [folder] : deletes the folder name passed to command
+
+crf <filename>.<extension> : Creates a file with specified name and extension
+
+crd <foldername> : Creates a folder with specified name
+
+sys --info : Prints a set of information in presentable format about System, Disk, Network and GPU
+
+mv <currentItem/Name.extension> <NewItemName.extension> : Renames a the given item in the first argument with the second argument. Extensions are read as part of the name for directories, if any
+
+rm <ItemName>.<extension> : Deletes given item, reads extension as a part of the name in case of directory, if any
+
+cd : prints current directory
+
+cd <path> : transfers bash to given directory
+
+sr <itemName> : Searches the current directory for exact or related results
+
+bash --sys 0 : Switches off the system
+
+process --uid : lists all process ongoing in the system with their priority, processId, ThreadCount, WorkingSetSize, HandleCount
+
+hide <item> : hides an item (remains hidden when view fromt Windows' default file explorer, might be visible for certain third party applications)
+
+uhd <item> : unhides item (if hidden)
+
+read <fileName>.<extension> : prints content of specified file in the terminal
+
+write <fileName>.<extension> : opens specified file in default editor, notepad for editing. After saving and closing file, bash displays the additions or deletions, if any
+
+rm -rf : if current directory is a git repository, it deletes the git repository (this command is a git command)
+
+help : prints this help message
+
+commands beginning with git and python are transferred to their respective shell systems and operated by the concerned
+
+exit : exit file bash
