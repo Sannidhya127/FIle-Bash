@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Welcome to File Bash’s documentation!" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Installation" href="installation.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
         <title>Usage - File Bash v0.0.1-beta documentation</title>
@@ -155,6 +155,7 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage</a></li>
 </ul>
 
@@ -190,10 +191,6 @@
         <article role="main">
           <section id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h1>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
-<p>To use File Bash, use the File Bash Installer Wizard</p>
-</section>
 <section id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h2>
 <ol class="upperroman simple">
@@ -219,12 +216,14 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">ls</span></code> command parameters can only track files with specifiend extensions. Other extensions will be <em>ignored</em> even if they fall in the requested category</p>
 <ol class="arabic" start="2">
 <li><p>To delete a file/folder, use the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">a</span> <span class="pre">file</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">C:\Users\Desktop\MyTestDir:</span> <span class="pre">rm</span> <span class="pre">HelloWorld.txt</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">a</span> <span class="pre">folder</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">C:\Users\Desktop\MyTestDir:</span> <span class="pre">rm</span> <span class="pre">MyLovelyFolder</span></code></p>
-</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">rm</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">txt</span>
+<span class="go">Deletes a file</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">rm</span> <span class="n">MyLovelyFolder</span>
+<span class="go">Deletes a folder</span>
+</pre></div>
+</div>
 </li>
 </ol>
 <dl class="py exception">
@@ -232,11 +231,6 @@
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Del.</span></span><span class="sig-name descname"><span class="pre">ItemNotFoundError</span></span><a class="headerlink" href="#Del.ItemNotFoundError" title="Permalink to this definition">#</a></dt>
 <dd><p>Raised if given item does not exist</p>
 </dd></dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lumache</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lumache</span><span class="o">.</span><span class="n">get_random_ingredients</span><span class="p">()</span>
-<span class="go">['shells', 'gorgonzola', 'parsley']</span>
-</pre></div>
-</div>
 </section>
 </section>
 
@@ -246,14 +240,14 @@
         
         <div class="related-pages">
           
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="installation.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">Installation</div>
                 
               </div>
             </a>
@@ -290,7 +284,6 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Usage</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#commands">Commands</a></li>
 </ul>
 </li>

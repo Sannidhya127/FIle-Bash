@@ -1,16 +1,9 @@
 Usage
 =====
 
-Installation
-------------
-
-To use File Bash, use the File Bash Installer Wizard
-
 .. .. code-block:: console
 
 ..    (.venv) $ pip install lumache
-
-
 
 Commands
 ----------------
@@ -38,18 +31,12 @@ The ``ls`` command parameters can only track files with specifiend extensions. O
 
 2. To delete a file/folder, use the ``rm`` command:
 
-    ``Delete a file``
-
-    ``C:\Users\Desktop\MyTestDir: rm HelloWorld.txt``
-
-    ``Delete a folder``
-
-    ``C:\Users\Desktop\MyTestDir: rm MyLovelyFolder``
+    >>> C:\Users\Desktop\MyTestDir: rm HelloWorld.txt
+    Deletes a file
+    
+    >>> C:\Users\Desktop\MyTestDir: rm MyLovelyFolder
+    Deletes a folder
 
 .. py:exception:: Del.ItemNotFoundError()
 
     Raised if given item does not exist
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']

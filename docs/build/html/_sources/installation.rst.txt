@@ -1,0 +1,9 @@
+Installation
+============
+
+To use File Bash, use the File Bash Installer Wizard
+
+Issues
+-----------
+
+Yet to be written
