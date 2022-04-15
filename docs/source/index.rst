@@ -36,4 +36,10 @@ Table Of Contents
 .. toctree::
    quickstart
    commands
+
+
+Changelog
+---------
+
+.. toctree::
    Changelist
