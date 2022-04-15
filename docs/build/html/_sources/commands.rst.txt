@@ -6,10 +6,13 @@
 Commands
 ========
 
+A detailed list of commands and their functionalities for the ease of users.
+
+
 .. _ls:
 
-1. ls
------
+1. ls [List Directory items]
+----------------------------
 
 ...
 
@@ -37,8 +40,8 @@ The ``ls`` command parameters can only track files with specifiend extensions. O
 .. _rm:
 
 
-2. rm
------
+2. rm [Remove Item]
+-------------------
 
 ...
 
@@ -57,8 +60,8 @@ To delete a file/folder, use the ``rm`` command:
 
 .. _mv:
 
-3. mv
------
+3. mv [Rename Item]
+-------------------
 
 ...
 
@@ -70,11 +73,20 @@ With the help of the above command, the system renames the initial file name (``
 
 If seperated with whitespaces, the index[1] argument is the current name and the index[2] argument is the new name to be given
 
+.. py:exception:: ListIndexOutOfRangeError
+
+
+    *Raises the error when names of items contain whitespaces. Developers are working to fix this*
+
+.. py:exception:: FileNotFoundError
+
+
+    *Raises the error when file bash failes to track file with specified name in index[1]*
 
 .. _crf:
 
-4. crf
-------
+4. crf [Create File]
+--------------------
 
 ...
 
@@ -89,3 +101,43 @@ Here the file name with extension supplied after the command is created in the c
     Displays fatal error when a pre-existent file name is given with this hidden exception.
 
 *Whitespaces* in name are supported
+
+.. _crd:
+
+5. crd [Create Directory]
+-------------------------
+
+...
+
+The ``crd`` command is used to create a new directory. The syntax usage is
+
+>>> C:\Users\Desktop\MyTestDir: crd MyNewFolder
+
+A new folder called ``MyNewFolder`` is created with the help of this command.
+To create a folder in another directory, specify full path
+
+>>> C:\Users\Desktop\MyTestDir: crf C:\Users\Desktop\Code\NewFolder
+
+This creates a new folder named *NewFolder* in the path ``C: -> Users -> Desktop -> Code``
+
+
+.. py:exception:: DirectoryExistionError
+
+    Displays fatal error when a pre-existent directory name is given with this hidden exception.
+
+.. _cd:
+
+6. cd [Current Directory/Change Directory]
+------------------------------------------
+
+...
+
+The ``cd`` command has multiple purposes depending on its usage.
+
+If user only inputs the command ``cd`` with no extra parameters, the command returns the Current Directory.
+
+If user enters command ``cd`` and then a valid path on the local disk, the bash's *current working directory* is changed to the given path. Here ``cd`` stands for *Change Directory*
+
+.. py:exception:: InvalidPathError
+
+    Raises fatal error on passing invalid *arg[1][path]*

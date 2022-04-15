@@ -1,0 +1,9 @@
+v0.0.1-beta
+-----------
+
+Build the first setup of this Documentation. The versioning will follow the semantic versioning of https://semver.org/.
+
+v0.0.2-beta
+-----------
+
+First developmental release inclusive of documentation. The documentation is being developed with sphinx and is yet to be completed. Contents added to documentation    

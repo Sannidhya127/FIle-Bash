@@ -17,4 +17,18 @@ In the above line we see a path given with a colon at the end. Towards the other
 Basic Commands (Visit :doc:`commands` page for details)
 -------------------------------------------------------
 
-Some of the most basic commands of the bash are :ref:`ls <ls>` (lists all directory items), :ref:`rm <rm>` (deletes given item), :ref:`mv <mv>` (renames given item with a new name from user)
+Some of the most basic commands of the bash are :ref:`ls <ls>` (lists all directory items), :ref:`rm <rm>` (deletes given item), :ref:`mv <mv>` (renames given item with a new name from user), etc.
+
+>>> C:\Users\Desktop\MyTestDir: ls
+
+Result
+
+>>> SomeTextFile.txt
+    APythonFile.py
+    /NiceFolder
+    main.c
+    image.png
+
+Visit :doc:`commands` for further details.
+
+

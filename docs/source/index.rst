@@ -36,3 +36,4 @@ Table Of Contents
 .. toctree::
    quickstart
    commands
+   Changelist

@@ -24,7 +24,7 @@ copyright = '2022, Sannnidhya127'
 author = 'Sannnidhya127'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.0.3-beta'
+release = 'v0.1.1'
 
 
 # -- General configuration ---------------------------------------------------
