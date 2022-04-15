@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Usage" href="usage.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Welcome to File Bash’s documentation!" href="index.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>File Bash v0.0.1-beta documentation</title>
+        <title>Usage - File Bash v0.0.1-beta documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">File Bash v0.0.1-beta documentation</div></a>
+      <a href="index.html"><div class="brand">File Bash v0.0.1-beta documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,7 +143,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
   <span class="sidebar-brand-text">File Bash v0.0.1-beta documentation</span>
@@ -154,8 +154,8 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+  <ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage</a></li>
 </ul>
 
 </div>
@@ -188,28 +188,54 @@
           </label>
         </div>
         <article role="main">
-          <section id="welcome-to-file-bash-s-documentation">
-<h1>Welcome to File Bash’s documentation!<a class="headerlink" href="#welcome-to-file-bash-s-documentation" title="Permalink to this headline">#</a></h1>
-<p><strong>File Bash</strong> is a simple command line interface application developed and maintained in <em>The Python Programming Language</em>. Inspired by the <em>Linux Terminal</em> and the <em>Windows Powershell</em>, File Bash tries to frame the basic commands coded completely in python <em>independently</em>.</p>
-<p>Source Code: &lt;<a class="reference external" href="https://github.com/Sannidhya127/FIle-Bash">https://github.com/Sannidhya127/FIle-Bash</a>&gt;</p>
-<p>Check out the <a class="reference internal" href="usage.html"><span class="doc">Usage</span></a> section for further information, including how to
-<span class="xref std std-ref">install</span> the project.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This project is under active development.</p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#commands">Commands</a></li>
+          <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
+<p>To use File Bash, use the File Bash Installer Wizard</p>
+</section>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h2>
+<ol class="upperroman simple">
+<li><p>To print a list of all items in the current directory, use the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command:</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ls" title="Permalink to this definition">#</a></dt>
+<dd><p>Return a list of all items in current directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>--docs</strong> – lists all items in directory with extensions .docs, .txt, .doc, .docxs, .rtf</p></li>
+<li><p><strong>--dir/dirs</strong> – lists all directories</p></li>
+<li><p><strong>--imgs</strong> – lists all items in directory with extensions .jpg, .png, .jpeg</p></li>
+<li><p><strong>--aud</strong> – lists all items in directory with extensions .wav, .flv, .mp3, .aiff, .mkv</p></li>
+<li><p><strong>--med</strong> – lists all items in directory with extensions .mp4, .webm, .gif, .wmv, .wav</p></li>
+<li><p><strong>--progs</strong> – lists all items in directory with extensions .py, .c, .c++, .cpp, .exe, .rb, .r, .php, .js, .html, .java, .css</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+<p>The <code class="docutils literal notranslate"><span class="pre">ls</span></code> command parameters can only track files with specifiend extensions. Other extensions will be <em>ignored</em> even if they fall in the requested category</p>
+<ol class="arabic" start="2">
+<li><p>To delete a file/folder, use the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">a</span> <span class="pre">file</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Users\Desktop\MyTestDir:</span> <span class="pre">rm</span> <span class="pre">HelloWorld.txt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">a</span> <span class="pre">folder</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Users\Desktop\MyTestDir:</span> <span class="pre">rm</span> <span class="pre">MyLovelyFolder</span></code></p>
+</div></blockquote>
 </li>
-</ul>
+</ol>
+<dl class="py exception">
+<dt class="sig sig-object py" id="Del.ItemNotFoundError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Del.</span></span><span class="sig-name descname"><span class="pre">ItemNotFoundError</span></span><a class="headerlink" href="#Del.ItemNotFoundError" title="Permalink to this definition">#</a></dt>
+<dd><p>Raised if given item does not exist</p>
+</dd></dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lumache</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lumache</span><span class="o">.</span><span class="n">get_random_ingredients</span><span class="p">()</span>
+<span class="go">['shells', 'gorgonzola', 'parsley']</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -219,16 +245,18 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="usage.html">
+          
+          <a class="prev-page" href="index.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
-                  <span>Next</span>
+                  <span>Previous</span>
                 </div>
-                <div class="title">Usage</div>
+                
+                <div class="title">Home</div>
+                
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -261,8 +289,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to File Bash’s documentation!</a><ul>
-<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#commands">Commands</a></li>
 </ul>
 </li>
 </ul>

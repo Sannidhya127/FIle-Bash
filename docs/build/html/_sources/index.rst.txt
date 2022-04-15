@@ -7,6 +7,9 @@ Welcome to File Bash's documentation!
 
 Source Code: <https://github.com/Sannidhya127/FIle-Bash>
 
+Check out the :doc:`usage` section for further information, including how to
+:ref:`install <installation>` the project.
+
 .. note::
 
    This project is under active development.
@@ -16,9 +19,17 @@ Source Code: <https://github.com/Sannidhya127/FIle-Bash>
 
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+
+Contents
+--------
+
+.. toctree::
+
+   usage
