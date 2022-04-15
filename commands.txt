@@ -1,4 +1,4 @@
-File Bash Commands patch-file-bash-alphaV0.0.1 
+File Bash Commands v0.1.0beta
 
 ls : lists all items in current directory
 
