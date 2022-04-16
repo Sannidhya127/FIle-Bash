@@ -1,8 +1,3 @@
-
-.. .. code-block:: console
-
-..    (.venv) $ pip install lumache
-
 Commands
 ========
 
@@ -136,8 +131,45 @@ The ``cd`` command has multiple purposes depending on its usage.
 
 If user only inputs the command ``cd`` with no extra parameters, the command returns the Current Directory.
 
+>>> C:\Users\Desktop\MyTestDir: cd
+    >>> C:\Users\Desktop\MyTestDir
+
+
 If user enters command ``cd`` and then a valid path on the local disk, the bash's *current working directory* is changed to the given path. Here ``cd`` stands for *Change Directory*
+
+>>> C:\Users\Desktop\MyTestDir: cd \
+    C:\: 
 
 .. py:exception:: InvalidPathError
 
     Raises fatal error on passing invalid *arg[1][path]*
+
+.. _sysinfo:
+
+7. sys --info [System Information Printer]
+------------------------------------------
+
+...
+
+The command ``sys --info`` is used for printing a very precise and detailed output of your system. 
+By definition, the ``sys --info`` command prints a set of information in presentable format about System, Disk, Network and GPU
+
+The syntax is such:
+
+>>> C:\Users\Desktop\MyTestDir: sys --info
+
+From the following command, we recieve an output of such, varying from system to system:
+
+The first part
+
+.. image:: https://i.imgur.com/NUCeVmO.png
+
+The second part
+
+.. image:: https://i.imgur.com/eXcNk3X.png
+
+The third part
+
+.. image:: https://i.imgur.com/R8opY7P.png
+
+The output couldn't be fit in a single screenshot

@@ -1,5 +1,8 @@
 .. File Bash documentation master file, created by
    sphinx-quickstart on Fri Apr 15 12:06:14 2022.
+
+...
+
 File Bash Documentation
 =======================
 **File Bash** is a simple command line interface application developed and maintained in *The Python Programming Language*. Inspired by the *Linux Terminal* and the *Windows Powershell*, File Bash tries to frame the basic commands of a shell coded completely in python.
@@ -36,10 +39,4 @@ Table Of Contents
 .. toctree::
    quickstart
    commands
-
-
-Changelog
----------
-
-.. toctree::
-   Changelist
+   updates

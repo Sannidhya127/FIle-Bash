@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="File Bash Change Logs" href="Changelist.html" /><link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Changelog" href="updates.html" /><link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
         <title>Commands - File Bash v0.1.1 documentation</title>
@@ -157,7 +157,7 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide to the use of a Bash</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelist.html">File Bash Change Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html">Changelog</a></li>
 </ul>
 
 </div>
@@ -293,12 +293,38 @@ To create a folder in another directory, specify full path</p>
 <p>…</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">cd</span></code> command has multiple purposes depending on its usage.</p>
 <p>If user only inputs the command <code class="docutils literal notranslate"><span class="pre">cd</span></code> with no extra parameters, the command returns the Current Directory.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">cd</span>
+<span class="go">    &gt;&gt;&gt; C:\Users\Desktop\MyTestDir</span>
+</pre></div>
+</div>
 <p>If user enters command <code class="docutils literal notranslate"><span class="pre">cd</span></code> and then a valid path on the local disk, the bash’s <em>current working directory</em> is changed to the given path. Here <code class="docutils literal notranslate"><span class="pre">cd</span></code> stands for <em>Change Directory</em></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">cd</span> \
+<span class="go">    C:\:</span>
+</pre></div>
+</div>
 <dl class="py exception">
 <dt class="sig sig-object py" id="InvalidPathError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidPathError</span></span><a class="headerlink" href="#InvalidPathError" title="Permalink to this definition">#</a></dt>
 <dd><p>Raises fatal error on passing invalid <em>arg[1][path]</em></p>
 </dd></dl>
+</section>
+<section id="sys-info-system-information-printer">
+<span id="sysinfo"></span><h2>7. sys –info [System Information Printer]<a class="headerlink" href="#sys-info-system-information-printer" title="Permalink to this headline">#</a></h2>
+<p>…</p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">--info</span></code> is used for printing a very precise and detailed output of your system.
+By definition, the <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">--info</span></code> command prints a set of information in presentable format about System, Disk, Network and GPU</p>
+<p>The syntax is such:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">sys</span> <span class="o">--</span><span class="n">info</span>
+</pre></div>
+</div>
+<p>From the following command, we recieve an output of such, varying from system to system:</p>
+<p>The first part</p>
+<img alt="https://i.imgur.com/NUCeVmO.png" src="https://i.imgur.com/NUCeVmO.png"/>
+<p>The second part</p>
+<img alt="https://i.imgur.com/eXcNk3X.png" src="https://i.imgur.com/eXcNk3X.png"/>
+<p>The third part</p>
+<img alt="https://i.imgur.com/R8opY7P.png" src="https://i.imgur.com/R8opY7P.png"/>
+<p>The output couldn’t be fit in a single screenshot</p>
 </section>
 </section>
 
@@ -307,12 +333,12 @@ To create a folder in another directory, specify full path</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="Changelist.html">
+          <a class="next-page" href="updates.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">File Bash Change Logs</div>
+                <div class="title">Changelog</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -366,6 +392,7 @@ To create a folder in another directory, specify full path</p>
 <li><a class="reference internal" href="#crf-create-file">4. crf [Create File]</a></li>
 <li><a class="reference internal" href="#crd-create-directory">5. crd [Create Directory]</a></li>
 <li><a class="reference internal" href="#cd-current-directory-change-directory">6. cd [Current Directory/Change Directory]</a></li>
+<li><a class="reference internal" href="#sys-info-system-information-printer">7. sys –info [System Information Printer]</a></li>
 </ul>
 </li>
 </ul>

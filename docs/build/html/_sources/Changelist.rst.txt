@@ -1,12 +1,8 @@
-File Bash Change Logs
-=====================
-
-
-
 v0.0.1-beta [16/04/2022 3:08 pm]
 --------------------------------
 
-Build the first setup of this Documentation. The versioning will follow the semantic versioning of https://semver.org/.
+- First setup of this Documentation. 
+- The versioning will follow the semantic versioning of https://semver.org/.
 
 v0.0.2-beta [16/04/2022 1:09 pm]
 --------------------------------
