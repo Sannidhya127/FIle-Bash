@@ -4,6 +4,7 @@ import os
 import sys
 import shutil
 import time as t
+import webbrowser
 import pathlib
 import time
 from colored import fg, bg, attr
@@ -1040,6 +1041,8 @@ if __name__ == '__main__':
         #     HackerUi()
         elif comd == "curt user":
             print(getpass.getuser())
+        elif comd == "documentation":
+            webbrowser.open(f"file:///{os.getcwd()}/docs/build/html/index.html")
         elif comd[0:3] == "pip":
             subprocess.run(comd)
         elif comd == "help" or comd == "Help" or comd == "bash --help" or comd == "help me":

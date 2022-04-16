@@ -51,3 +51,8 @@ v0.1.3 [16/04/2022 18:18 pm]
     - LISCENSE
 
 - The pages only have their headings for now and the :doc:`functions` page has a small note item regarding its content. 
+
+v0.1.4 [16/04/2022 18:47]
+-------------------------
+
+- Added a command named ``documentation`` which when entered opens the documentation in the default web browser
