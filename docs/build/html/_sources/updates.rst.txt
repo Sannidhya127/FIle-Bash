@@ -36,7 +36,18 @@ v0.1.1 [16/04/2022 12:15 am]
 v0.1.2 [16/04/2022 17:17 pm]
 ----------------------------
 
-- Changed changeloge.rst to update.rst and removed Changelog sub heading. It is now displayed as a link just like commands and quickstart pages.
+- Changed changelog.rst to update.rst and removed Changelog sub heading. It is now displayed as a link just like commands and quickstart pages.
 
 - Added ``sys --info`` command to commands page. Details regarding GPU information missing and screenshots provided.
 
+v0.1.3 [16/04/2022 18:18 pm]
+----------------------------
+
+- Added several pages according to a pre-designed blueprint to the documentation. The pages are:
+    - Some important functions used to code commands
+    - API Reference
+    - About 
+    - Contribute
+    - LISCENSE
+
+- The pages only have their headings for now and the :doc:`functions` page has a small note item regarding its content. 

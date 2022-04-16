@@ -11,7 +11,7 @@ On launching the File Bash Terminal you will observe an interface similar to thi
 .. image:: https://i.imgur.com/sog6b7Q.png
 
 
-In the above image we see a path given with a colon at the end. This is a basic command promt interface, interface may slightly vary depending on the application being used. Towards the other side of the colon is the point where the user enters his/her desired command to the terminal and recieves the desired result unless a wrong command is passed. The path that we see is the current working directory, i.e, the folder in which the terminal is currently open.
+In the above image we see a path given with a colon at the end. This is a basic command prompt interface, interface may slightly vary depending on the application being used. Towards the other side of the colon is the point where the user enters his/her desired command to the terminal and recieves the desired result unless a wrong command is passed. The path that we see is the current working directory, i.e, the folder in which the terminal is currently open.
 
 
 
@@ -32,6 +32,6 @@ Result
 
 Visit :doc:`commands` for further details.
 
-We believe you have gained a standard command promt knowledge from the following introductory tutorial. For more details, refer to the documentation.
+We believe you have gained a standard command prompt knowledge from the following introductory tutorial. For more details, refer to the documentation.
 
 
