@@ -21,8 +21,8 @@ Installation
 .. important::
    The File Bash Installation Wizard is under development and is expected in an ETA of 3-4 months (might change). We appreciate your patience and cooperation.
 
-Support
--------
+Support Me
+----------
 
 If you found File Bash an interesting project, it would be worth a million blessings for me if you oblige to follow me on GitHub at github.com/Sannidhya127 and if possible, propose an idea in the form of pull request in the repository. Refer to :doc:`contribute` for details on pull requests.
 
