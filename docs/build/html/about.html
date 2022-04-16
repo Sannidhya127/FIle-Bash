@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="author" title="About these documents" href="#" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Contribute" href="contribute.html" /><link rel="prev" title="API Reference" href="api.html" />
+<link rel="author" title="About these documents" href="#" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Contribute" href="contribute.html" /><link rel="prev" title="Contributor Covenant Code of Conduct" href="conduct.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
         <title>About - File Bash v0.1.1 documentation</title>
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -157,11 +157,12 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide to the use of a Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">Important Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Some important functions used to code commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conduct.html">Contributor Covenant Code of Conduct</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liscense.html">liscense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liscense.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html">Changelog</a></li>
 </ul>
 
@@ -189,7 +190,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -197,6 +198,423 @@
         <article role="main">
           <section id="about">
 <h1>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h1>
+<p>File Bash is a python-based command prompt project made out of pure fun and an independent idea. The project has taken inspiration from the Windows Powershell and Linux Terminal. The python code and logic used in its making is to be credited to the Author.</p>
+<section id="how-the-project-began">
+<h2>How the project began<a class="headerlink" href="#how-the-project-began" title="Permalink to this headline">#</a></h2>
+<p>The project of File Bash had begun as a killer boredom during the mid october of 2020. The initial idea was to have a command prompt like interface with some basic commands. The commands unlike now were not one-liners but required greater effort from user. Since then File Bash and my coding skills have both experienced dramatic changes</p>
+</section>
+<section id="missing-commits">
+<h2>Missing Commits<a class="headerlink" href="#missing-commits" title="Permalink to this headline">#</a></h2>
+<p>On locating the first ever commit of the File Bash repository, it is seen that the project was already a lot developed by that time.
+According to the first commit available in the repository, the code was this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">time</span> <span class="k">as</span> <span class="nn">t</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">from</span> <span class="nn">colored</span> <span class="kn">import</span> <span class="n">fg</span><span class="p">,</span> <span class="n">bg</span><span class="p">,</span> <span class="n">attr</span>
+<span class="kn">import</span> <span class="nn">pyttsx3</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">watchdog.observers</span> <span class="kn">import</span> <span class="n">Observer</span>
+<span class="kn">import</span> <span class="nn">watchdog.events</span>
+<span class="kn">from</span> <span class="nn">watchdog.events</span> <span class="kn">import</span> <span class="n">PatternMatchingEventHandler</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">difflib</span>
+<span class="kn">from</span> <span class="nn">difflib</span> <span class="kn">import</span> <span class="n">SequenceMatcher</span><span class="p">,</span> <span class="n">get_close_matches</span><span class="p">,</span> <span class="n">Differ</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">win32con</span>
+<span class="kn">import</span> <span class="nn">win32api</span>
+<span class="kn">import</span> <span class="nn">winreg</span> <span class="k">as</span> <span class="nn">reg</span>
+<span class="kn">from</span> <span class="nn">playsound</span> <span class="kn">import</span> <span class="n">playsound</span>
+<span class="kn">import</span> <span class="nn">pyautogui</span>
+<span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">messagebox</span>
+<span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">simpledialog</span>
+<span class="kn">import</span> <span class="nn">PyQt5</span>
+<span class="kn">import</span> <span class="nn">plyer</span>
+<span class="kn">from</span> <span class="nn">plyer</span> <span class="kn">import</span> <span class="n">notification</span>
+<span class="kn">import</span> <span class="nn">win32ui</span>
+<span class="kn">import</span> <span class="nn">win32con</span>
+<span class="c1"># subprocess.run(</span>
+<span class="c1">#     "runas /user:KAUSTAV\Desktop\File Bash\dist\main\main.exe")</span>
+
+
+<span class="k">def</span> <span class="nf">AllFiles</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    lists all files in the directory</span>
+<span class="sd">    '''</span>
+    <span class="n">listOfAll</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">listOfAll</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="c1"># ! response = win32ui.MessageBox("Binary Files Detected", "Uncode Error", win32con.MB_ICONERROR)</span>
+
+
+<span class="k">def</span> <span class="nf">printDocs</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    Prints only documents from the directory</span>
+<span class="sd">    '''</span>
+    <span class="n">listOfAll</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">listOfAll</span><span class="p">:</span>
+        <span class="n">docs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".docs"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".txt"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".docxs"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">docs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">printImg</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    Prints only images from the directory</span>
+<span class="sd">    '''</span>
+    <span class="n">listOfAll</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">listOfAll</span><span class="p">:</span>
+        <span class="n">docs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".jpg"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".png"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".jpeg"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">docs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">printAud</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    Prints only audio files from the directory</span>
+<span class="sd">    '''</span>
+    <span class="n">listOfAll</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">listOfAll</span><span class="p">:</span>
+        <span class="n">docs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".wav"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".flv"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".mp3"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".aiff"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">docs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">printMed</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    Prints only video files from the directory</span>
+<span class="sd">    '''</span>
+    <span class="n">listOfAll</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">listOfAll</span><span class="p">:</span>
+        <span class="n">docs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".mp4"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".webm"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".gif"</span> <span class="ow">and</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".wmv"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">docs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">printProgs</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    Prints only program files from the directory</span>
+<span class="sd">    '''</span>
+    <span class="n">listOfAll</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">listOfAll</span><span class="p">:</span>
+        <span class="n">docs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".py"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".c"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".c++"</span> <span class="ow">and</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".cpp"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".exe"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".rb"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".r"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".php"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".js"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".html"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".java"</span> <span class="ow">or</span> <span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">".css"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">docs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">docs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">DelFile</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Deltes a file with the help of the commnad `delf`</span>
+<span class="sd">    '''</span>
+    <span class="n">command</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="n">existion</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">command</span><span class="p">[</span><span class="mi">5</span><span class="p">::])</span>
+    <span class="k">if</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">""</span> <span class="ow">or</span> <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">" "</span> <span class="ow">or</span> <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"  "</span> <span class="ow">or</span> <span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"   "</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">)</span><span class="si">}</span><span class="s2">fatal: could not find any file with the mentioned name </span><span class="si">{</span><span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">command</span><span class="p">[</span><span class="mi">5</span><span class="p">::])</span>
+    <span class="k">elif</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">command</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">""</span> <span class="ow">or</span> <span class="n">command</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">" "</span> <span class="ow">or</span> <span class="n">command</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">"  "</span> <span class="ow">or</span> <span class="n">command</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">"   "</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">)</span><span class="si">}</span><span class="s2">fatal: could not find any file with the mentioned name </span><span class="si">{</span><span class="n">command</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">)</span><span class="si">}{</span><span class="n">command</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span><span class="si">}</span><span class="s2"> does not exist</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="c1"># print(f"{command[1]}")</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"File Bash is facing issues while reading your disk.</span><span class="se">\n</span><span class="s2">Email us at filebash33@gmail.com for feedback"</span><span class="p">)</span>
+        <span class="c1"># notification.notify(title="Succesfully Completed ls command",</span>
+        <span class="c1">#                     message="The ls command was successfull",</span>
+        <span class="c1">#                     timeout=5</span>
+        <span class="c1">#                     )</span>
+
+
+<span class="k">def</span> <span class="nf">DelDir</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Uses the command `deld` to delete a directory and its inner branches and leaves</span>
+<span class="sd">    '''</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">input</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+        <span class="n">existion</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="mi">5</span><span class="p">::])</span>
+        <span class="k">if</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="mi">5</span><span class="p">::])</span>
+        <span class="k">elif</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">input</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">""</span> <span class="ow">or</span> <span class="nb">input</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">" "</span> <span class="ow">or</span> <span class="nb">input</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">"  "</span> <span class="ow">or</span> <span class="nb">input</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span> <span class="o">==</span> <span class="s2">"   "</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red'</span><span class="p">)</span><span class="si">}</span><span class="s2">fatal: couldn't find any directory in command</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">)</span><span class="si">}</span><span class="s2">fatal : </span><span class="si">{</span><span class="nb">input</span><span class="p">[</span><span class="mi">5</span><span class="p">::]</span><span class="si">}</span><span class="s2"> does not exist</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"File Bash is facing issues while reading your disk.</span><span class="se">\n</span><span class="s2">Email us at filebash33@gmail.com for feedback"</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">win32ui</span><span class="o">.</span><span class="n">MessageBox</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"Function has crashed (reason might be because you have entered a name of a file instead of a directory)"</span><span class="p">,</span> <span class="s2">"File error"</span><span class="p">,</span> <span class="n">win32con</span><span class="o">.</span><span class="n">MB_ICONERROR</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red'</span><span class="p">)</span><span class="si">}</span><span class="s2">fatal: Function has crashed (reason might be because you have entered a name of a file instead of a directory)</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">CreateFile</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    uses command `crf` to create a new file. This function earlier had a hard coding of ls --crfile which when entered would ask the users for the file name and then create a file with the name and extension</span>
+<span class="sd">    '''</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">comd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"."</span><span class="p">)</span>
+        <span class="n">existion</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="mi">4</span><span class="p">::])</span>
+        <span class="k">if</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="nb">open</span><span class="p">((</span><span class="nb">input</span><span class="p">[</span><span class="mi">4</span><span class="p">::]),</span> <span class="s2">"a"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'sandy_brown'</span><span class="p">)</span><span class="si">}</span><span class="s2">fatal: </span><span class="si">{</span><span class="nb">input</span><span class="p">[</span><span class="mi">4</span><span class="p">::]</span><span class="si">}</span><span class="s2"> already exists</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"File Bash is facing issues while reading your disk.</span><span class="se">\n</span><span class="s2">Email us at filebash33@gmail.com for feedback"</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">)</span><span class="si">}</span><span class="s2">fatal: no name mentioned</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">FileRename</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    renames a file or a folder</span>
+<span class="sd">    '''</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="n">existion</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">file</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s2">"red_1"</span><span class="p">)</span><span class="si">}</span><span class="s1">fatal==="</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s2">"reset"</span><span class="p">)</span><span class="si">}{</span><span class="n">fg</span><span class="p">(</span><span class="s2">"red"</span><span class="p">)</span><span class="si">}{</span><span class="n">file</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">": No Such file or directory</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s2">"reset"</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">creatTh</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Do you want to create it?[y/n]: "</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">creatTh</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
+                <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"a"</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">creatTh</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"n"</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Ok"</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"File Bash expects y or n as yes or no respectively. </span><span class="si">{</span><span class="n">creatTh</span><span class="si">}</span><span class="s2"> is not a command"</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"File Bash is facing issues while reading your disk.</span><span class="se">\n</span><span class="s2">Email us at filebash33@gmail.com for feedback"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">CreateDir</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    creates a directory. To create a directory tree type `crd dir1/dir2/........`</span>
+<span class="sd">    '''</span>
+    <span class="n">breaker</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">existion</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">breaker</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">breaker</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">existion</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red'</span><span class="p">)</span><span class="si">}{</span><span class="n">breaker</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> already exists</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"File Bash is facing issues while reading your disk.</span><span class="se">\n</span><span class="s2">Email us at filebash33@gmail.com for feedback"</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">)</span><span class="si">}</span><span class="s2">Empty Index Error: Please enter a directory name.</span><span class="se">\n</span><span class="s2">Eg: crd testFolder</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">cwdPrint</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    Prints the current working directory</span>
+<span class="sd">    '''</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+    <span class="k">return</span> <span class="s2">""</span>
+
+
+<span class="k">def</span> <span class="nf">cwdChange</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Changes the current working directory</span>
+<span class="sd">    '''</span>
+    <span class="n">mainPathForCd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter path: "</span><span class="p">)</span>
+    <span class="n">pathExist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">mainPathForCd</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pathExist</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">mainPathForCd</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pathExist</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'"</span><span class="si">{</span><span class="n">mainPathForCd</span><span class="si">}</span><span class="s1">": No such file or directory'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"File Handler Crashed!"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">checker</span><span class="p">():</span>
+
+    <span class="n">path</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span>
+        <span class="s2">"Enter the fiel or directory name, if in another folder enter full path or change cwd: "</span><span class="p">)</span>
+    <span class="n">boolTF</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">boolTF</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> exists"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">boolTF</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> does not exist"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">diffChecker</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="n">FileNames</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">FileNames</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"r"</span><span class="p">)</span>
+    <span class="n">file2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">FileNames</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">"r"</span><span class="p">)</span>
+    <span class="n">txt1</span> <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="n">txt2</span> <span class="o">=</span> <span class="n">file2</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="n">dif</span> <span class="o">=</span> <span class="n">Differ</span><span class="p">()</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dif</span><span class="o">.</span><span class="n">compare</span><span class="p">(</span><span class="n">txt1</span><span class="p">,</span> <span class="n">txt2</span><span class="p">))</span>
+    <span class="c1"># newLine = "\n"</span>
+
+    <span class="c1"># pprint(df)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"+"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'green'</span><span class="p">)</span><span class="si">}{</span><span class="n">i</span><span class="si">}{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"-"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">)</span><span class="si">}{</span><span class="n">i</span><span class="si">}{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bean</span><span class="p">():</span>
+    <span class="sd">'''</span>
+<span class="sd">    This function will have the code for maming a small programming langauge which have the following functions:</span>
+<span class="sd">    `variables,</span>
+<span class="sd">    Data Types,</span>
+<span class="sd">    Comments,</span>
+<span class="sd">    loops, if-else statements, print, run`</span>
+<span class="sd">    '''</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">add</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">status</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">About</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">"about bash"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'yellow_1'</span><span class="p">)</span><span class="si">}</span><span class="s2">Welcome to File Bash!</span><span class="se">\n</span><span class="s2">File Bash is an interactive bash or terminal which not only helps you manage your files but helps you process tasks like powershell and Git commands.</span><span class="se">\n</span><span class="s2">File Bash was created by Sannidhya. This project started on the Tue Nov 17 2020.</span><span class="se">\n</span><span class="s2">Since then it has been going through a lot of updates and bug fixes. You can get the source code of this bash in Github/Sannidhya127!</span><span class="se">\n</span><span class="s2">Some Code Details of File Bash are listed below</span><span class="se">\n\t</span><span class="s2">Version ------------- NIL (Not Yet in Production)</span><span class="se">\n\t</span><span class="s2">Written In ------------- Python Programming Language</span><span class="se">\n\t</span><span class="s2">Created By ------------- Sannidhya Dasgupta</span><span class="se">\n\t</span><span class="s2">Project Started On ------------- Tue Nov 17 2020</span><span class="se">\n\t</span><span class="s2">Extra Assets ------------- BashApi (A smart terminal to interact and help File Bash grow)</span><span class="se">\n\n</span><span class="s2">Thank You for using File Bash! Visit our GitHub repo and contribute or download BashApi from our website now!</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Get path of current working directory and python.exe</span>
+        <span class="n">cwd</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"C:\Users\KAUSTAV\Desktop\File Bash\dist\main.exe"</span>
+        <span class="n">python_exe</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span>
+
+        <span class="c1"># optional hide python terminal in windows</span>
+        <span class="n">hidden_terminal</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\\</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">python_exe</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'</span><span class="se">\\</span><span class="s1">'</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="s2">"</span><span class="se">\\</span><span class="s2">pythonw.exe"</span>
+
+        <span class="c1"># Set the path of the context menu (right-click menu)</span>
+        <span class="c1"># Change 'Organiser' to the name of your project</span>
+        <span class="n">key_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'Directory</span><span class="se">\\</span><span class="s1">Background</span><span class="se">\\</span><span class="s1">shell</span><span class="se">\\</span><span class="s1">File Bash</span><span class="se">\\</span><span class="s1">'</span>
+
+        <span class="c1"># Create outer key</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">CreateKey</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">,</span> <span class="n">key_path</span><span class="p">)</span>
+        <span class="c1"># Change 'Organise folder' to the function of your script</span>
+        <span class="n">reg</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">reg</span><span class="o">.</span><span class="n">REG_SZ</span><span class="p">,</span> <span class="s1">'&amp;File Bash here'</span><span class="p">)</span>
+
+        <span class="c1"># create inner key</span>
+        <span class="n">key1</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">CreateKey</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"command"</span><span class="p">)</span>
+        <span class="c1"># change 'file_organiser.py' to the name of your script</span>
+        <span class="n">reg</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">reg</span><span class="o">.</span><span class="n">REG_SZ</span><span class="p">,</span> <span class="s2">""</span> <span class="o">+</span>
+                    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">cwd</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="c1"># reg.SetValue(key1, '', reg.REG_SZ, hidden_terminal + f' "{cwd}\\file_organiser.py"')  # use to to hide terminal</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">keyPathEx</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span>
+            <span class="s2">"Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\File Bash"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">keyPathEx</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">win32ui</span><span class="o">.</span><span class="n">MessageBox</span><span class="p">(</span>
+                <span class="s2">"WinError 5. Access error. Could not access registry editor. Try running File Bash as asministrator"</span><span class="p">,</span> <span class="s2">"WinError[5] Access Error"</span><span class="p">,</span> <span class="n">win32con</span><span class="o">.</span><span class="n">MB_ICONERROR</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="n">added</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">commands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ls"</span><span class="p">,</span> <span class="s2">"ls --docs"</span><span class="p">,</span> <span class="s2">"ls --imgs"</span><span class="p">,</span> <span class="s2">"ls --aud"</span><span class="p">,</span> <span class="s2">"ls --med"</span><span class="p">,</span> <span class="s2">"ls --progs"</span><span class="p">,</span> <span class="s2">"delf filename"</span><span class="p">,</span> <span class="s2">"deld foldername"</span><span class="p">,</span> <span class="s2">"mv name1  name2'"</span><span class="p">,</span> <span class="s2">"crf 'filename'"</span><span class="p">,</span> <span class="s2">"crd 'foldername'"</span><span class="p">,</span> <span class="s2">"cd"</span><span class="p">,</span>
+                <span class="s2">"cd --to"</span><span class="p">,</span> <span class="s2">"ls --check"</span><span class="p">,</span> <span class="s2">"git status"</span><span class="p">,</span> <span class="s2">"git init"</span><span class="p">,</span> <span class="s2">"git add --a"</span><span class="p">,</span> <span class="s2">"git commit -m"</span><span class="p">,</span> <span class="s2">"git log"</span><span class="p">,</span> <span class="s2">"git log --oneline"</span><span class="p">,</span> <span class="s2">"git push origin branch name"</span><span class="p">,</span> <span class="s2">"comp 'filename1' 'filename2'"</span><span class="p">,</span> <span class="s2">"bash --q"</span><span class="p">]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">fg</span><span class="p">(</span><span class="s1">'green_1'</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
+        <span class="n">comd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">": "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"bash --help"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ls (list all files and directories)</span><span class="se">\n\n</span><span class="s2">ls --docs (list all test files)</span><span class="se">\n\n</span><span class="s2">ls --imgs (list all image files)</span><span class="se">\n\n</span><span class="s2">ls --aud (list all audio files)</span><span class="se">\n\n</span><span class="s2">ls --med(list all video files)</span><span class="se">\n\n</span><span class="s2">ls --progs (lists all program files)</span><span class="se">\n\n</span><span class="s2">delf filename (deletes a file)</span><span class="se">\n\n</span><span class="s2">deld foldername (deletes a folder)</span><span class="se">\n\n</span><span class="s2">mv fileOrFolderName (renames a file or folder)</span><span class="se">\n\n</span><span class="s2">crf filename (creates a new file or directory)</span><span class="se">\n\n</span><span class="s2">crd foldername (this creates a directory)</span><span class="se">\n\n</span><span class="s2">cd (prints the current working directory)</span><span class="se">\n\n</span><span class="s2">cd --to (changes the current working directory)</span><span class="se">\n\n</span><span class="s2">ls --check (checks a given path for existence)</span><span class="se">\n\n</span><span class="s2">comp file1 file2 (compares the text of file2 with file1 and reports the differences)</span><span class="se">\n\n</span><span class="s2">bash --q (quits file bash)</span><span class="se">\n\n</span><span class="s2">For More Queries Emil us at filebash45@gmail.com"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"ls"</span><span class="p">:</span>
+            <span class="n">AllFiles</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"ls --docs"</span><span class="p">:</span>
+            <span class="n">printDocs</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"ls --imgs"</span><span class="p">:</span>
+            <span class="n">printImg</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"ls --aud"</span><span class="p">:</span>
+            <span class="n">printAud</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"ls --med"</span><span class="p">:</span>
+            <span class="n">printMed</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"ls --progs"</span><span class="p">:</span>
+            <span class="n">printProgs</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="s2">"delf"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">DelFile</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"deld"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">DelDir</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"mv"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">FileRename</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"crf"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">CreateFile</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"crd"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">CreateDir</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"about bash"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">About</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"cd"</span><span class="p">:</span>
+            <span class="n">cwdPrint</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"cd --to"</span><span class="p">:</span>
+            <span class="n">cwdChange</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"ls --check"</span><span class="p">:</span>
+            <span class="n">checker</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"git status"</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"git status"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"git init"</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"git init"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"git add --a"</span> <span class="ow">or</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"git add ."</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"git add --a"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"git commit -m"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"git log"</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"git log"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"git log --oneline"</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"git log --oneline"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"git push origin"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">"comp"</span> <span class="ow">in</span> <span class="n">comd</span><span class="p">:</span>
+            <span class="n">diffChecker</span><span class="p">(</span><span class="n">comd</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"bean bash"</span><span class="p">:</span>
+            <span class="n">bean</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"bash stat"</span><span class="p">:</span>
+            <span class="n">status</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"bash --a"</span><span class="p">:</span>
+            <span class="n">add</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"bash --q"</span> <span class="ow">or</span> <span class="n">comd</span> <span class="o">==</span> <span class="s2">"exit"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Exit Bash"</span><span class="p">)</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.50</span><span class="p">)</span>
+            <span class="n">exit</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">items</span> <span class="o">=</span> <span class="n">get_close_matches</span><span class="p">(</span><span class="n">comd</span><span class="p">,</span> <span class="n">commands</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red_1'</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"Invalid command"</span><span class="p">,</span> <span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fg</span><span class="p">(</span><span class="s1">'red'</span><span class="p">)</span><span class="si">}{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'blink'</span><span class="p">)</span><span class="si">}</span><span class="s2">Did you mean:</span><span class="se">\n\t</span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="se">\n</span><span class="s2">Use bash --help for commands list</span><span class="si">{</span><span class="n">attr</span><span class="p">(</span><span class="s1">'reset'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+                <span class="k">continue</span>
+</pre></div>
+</div>
+<p>This is the exact code of that commit of main.py. View the other commits and explore how File Bash developed overtime with greater ease.</p>
+</section>
+<section id="one-liners">
+<h2>One-liners<a class="headerlink" href="#one-liners" title="Permalink to this headline">#</a></h2>
+<p>One of the biggest developments in File Bash was the introduction of one line commands. The first one-liner command made was <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&lt;path&gt;</span></code>.</p>
+<p>Earlier to change path, the user had to write <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">--change</span></code>. This would display an input field where the path would be supplied and the process would continue. With the development of one-liner commands, this is of much greater ease to users. Now, all File Bash Commands are one-liners.</p>
+</section>
 </section>
 
         </article>
@@ -213,14 +631,14 @@
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="api.html">
+          <a class="prev-page" href="conduct.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">API Reference</div>
+                <div class="title">Contributor Covenant Code of Conduct</div>
                 
               </div>
             </a>
@@ -244,8 +662,29 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">About</a><ul>
+<li><a class="reference internal" href="#how-the-project-began">How the project began</a></li>
+<li><a class="reference internal" href="#missing-commits">Missing Commits</a></li>
+<li><a class="reference internal" href="#one-liners">One-liners</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
