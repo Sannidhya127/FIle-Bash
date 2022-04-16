@@ -57,7 +57,7 @@ v0.1.4 [16/04/2022 18:47 pm]
 
 - Added a command named ``documentation`` which when entered opens the documentation in the default web browser
 
-v0.1.5 [16/04/2022 20:15 pm]
+v0.2.0 [16/04/2022 20:15 pm]
 ----------------------------
 
 - Added LICENSE.md file containing the MIT License in repository
