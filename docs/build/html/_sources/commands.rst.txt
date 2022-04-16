@@ -173,3 +173,18 @@ The third part
 .. image:: https://i.imgur.com/R8opY7P.png
 
 The output couldn't be fit in a single screenshot
+
+.. tip::
+    Note that in the above pics, the GPU details are missing. This is because of an unrecognisable intel hd integrated graphics card in the system. To fix this try the following steps:
+
+    - Open Settings
+
+    - Navigate to System > Display > Graphics
+
+    - Click on the browse button and select the file bash application
+
+    - Once added, click on options and select your GPU as the default File Bash GPU
+
+    This process is not guaranteed to fix the issue, but might fix it. Development is in progress
+
+
