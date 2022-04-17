@@ -1,1 +1,0 @@
-commands = ["ls", "ls --docs", "ls --imgs", "ls --aud" , "ls --med", "ls --progs", "delf","deld","crf","crd","sys --info", "mv", "rm", "cd", "sr", "bash --sys 0","process --uid", "hide", "uhd","read","write","rm -rf", "exit", "help"]

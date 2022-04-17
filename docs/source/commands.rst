@@ -6,10 +6,10 @@ A detailed list of commands and their functionalities for the ease of users.
 
 .. _ls:
 
-1. ls [List Directory items]
+1. ls (List Directory items)
 ----------------------------
 
-...
+
 
 To print a list of all items in the current directory, use the ``ls`` command:
 
@@ -35,10 +35,13 @@ The ``ls`` command parameters can only track files with specifiend extensions. O
 .. _rm:
 
 
-2. rm [Remove Item]
+2. rm (Remove Item)
 -------------------
 
-...
+
+
+.. py:function:: delete(arg=item)
+
 
 To delete a file/folder, use the ``rm`` command:
 
@@ -55,10 +58,10 @@ To delete a file/folder, use the ``rm`` command:
 
 .. _mv:
 
-3. mv [Rename Item]
+3. mv (Rename Item)
 -------------------
 
-...
+.. py:function:: FileRename(arg=item)
 
 The ``mv`` command is used for renaming a file or directory. The syntax of the command is
 
@@ -80,10 +83,10 @@ If seperated with whitespaces, the index[1] argument is the current name and the
 
 .. _crf:
 
-4. crf [Create File]
+4. crf (Create File)
 --------------------
 
-...
+.. py:function:: CreateFile(arg=file)
 
 The ``crf`` command is used for a creating a new *file* (note not a folder). The syntax of the command is
 
@@ -99,10 +102,10 @@ Here the file name with extension supplied after the command is created in the c
 
 .. _crd:
 
-5. crd [Create Directory]
+5. crd (Create Directory)
 -------------------------
 
-...
+.. py:function:: CreateDir(arg=directory)
 
 The ``crd`` command is used to create a new directory. The syntax usage is
 
@@ -122,10 +125,11 @@ This creates a new folder named *NewFolder* in the path ``C: -> Users -> Desktop
 
 .. _cd:
 
-6. cd [Current Directory/Change Directory]
+6. cd (Current Directory/Change Directory)
 ------------------------------------------
 
-...
+.. py:function:: cwdPrint(arg=None)
+.. py:function:: cwdChange(arg=path)
 
 The ``cd`` command has multiple purposes depending on its usage.
 
@@ -146,10 +150,10 @@ If user enters command ``cd`` and then a valid path on the local disk, the bash'
 
 .. _sysinfo:
 
-7. sys --info [System Information Printer]
+7. sys --info (System Information Printer)
 ------------------------------------------
 
-...
+.. py:function:: sys_info(arg=None)
 
 The command ``sys --info`` is used for printing a very precise and detailed output of your system. 
 By definition, the ``sys --info`` command prints a set of information in presentable format about System, Disk, Network and GPU
@@ -187,4 +191,67 @@ The output couldn't be fit in a single screenshot
 
     This process is not guaranteed to fix the issue, but might fix it. Development is in progress
 
+.. _sr:
 
+8. sr (Search Directory)
+------------------------
+
+.. py:function:: searchDir(arg=path)
+
+The ``sr`` command has its usage in searching for a required item in the current working directory.
+The syntax is
+
+>>> C:\Users\Desktop\MyTestDir: sr HelloWorld.rb
+
+Here the argument passed to the command is ``HelloWorld``, the sr command used the function ``searchDir(query)`` function where the query parameter holds reponsibilty of the item name. 
+
+For a directory having items with names:
+- main.py
+- mainFile.c
+- index.html
+- main.css
+- MainFolder
+- AnotherFolder
+
+If the user passes ``main`` as the ``query`` parameter, the output would include
+``main.py, mainFile.c, main.css, MainFolder``
+
+These names include the *query* ``main`` in them and are thus displayed
+
+When *query* recieves an operand with no existence in the currrent working directory, it raises a *No Result Found* error.
+
+.. _delf:
+
+9. delf (Deletes only files)
+----------------------------
+
+.. py:function:: DelFile(command)
+
+.. warning::
+    This command is an early File Bash command and is depreceted from use. For better performance, use the :ref:`rm <rm>`
+    command for better performance and efficiency.
+
+The ``delf`` command was initially developed as a command for deleting only files in File Bash. The command, unlike ``rm`` command has no file/folder tracing system. On entering a folder name it raise a fatal Folder error.
+
+.. py:exception:: FolderError
+
+    Raised when operand is a folder
+
+The command recieves the file name as argument with syntax 
+
+>>> C:\Users\Desktop\MyTestDir: delf HelloWorld.java
+
+This command deletes the file ``HelloWorld.java``.
+
+For a non-existen file,
+
+>>> C:\Users\Desktop\MyTestDir: delf SomeNonExistentFile.c++
+    'SomeNonExistentFile.c++' does not exist
+
+.. _deld:
+
+
+10. deld (Delete Directory)
+---------------------------
+
+.. py:function:: DelDir(arg=directory)

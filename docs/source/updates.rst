@@ -80,3 +80,13 @@ v.0.4.0 [17/04/2022 12:13]
 - Added ``code of conduct`` command that prints the Code Of Conduct document
 - fixed the closest match tracked for wrong command by adding all updated commands to its list
 - Removed some unused functions
+
+v0.5.1 [17/04/2022 20:21]
+-------------------------
+
+- Added ``sr`` command to :doc:`commands`
+- Added ``delf`` command to :doc:`commands`
+- Added ``deld`` command to :doc:`commands`
+- Added the function used for all commands
+- Removed API Reference page
+- Added a page for the upcoming File Bash Project Testing system, Rooter

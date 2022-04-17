@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Changelog" href="updates.html" /><link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" />
+<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Understanding some important functions used to code commands" href="functions.html" /><link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
         <title>Commands - File Bash v0.1.1 documentation</title>
@@ -157,6 +157,12 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide to the use of a Bash</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Understanding some important functions used to code commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="root.html">Rooter: An efficient application for testing File Bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conduct.html">Contributor Covenant Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liscense.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html">Changelog</a></li>
 </ul>
 
@@ -194,8 +200,7 @@
 <h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h1>
 <p>A detailed list of commands and their functionalities for the ease of users.</p>
 <section id="ls-list-directory-items">
-<span id="ls"></span><h2>1. ls [List Directory items]<a class="headerlink" href="#ls-list-directory-items" title="Permalink to this headline">#</a></h2>
-<p>…</p>
+<span id="ls"></span><h2>1. ls (List Directory items)<a class="headerlink" href="#ls-list-directory-items" title="Permalink to this headline">#</a></h2>
 <p>To print a list of all items in the current directory, use the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="id0">
@@ -217,8 +222,11 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">ls</span></code> command parameters can only track files with specifiend extensions. Other extensions will be <em>ignored</em> even if they fall in the requested category</p>
 </section>
 <section id="rm-remove-item">
-<span id="rm"></span><h2>2. rm [Remove Item]<a class="headerlink" href="#rm-remove-item" title="Permalink to this headline">#</a></h2>
-<p>…</p>
+<span id="rm"></span><h2>2. rm (Remove Item)<a class="headerlink" href="#rm-remove-item" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 <p>To delete a file/folder, use the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">rm</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">txt</span>
 <span class="go">Deletes a file</span>
@@ -235,8 +243,11 @@
 </dd></dl>
 </section>
 <section id="mv-rename-item">
-<span id="mv"></span><h2>3. mv [Rename Item]<a class="headerlink" href="#mv-rename-item" title="Permalink to this headline">#</a></h2>
-<p>…</p>
+<span id="mv"></span><h2>3. mv (Rename Item)<a class="headerlink" href="#mv-rename-item" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FileRename">
+<span class="sig-name descname"><span class="pre">FileRename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FileRename" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">mv</span></code> command is used for renaming a file or directory. The syntax of the command is</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">mv</span> <span class="n">OrginalFile</span><span class="o">.</span><span class="n">py</span> <span class="n">NewlyNamedFile</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -255,8 +266,11 @@
 </dd></dl>
 </section>
 <section id="crf-create-file">
-<span id="crf"></span><h2>4. crf [Create File]<a class="headerlink" href="#crf-create-file" title="Permalink to this headline">#</a></h2>
-<p>…</p>
+<span id="crf"></span><h2>4. crf (Create File)<a class="headerlink" href="#crf-create-file" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="CreateFile">
+<span class="sig-name descname"><span class="pre">CreateFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CreateFile" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">crf</span></code> command is used for a creating a new <em>file</em> (note not a folder). The syntax of the command is</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">crf</span> <span class="n">MyNewFile</span><span class="o">.</span><span class="n">c</span>
 </pre></div>
@@ -270,8 +284,11 @@
 <p><em>Whitespaces</em> in name are supported</p>
 </section>
 <section id="crd-create-directory">
-<span id="crd"></span><h2>5. crd [Create Directory]<a class="headerlink" href="#crd-create-directory" title="Permalink to this headline">#</a></h2>
-<p>…</p>
+<span id="crd"></span><h2>5. crd (Create Directory)<a class="headerlink" href="#crd-create-directory" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="CreateDir">
+<span class="sig-name descname"><span class="pre">CreateDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CreateDir" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">crd</span></code> command is used to create a new directory. The syntax usage is</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">crd</span> <span class="n">MyNewFolder</span>
 </pre></div>
@@ -289,8 +306,15 @@ To create a folder in another directory, specify full path</p>
 </dd></dl>
 </section>
 <section id="cd-current-directory-change-directory">
-<span id="cd"></span><h2>6. cd [Current Directory/Change Directory]<a class="headerlink" href="#cd-current-directory-change-directory" title="Permalink to this headline">#</a></h2>
-<p>…</p>
+<span id="cd"></span><h2>6. cd (Current Directory/Change Directory)<a class="headerlink" href="#cd-current-directory-change-directory" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="cwdPrint">
+<span class="sig-name descname"><span class="pre">cwdPrint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cwdPrint" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="cwdChange">
+<span class="sig-name descname"><span class="pre">cwdChange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cwdChange" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">cd</span></code> command has multiple purposes depending on its usage.</p>
 <p>If user only inputs the command <code class="docutils literal notranslate"><span class="pre">cd</span></code> with no extra parameters, the command returns the Current Directory.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">cd</span>
@@ -309,8 +333,11 @@ To create a folder in another directory, specify full path</p>
 </dd></dl>
 </section>
 <section id="sys-info-system-information-printer">
-<span id="sysinfo"></span><h2>7. sys –info [System Information Printer]<a class="headerlink" href="#sys-info-system-information-printer" title="Permalink to this headline">#</a></h2>
-<p>…</p>
+<span id="sysinfo"></span><h2>7. sys –info (System Information Printer)<a class="headerlink" href="#sys-info-system-information-printer" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="sys_info">
+<span class="sig-name descname"><span class="pre">sys_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sys_info" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 <p>The command <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">--info</span></code> is used for printing a very precise and detailed output of your system.
 By definition, the <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">--info</span></code> command prints a set of information in presentable format about System, Disk, Network and GPU</p>
 <p>The syntax is such:</p>
@@ -337,6 +364,65 @@ By definition, the <code class="docutils literal notranslate"><span class="pre">
 <p>This process is not guaranteed to fix the issue, but might fix it. Development is in progress</p>
 </div>
 </section>
+<section id="sr-search-directory">
+<span id="sr"></span><h2>8. sr (Search Directory)<a class="headerlink" href="#sr-search-directory" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="searchDir">
+<span class="sig-name descname"><span class="pre">searchDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#searchDir" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+<p>The <code class="docutils literal notranslate"><span class="pre">sr</span></code> command has its usage in searching for a required item in the current working directory.
+The syntax is</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">sr</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">rb</span>
+</pre></div>
+</div>
+<p>Here the argument passed to the command is <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code>, the sr command used the function <code class="docutils literal notranslate"><span class="pre">searchDir(query)</span></code> function where the query parameter holds reponsibilty of the item name.</p>
+<p>For a directory having items with names:
+- main.py
+- mainFile.c
+- index.html
+- main.css
+- MainFolder
+- AnotherFolder</p>
+<p>If the user passes <code class="docutils literal notranslate"><span class="pre">main</span></code> as the <code class="docutils literal notranslate"><span class="pre">query</span></code> parameter, the output would include
+<code class="docutils literal notranslate"><span class="pre">main.py,</span> <span class="pre">mainFile.c,</span> <span class="pre">main.css,</span> <span class="pre">MainFolder</span></code></p>
+<p>These names include the <em>query</em> <code class="docutils literal notranslate"><span class="pre">main</span></code> in them and are thus displayed</p>
+<p>When <em>query</em> recieves an operand with no existence in the currrent working directory, it raises a <em>No Result Found</em> error.</p>
+</section>
+<section id="delf-deletes-only-files">
+<span id="delf"></span><h2>9. delf (Deletes only files)<a class="headerlink" href="#delf-deletes-only-files" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DelFile">
+<span class="sig-name descname"><span class="pre">DelFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DelFile" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This command is an early File Bash command and is depreceted from use. For better performance, use the <a class="reference internal" href="#rm"><span class="std std-ref">rm</span></a>
+command for better performance and efficiency.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">delf</span></code> command was initially developed as a command for deleting only files in File Bash. The command, unlike <code class="docutils literal notranslate"><span class="pre">rm</span></code> command has no file/folder tracing system. On entering a folder name it raise a fatal Folder error.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="FolderError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FolderError</span></span><a class="headerlink" href="#FolderError" title="Permalink to this definition">#</a></dt>
+<dd><p>Raised when operand is a folder</p>
+</dd></dl>
+<p>The command recieves the file name as argument with syntax</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">delf</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">java</span>
+</pre></div>
+</div>
+<p>This command deletes the file <code class="docutils literal notranslate"><span class="pre">HelloWorld.java</span></code>.</p>
+<p>For a non-existen file,</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">delf</span> <span class="n">SomeNonExistentFile</span><span class="o">.</span><span class="n">c</span><span class="o">++</span>
+<span class="go">    'SomeNonExistentFile.c++' does not exist</span>
+</pre></div>
+</div>
+</section>
+<section id="deld-delete-directory">
+<span id="deld"></span><h2>10. deld (Delete Directory)<a class="headerlink" href="#deld-delete-directory" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DelDir">
+<span class="sig-name descname"><span class="pre">DelDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DelDir" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+</section>
 </section>
 
         </article>
@@ -344,12 +430,12 @@ By definition, the <code class="docutils literal notranslate"><span class="pre">
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="updates.html">
+          <a class="next-page" href="functions.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Changelog</div>
+                <div class="title">Understanding some important functions used to code commands</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -397,13 +483,16 @@ By definition, the <code class="docutils literal notranslate"><span class="pre">
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Commands</a><ul>
-<li><a class="reference internal" href="#ls-list-directory-items">1. ls [List Directory items]</a></li>
-<li><a class="reference internal" href="#rm-remove-item">2. rm [Remove Item]</a></li>
-<li><a class="reference internal" href="#mv-rename-item">3. mv [Rename Item]</a></li>
-<li><a class="reference internal" href="#crf-create-file">4. crf [Create File]</a></li>
-<li><a class="reference internal" href="#crd-create-directory">5. crd [Create Directory]</a></li>
-<li><a class="reference internal" href="#cd-current-directory-change-directory">6. cd [Current Directory/Change Directory]</a></li>
-<li><a class="reference internal" href="#sys-info-system-information-printer">7. sys –info [System Information Printer]</a></li>
+<li><a class="reference internal" href="#ls-list-directory-items">1. ls (List Directory items)</a></li>
+<li><a class="reference internal" href="#rm-remove-item">2. rm (Remove Item)</a></li>
+<li><a class="reference internal" href="#mv-rename-item">3. mv (Rename Item)</a></li>
+<li><a class="reference internal" href="#crf-create-file">4. crf (Create File)</a></li>
+<li><a class="reference internal" href="#crd-create-directory">5. crd (Create Directory)</a></li>
+<li><a class="reference internal" href="#cd-current-directory-change-directory">6. cd (Current Directory/Change Directory)</a></li>
+<li><a class="reference internal" href="#sys-info-system-information-printer">7. sys –info (System Information Printer)</a></li>
+<li><a class="reference internal" href="#sr-search-directory">8. sr (Search Directory)</a></li>
+<li><a class="reference internal" href="#delf-deletes-only-files">9. delf (Deletes only files)</a></li>
+<li><a class="reference internal" href="#deld-delete-directory">10. deld (Delete Directory)</a></li>
 </ul>
 </li>
 </ul>

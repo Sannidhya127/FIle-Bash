@@ -336,8 +336,12 @@ def DelFile(command):
                 f"{fg('red_1')}fatal: No file mentioned{command[1]}{attr('reset')}")
 
         else:
-            logging.info(f"Deleted {command[5::]} from the system")
-            os.remove(command[5::])
+            name = command[5::]
+            isdirCheck = os.path.isdir(command[5::])
+            if isdirCheck == True:
+                print(f"{fg('red_1')}fatal: entered operand {name} is a directory{attr('reset')}")
+            logging.info(f"Deleted' '{command[5::]}' from the system")
+            # os.remove(command[5::])
 
     elif existion == False:
         logging.info(

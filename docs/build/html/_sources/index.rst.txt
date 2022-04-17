@@ -48,7 +48,7 @@ Table Of Contents
    quickstart
    commands
    functions
-   api
+   root
    conduct
    about
    contribute
