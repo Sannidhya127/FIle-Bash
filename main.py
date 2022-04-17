@@ -625,43 +625,6 @@ def Notify(time):
                             timeout=5
                             )
 
-def HelpWeb():
-    HelpFile =  open('commands.html', 'w')
-    HelpFile.write(
-    '''
-    <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
-
-    '''
-    )
-
 def hideItems(param):
     try:
         if "\\" in param:
@@ -766,6 +729,16 @@ def ShutDown():
     os.system('shutdown -s')
 # def HackerTheme():
 #     name = input("En")
+
+def license():
+    licenseFile = open('LICENSE', 'r')
+    licenseData = licenseFile.read()
+    print(licenseData)
+
+def coc():
+    code_of_coduct = open('CODE_OF_CONDUCT.md', 'r')
+    content =  code_of_coduct.read()
+    print(content)
 
 def InstallationCheck():
     files = os.listdir()
@@ -964,11 +937,14 @@ if __name__ == '__main__':
         d = os.getcwd()
         # if color == False:
         comd = input(f"{fg('46')}{d}: {attr('reset')}")
-        commands = []
-        # if comd == "bash --help":
-        #     print(f"ls (list all files and directories)\n\nls --docs (list all test files)\n\nls --imgs (list all image files)\n\nls --aud (list all audio files)\n\nls --med(list all video files)\n\nls --progs (lists all program files)\n\ndelf filename (deletes a file)\n\ndeld foldername (deletes a folder)\n\nmv fileOrFolderName (renames a file or folder)\n\ncrf filename (creates a new file or directory)\n\ncrd foldername (this creates a directory)\n\ncd (prints the current working directory)\n\ncd --to (changes the current working directory)\n\nls --check (checks a given path for existence)\n\ncomp file1 file2 (compares the text of file2 with file1 and reports the differences)\n\nbash --q (quits file bash)\n\nFor More Queries Email us at filebash45@gmail.com")
+        comd = comd.lower()
+        commands = ["ls", "ls --docs", "ls --imgs", "ls --aud" , "ls --med", "ls --progs", "delf","deld","crf","crd","sys --info", "mv", "rm", "cd", "sr", "bash --sys 0","process --uid", "hide", "uhd","read","write","rm -rf", "exit", "help"]
         if comd == "ls":
             AllFiles()
+        elif comd == "code of conduct" or comd == "Code Of Conduct":
+            coc()
+        elif comd == "license":
+            license()
         elif comd == "^f":
             print("#WORKING")
         elif comd == "ls --docs":
@@ -1070,11 +1046,14 @@ if __name__ == '__main__':
             t.sleep(0.50)
             exit()
         else:
-            items = get_close_matches(comd, commands, n=1, cutoff=0.5)
-            # print(f"{fg('red_1')}fatal: Invalid Command '{comd}'{attr('reset')}")
+            items = get_close_matches(comd, commands, n=3, cutoff=0.3)
             print(f"bash: no command found: '{comd}'")
+            print(
+                    f"{fg('red')}{attr('blink')}Did you mean:{attr('reset')}")
+            
             for i in items:
                 data = i
                 print(
-                    f"{fg('red')}{attr('blink')}Did you mean:\n\t{data}\nUse bash --help for commands list{attr('reset')}")
+                    f"{fg('red')}{attr('blink')}\t{data}{attr('reset')}")
                 continue
+            print("Use bash --help for commands list")

@@ -72,3 +72,11 @@ v.0.3.0 [17/04/2022 1:03]
 - Added Code Of Conduct File in repo and also in documentation.
 - Added details of File Bash in :doc:`about` section
 - Added Code Of Conduct and mini guide for contribution in :doc:`contribute` section
+
+v.0.4.0 [17/04/2022 12:13]
+--------------------------
+
+- Added ``license`` command that prints license document
+- Added ``code of conduct`` command that prints the Code Of Conduct document
+- fixed the closest match tracked for wrong command by adding all updated commands to its list
+- Removed some unused functions
