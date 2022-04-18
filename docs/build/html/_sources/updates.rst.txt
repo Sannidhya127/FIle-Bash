@@ -90,3 +90,8 @@ v0.5.1 [17/04/2022 20:21]
 - Added the function used for all commands
 - Removed API Reference page
 - Added a page for the upcoming File Bash Project Testing system, Rooter
+
+v0.5.2 [18/04/2022 22:21]
+-------------------------
+
+- Added ``deld`` command's remaining details

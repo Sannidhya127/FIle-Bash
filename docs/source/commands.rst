@@ -255,3 +255,19 @@ For a non-existen file,
 ---------------------------
 
 .. py:function:: DelDir(arg=directory)
+
+.. warning::
+    This command is an early File Bash command and is depreceted from use. For better performance, use the :ref:`rm <rm>`
+    command for better performance and efficiency.
+
+The ``deld`` command is used to delete only directories. It lacks the ability to track files and delete them. The command used *Python shutil* module to delete folders. The recently added ``rm`` command has outdone both ``delf`` and ``deld`` commands.
+
+The syntax for ``deld`` is:
+
+>>> C:\Users\Desktop\MyTestDir: deld MyDocs
+
+Here the operand ``MyDocs`` is the target directory to be deleted. 
+
+.. py:exception:: OperandNotFolderError
+
+    Raised when entered operand is not a folder but a file.
