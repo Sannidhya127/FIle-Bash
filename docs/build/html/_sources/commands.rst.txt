@@ -280,7 +280,7 @@ Here the operand ``MyDocs`` is the target directory to be deleted.
 
 .. py:function:: shutdown(arg=None)
 
-The ``bash --sys -`` command shuts down the system.
+The ``bash --sys 0`` command shuts down the system.
 
 .. _uid:
 
