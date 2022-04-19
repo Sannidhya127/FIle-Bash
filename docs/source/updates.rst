@@ -95,3 +95,11 @@ v0.5.2 [18/04/2022 22:21]
 -------------------------
 
 - Added ``deld`` command's remaining details
+
+v0.5.3 [18/04/2022 19:24]
+-------------------------
+
+- Added ``bash --sys 0`` command
+- Added ``process --uid`` command
+- Added ``hide`` command
+- Changed theme to **sphinx_rtd_theme**

@@ -1,162 +1,61 @@
-<!doctype html>
-<html class="no-js">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Understanding some important functions used to code commands" href="functions.html" /><link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" />
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
-        <title>Commands - File Bash v0.1.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    
-    
-
-
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commands &mdash; File Bash v0.1.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style></head>
-  <body>
-    
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
-    
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Understanding some important functions used to code commands" href="functions.html" />
+    <link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" /> 
+</head>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
-</svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
-
-
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="index.html"><div class="brand">File Bash v0.1.1 documentation</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
-  
-  
-  <span class="sidebar-brand-text">File Bash v0.1.1 documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> File Bash
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide to the use of a Bash</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ls-list-directory-items">1. ls (List Directory items)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rm-remove-item">2. rm (Remove Item)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mv-rename-item">3. mv (Rename Item)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crf-create-file">4. crf (Create File)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crd-create-directory">5. crd (Create Directory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cd-current-directory-change-directory">6. cd (Current Directory/Change Directory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sys-info-system-information-printer">7. sys –info (System Information Printer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sr-search-directory">8. sr (Search Directory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delf-deletes-only-files">9. delf (Deletes only files)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deld-delete-directory">10. deld (Delete Directory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bash-sys-0-shutdown-system">11. bash –sys 0 (shutdown system)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#process-uid-lists-running-process">12. process –uid (lists running process)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hide-hides-any-item">13. hide (hides any item)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Understanding some important functions used to code commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="root.html">Rooter: An efficient application for testing File Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conduct.html">Contributor Covenant Code of Conduct</a></li>
@@ -166,45 +65,39 @@
 <li class="toctree-l1"><a class="reference internal" href="updates.html">Changelog</a></li>
 </ul>
 
-</div>
-</div>
-
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
         </div>
-        <article role="main">
-          <section id="commands">
-<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h1>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">File Bash</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Commands</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/commands.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="commands">
+<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline"></a></h1>
 <p>A detailed list of commands and their functionalities for the ease of users.</p>
 <section id="ls-list-directory-items">
-<span id="ls"></span><h2>1. ls (List Directory items)<a class="headerlink" href="#ls-list-directory-items" title="Permalink to this headline">#</a></h2>
+<span id="ls"></span><h2>1. ls (List Directory items)<a class="headerlink" href="#ls-list-directory-items" title="Permalink to this headline"></a></h2>
 <p>To print a list of all items in the current directory, use the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="id0">
-<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
 <dd><p>Return a list of all items in current directory</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -219,14 +112,16 @@
 </dd>
 </dl>
 </dd></dl>
+
 <p>The <code class="docutils literal notranslate"><span class="pre">ls</span></code> command parameters can only track files with specifiend extensions. Other extensions will be <em>ignored</em> even if they fall in the requested category</p>
 </section>
 <section id="rm-remove-item">
-<span id="rm"></span><h2>2. rm (Remove Item)<a class="headerlink" href="#rm-remove-item" title="Permalink to this headline">#</a></h2>
+<span id="rm"></span><h2>2. rm (Remove Item)<a class="headerlink" href="#rm-remove-item" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="delete">
-<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <p>To delete a file/folder, use the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">rm</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">txt</span>
 <span class="go">Deletes a file</span>
@@ -238,16 +133,18 @@
 </div>
 <dl class="py exception">
 <dt class="sig sig-object py" id="Del.ItemNotFoundError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Del.</span></span><span class="sig-name descname"><span class="pre">ItemNotFoundError</span></span><a class="headerlink" href="#Del.ItemNotFoundError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Del.</span></span><span class="sig-name descname"><span class="pre">ItemNotFoundError</span></span><a class="headerlink" href="#Del.ItemNotFoundError" title="Permalink to this definition"></a></dt>
 <dd><p>Raised if given item does not exist</p>
 </dd></dl>
+
 </section>
 <section id="mv-rename-item">
-<span id="mv"></span><h2>3. mv (Rename Item)<a class="headerlink" href="#mv-rename-item" title="Permalink to this headline">#</a></h2>
+<span id="mv"></span><h2>3. mv (Rename Item)<a class="headerlink" href="#mv-rename-item" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="FileRename">
-<span class="sig-name descname"><span class="pre">FileRename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FileRename" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">FileRename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#FileRename" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <p>The <code class="docutils literal notranslate"><span class="pre">mv</span></code> command is used for renaming a file or directory. The syntax of the command is</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">mv</span> <span class="n">OrginalFile</span><span class="o">.</span><span class="n">py</span> <span class="n">NewlyNamedFile</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
@@ -256,21 +153,24 @@
 <p>If seperated with whitespaces, the index[1] argument is the current name and the index[2] argument is the new name to be given</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="ListIndexOutOfRangeError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ListIndexOutOfRangeError</span></span><a class="headerlink" href="#ListIndexOutOfRangeError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ListIndexOutOfRangeError</span></span><a class="headerlink" href="#ListIndexOutOfRangeError" title="Permalink to this definition"></a></dt>
 <dd><p><em>Raises the error when names of items contain whitespaces. Developers are working to fix this</em></p>
 </dd></dl>
+
 <dl class="py exception">
 <dt class="sig sig-object py" id="FileNotFoundError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileNotFoundError</span></span><a class="headerlink" href="#FileNotFoundError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileNotFoundError</span></span><a class="headerlink" href="#FileNotFoundError" title="Permalink to this definition"></a></dt>
 <dd><p><em>Raises the error when file bash failes to track file with specified name in index[1]</em></p>
 </dd></dl>
+
 </section>
 <section id="crf-create-file">
-<span id="crf"></span><h2>4. crf (Create File)<a class="headerlink" href="#crf-create-file" title="Permalink to this headline">#</a></h2>
+<span id="crf"></span><h2>4. crf (Create File)<a class="headerlink" href="#crf-create-file" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="CreateFile">
-<span class="sig-name descname"><span class="pre">CreateFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CreateFile" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CreateFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CreateFile" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <p>The <code class="docutils literal notranslate"><span class="pre">crf</span></code> command is used for a creating a new <em>file</em> (note not a folder). The syntax of the command is</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">crf</span> <span class="n">MyNewFile</span><span class="o">.</span><span class="n">c</span>
 </pre></div>
@@ -278,17 +178,19 @@
 <p>Here the file name with extension supplied after the command is created in the current working directory.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="FileExistionError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileExistionError</span></span><a class="headerlink" href="#FileExistionError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileExistionError</span></span><a class="headerlink" href="#FileExistionError" title="Permalink to this definition"></a></dt>
 <dd><p>Displays fatal error when a pre-existent file name is given with this hidden exception.</p>
 </dd></dl>
+
 <p><em>Whitespaces</em> in name are supported</p>
 </section>
 <section id="crd-create-directory">
-<span id="crd"></span><h2>5. crd (Create Directory)<a class="headerlink" href="#crd-create-directory" title="Permalink to this headline">#</a></h2>
+<span id="crd"></span><h2>5. crd (Create Directory)<a class="headerlink" href="#crd-create-directory" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="CreateDir">
-<span class="sig-name descname"><span class="pre">CreateDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CreateDir" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CreateDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CreateDir" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <p>The <code class="docutils literal notranslate"><span class="pre">crd</span></code> command is used to create a new directory. The syntax usage is</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">crd</span> <span class="n">MyNewFolder</span>
 </pre></div>
@@ -301,20 +203,23 @@ To create a folder in another directory, specify full path</p>
 <p>This creates a new folder named <em>NewFolder</em> in the path <code class="docutils literal notranslate"><span class="pre">C:</span> <span class="pre">-&gt;</span> <span class="pre">Users</span> <span class="pre">-&gt;</span> <span class="pre">Desktop</span> <span class="pre">-&gt;</span> <span class="pre">Code</span></code></p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="DirectoryExistionError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectoryExistionError</span></span><a class="headerlink" href="#DirectoryExistionError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DirectoryExistionError</span></span><a class="headerlink" href="#DirectoryExistionError" title="Permalink to this definition"></a></dt>
 <dd><p>Displays fatal error when a pre-existent directory name is given with this hidden exception.</p>
 </dd></dl>
+
 </section>
 <section id="cd-current-directory-change-directory">
-<span id="cd"></span><h2>6. cd (Current Directory/Change Directory)<a class="headerlink" href="#cd-current-directory-change-directory" title="Permalink to this headline">#</a></h2>
+<span id="cd"></span><h2>6. cd (Current Directory/Change Directory)<a class="headerlink" href="#cd-current-directory-change-directory" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="cwdPrint">
-<span class="sig-name descname"><span class="pre">cwdPrint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cwdPrint" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">cwdPrint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cwdPrint" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="cwdChange">
-<span class="sig-name descname"><span class="pre">cwdChange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cwdChange" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">cwdChange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cwdChange" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <p>The <code class="docutils literal notranslate"><span class="pre">cd</span></code> command has multiple purposes depending on its usage.</p>
 <p>If user only inputs the command <code class="docutils literal notranslate"><span class="pre">cd</span></code> with no extra parameters, the command returns the Current Directory.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">cd</span>
@@ -328,16 +233,18 @@ To create a folder in another directory, specify full path</p>
 </div>
 <dl class="py exception">
 <dt class="sig sig-object py" id="InvalidPathError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidPathError</span></span><a class="headerlink" href="#InvalidPathError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidPathError</span></span><a class="headerlink" href="#InvalidPathError" title="Permalink to this definition"></a></dt>
 <dd><p>Raises fatal error on passing invalid <em>arg[1][path]</em></p>
 </dd></dl>
+
 </section>
 <section id="sys-info-system-information-printer">
-<span id="sysinfo"></span><h2>7. sys –info (System Information Printer)<a class="headerlink" href="#sys-info-system-information-printer" title="Permalink to this headline">#</a></h2>
+<span id="sysinfo"></span><h2>7. sys –info (System Information Printer)<a class="headerlink" href="#sys-info-system-information-printer" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sys_info">
-<span class="sig-name descname"><span class="pre">sys_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sys_info" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sys_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sys_info" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <p>The command <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">--info</span></code> is used for printing a very precise and detailed output of your system.
 By definition, the <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">--info</span></code> command prints a set of information in presentable format about System, Disk, Network and GPU</p>
 <p>The syntax is such:</p>
@@ -346,11 +253,11 @@ By definition, the <code class="docutils literal notranslate"><span class="pre">
 </div>
 <p>From the following command, we recieve an output of such, varying from system to system:</p>
 <p>The first part</p>
-<img alt="https://i.imgur.com/NUCeVmO.png" src="https://i.imgur.com/NUCeVmO.png"/>
+<img alt="https://i.imgur.com/NUCeVmO.png" src="https://i.imgur.com/NUCeVmO.png" />
 <p>The second part</p>
-<img alt="https://i.imgur.com/eXcNk3X.png" src="https://i.imgur.com/eXcNk3X.png"/>
+<img alt="https://i.imgur.com/eXcNk3X.png" src="https://i.imgur.com/eXcNk3X.png" />
 <p>The third part</p>
-<img alt="https://i.imgur.com/R8opY7P.png" src="https://i.imgur.com/R8opY7P.png"/>
+<img alt="https://i.imgur.com/R8opY7P.png" src="https://i.imgur.com/R8opY7P.png" />
 <p>The output couldn’t be fit in a single screenshot</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -365,11 +272,12 @@ By definition, the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="sr-search-directory">
-<span id="sr"></span><h2>8. sr (Search Directory)<a class="headerlink" href="#sr-search-directory" title="Permalink to this headline">#</a></h2>
+<span id="sr"></span><h2>8. sr (Search Directory)<a class="headerlink" href="#sr-search-directory" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="searchDir">
-<span class="sig-name descname"><span class="pre">searchDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#searchDir" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">searchDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#searchDir" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <p>The <code class="docutils literal notranslate"><span class="pre">sr</span></code> command has its usage in searching for a required item in the current working directory.
 The syntax is</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">sr</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">rb</span>
@@ -389,11 +297,12 @@ The syntax is</p>
 <p>When <em>query</em> recieves an operand with no existence in the currrent working directory, it raises a <em>No Result Found</em> error.</p>
 </section>
 <section id="delf-deletes-only-files">
-<span id="delf"></span><h2>9. delf (Deletes only files)<a class="headerlink" href="#delf-deletes-only-files" title="Permalink to this headline">#</a></h2>
+<span id="delf"></span><h2>9. delf (Deletes only files)<a class="headerlink" href="#delf-deletes-only-files" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="DelFile">
-<span class="sig-name descname"><span class="pre">DelFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DelFile" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">DelFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DelFile" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This command is an early File Bash command and is depreceted from use. For better performance, use the <a class="reference internal" href="#rm"><span class="std std-ref">rm</span></a>
@@ -402,9 +311,10 @@ command for better performance and efficiency.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">delf</span></code> command was initially developed as a command for deleting only files in File Bash. The command, unlike <code class="docutils literal notranslate"><span class="pre">rm</span></code> command has no file/folder tracing system. On entering a folder name it raise a fatal Folder error.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="FolderError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FolderError</span></span><a class="headerlink" href="#FolderError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FolderError</span></span><a class="headerlink" href="#FolderError" title="Permalink to this definition"></a></dt>
 <dd><p>Raised when operand is a folder</p>
 </dd></dl>
+
 <p>The command recieves the file name as argument with syntax</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">delf</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">java</span>
 </pre></div>
@@ -412,16 +322,17 @@ command for better performance and efficiency.</p>
 <p>This command deletes the file <code class="docutils literal notranslate"><span class="pre">HelloWorld.java</span></code>.</p>
 <p>For a non-existen file,</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">delf</span> <span class="n">SomeNonExistentFile</span><span class="o">.</span><span class="n">c</span><span class="o">++</span>
-<span class="go">    'SomeNonExistentFile.c++' does not exist</span>
+<span class="go">    &#39;SomeNonExistentFile.c++&#39; does not exist</span>
 </pre></div>
 </div>
 </section>
 <section id="deld-delete-directory">
-<span id="deld"></span><h2>10. deld (Delete Directory)<a class="headerlink" href="#deld-delete-directory" title="Permalink to this headline">#</a></h2>
+<span id="deld"></span><h2>10. deld (Delete Directory)<a class="headerlink" href="#deld-delete-directory" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="DelDir">
-<span class="sig-name descname"><span class="pre">DelDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DelDir" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">DelDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DelDir" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This command is an early File Bash command and is depreceted from use. For better performance, use the <a class="reference internal" href="#rm"><span class="std std-ref">rm</span></a>
@@ -435,100 +346,280 @@ command for better performance and efficiency.</p>
 <p>Here the operand <code class="docutils literal notranslate"><span class="pre">MyDocs</span></code> is the target directory to be deleted.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="OperandNotFolderError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OperandNotFolderError</span></span><a class="headerlink" href="#OperandNotFolderError" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OperandNotFolderError</span></span><a class="headerlink" href="#OperandNotFolderError" title="Permalink to this definition"></a></dt>
 <dd><p>Raised when entered operand is not a folder but a file.</p>
 </dd></dl>
+
 </section>
 <section id="bash-sys-0-shutdown-system">
-<span id="bash0"></span><h2>11. bash –sys 0 (shutdown system)<a class="headerlink" href="#bash-sys-0-shutdown-system" title="Permalink to this headline">#</a></h2>
+<span id="bash0"></span><h2>11. bash –sys 0 (shutdown system)<a class="headerlink" href="#bash-sys-0-shutdown-system" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shutdown" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <p>The <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">--sys</span> <span class="pre">-</span></code> command shuts down the system.</p>
 </section>
+<section id="process-uid-lists-running-process">
+<span id="uid"></span><h2>12. process –uid (lists running process)<a class="headerlink" href="#process-uid-lists-running-process" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="processes">
+<span class="sig-name descname"><span class="pre">processes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#processes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p><code class="docutils literal notranslate"><span class="pre">process</span> <span class="pre">-</span> <span class="pre">-</span> <span class="pre">uid</span></code> lists all running functions in a paginated format inclusive of their priority,
+processId, ThreadCount, WorkingSetSize, HandleCount.</p>
+<p>The output is something like this:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">process</span> <span class="o">--</span><span class="n">uid</span>
+<span class="go">b&#39;HandleCount  Name                         Priority  ProcessId  ThreadCount  WorkingSetSize</span>
+<span class="go">0            System Idle Process          0         0          8            8192</span>
+<span class="go">3981         System                       8         4          209          139264</span>
+<span class="go">0            Registry                     8         120        4            50270208</span>
+<span class="go">57           smss.exe                     11        448        2            999424</span>
+<span class="go">732          csrss.exe                    13        716        14           6045696</span>
+<span class="go">156          wininit.exe                  13        796        1            6537216</span>
+<span class="go">729          services.exe                 9         936        6            9687040</span>
+<span class="go">1386         lsass.exe                    9         980        8            19595264</span>
+<span class="go">1855         svchost.exe                  8         572        11           35430400</span>
+<span class="go">33           fontdrvhost.exe              8         992        5            2519040</span>
+<span class="go">334          WUDFHost.exe                 13        1088       11           13987840</span>
+<span class="go">1309         svchost.exe                  8         1144       12           15835136</span>
+<span class="go">321          svchost.exe                  8         1184       6            8749056</span>
+<span class="go">246          svchost.exe                  8         1360       3            8454144</span>
+<span class="go">233          svchost.exe                  8         1368       2            12566528</span>
+<span class="go">264          svchost.exe                  8         1376       6            11755520</span>
+<span class="go">259          svchost.exe                  8         1452       4            10170368</span>
+<span class="go">208          svchost.exe                  8         1540       5            10358784</span>
+<span class="go">415          svchost.exe                  8         1548       1            7983104</span>
+<span class="go">429          svchost.exe                  8         1564       7            15986688</span>
+<span class="go">139          IntelCpHDCPSvc.exe           8         1580       3            6852608</span>
+<span class="go">361          svchost.exe                  8         1604       10           8974336</span>
+<span class="go">146          svchost.exe                  8         1760       3            8810496</span>
+<span class="go">273          svchost.exe                  8         1848       6            11550720</span>
+<span class="go">844          svchost.exe                  8         1864       11           15884288</span>
+<span class="go">138          IntelCpHeciSvc.exe           8         1924       3            6909952</span>
+<span class="go">233          svchost.exe                  8         1156       5            12779520</span>
+<span class="go">171          svchost.exe                  8         2088       2            5853184</span>
+<span class="go">205          svchost.exe                  8         2260       2            7581696</span>
+<span class="go">329          SynTPEnhService.exe          8         2268       7            9375744</span>
+<span class="go">195          dasHost.exe                  8         2444       2            10842112</span>
+<span class="go">286          svchost.exe                  8         2472       11           8298496</span>
+<span class="go">205          svchost.exe                  8         2480       1            8986624</span>
+<span class="go">466          svchost.exe                  8         2556       7            16777216</span>
+<span class="go">184          svchost.exe                  8         2612       6            7393280</span>
+<span class="go">226          svchost.exe                  8         2624       3            14372864</span>
+<span class="go">213          svchost.exe                  8         2640       4            5562368</span>
+<span class="go">0            Memory Compression           8         2744       46           127373312</span>
+<span class="go">187          svchost.exe                  8         2760       3            8433664</span>
+<span class="go">115          svchost.exe                  8         2824       1            6246400</span>
+<span class="go">176          igfxCUIService.exe           8         2868       2            8781824</span>
+<span class="go">151          svchost.exe                  8         2904       7            7557120</span>
+<span class="go">240          svchost.exe                  8         2912       4            8851456</span>
+<span class="go">224          svchost.exe                  8         3068       6            7184384</span>
+<span class="go">502          svchost.exe                  8         2136       13           15527936</span>
+<span class="go">419          svchost.exe                  8         1268       6            9314304</span>
+<span class="go">265          svchost.exe                  8         2964       8            7606272</span>
+<span class="go">148          svchost.exe                  8         2532       3            6266880</span>
+<span class="go">351          svchost.exe                  8         3232       4            15683584</span>
+<span class="go">180          svchost.exe                  8         3272       3            7065600</span>
+<span class="go">533          svchost.exe                  8         3384       12           18837504</span>
+<span class="go">240          svchost.exe                  8         3408       4            14442496</span>
+<span class="go">437          spoolsv.exe                  8         3436       7            12025856</span>
+<span class="go">428          svchost.exe                  8         3496       13           16584704</span>
+<span class="go">169          svchost.exe                  8         3552       3            7290880</span>
+<span class="go">193          wlanext.exe                  8         3736       9            7966720</span>
+<span class="go">82           conhost.exe                  8         3764       2            4718592</span>
+<span class="go">608          svchost.exe                  8         3912       11           29700096</span>
+<span class="go">390          svchost.exe                  8         3920       9            14319616</span>
+<span class="go">386          svchost.exe                  8         3928       16           23179264</span>
+<span class="go">267          svchost.exe                  8         3956       5            7868416</span>
+<span class="go">687          DSAService.exe               8         3972       12           21864448</span>
+<span class="go">779          OneApp.IGCC.WinService.exe   8         3988       7            25911296</span>
+<span class="go">785          OfficeClickToRun.exe         8         4008       21           39268352</span>
+<span class="go">364          svchost.exe                  8         4020       5            10805248</span>
+<span class="go">163          svchost.exe                  8         4044       3            7069696</span>
+<span class="go">106          esif_uf.exe                  13        4084       3            5554176</span>
+<span class="go">145          svchost.exe                  8         3524       1            6361088</span>
+<span class="go">218          LMS.exe                      8         4120       3            8421376</span>
+<span class="go">205          svchost.exe                  8         4136       5            8978432</span>
+<span class="go">191          svchost.exe                  8         4160       4            9445376</span>
+<span class="go">168          setup.exe                    8         4168       2            6565888</span>
+<span class="go">350          RtkAudUService64.exe         8         4180       14           11735040</span>
+<span class="go">130          RstMwService.exe             8         4188       3            5844992</span>
+<span class="go">178          SynAudSrv.exe                8         4196       5            7868416</span>
+<span class="go">145          SECOMN64.exe                 8         4204       4            8577024</span>
+<span class="go">157          RtkBtManServ.exe             8         4220       2            7565312</span>
+<span class="go">316          CxAudioSvc.exe               8         4240       8            23183360</span>
+<span class="go">777          SurSvc.exe                   4         4284       9            70680576</span>
+<span class="go">1630         MsMpEng.exe                  8         4348       40           245993472</span>
+<span class="go">457          svchost.exe                  8         4360       13           18546688</span>
+<span class="go">413          svchost.exe                  8         4400       8            22011904</span>
+<span class="go">141          svchost.exe                  8         4416       3            5369856</span>
+<span class="go">492          XtuService.exe               8         4504       14           29057024</span>
+<span class="go">133          jhi_service.exe              8         4604       2            5873664</span>
+<span class="go">438          svchost.exe                  8         4952       12           12165120</span>
+<span class="go">256          svchost.exe                  8         5324       8            8536064</span>
+<span class="go">90           AggregatorHost.exe           8         5700       3            5431296</span>
+<span class="go">313          WmiPrvSE.exe                 8         6604       6            16785408</span>
+<span class="go">431          DSAUpdateService.exe         8         6688       7            27566080</span>
+<span class="go">202          dllhost.exe                  8         6292       4            10850304</span>
+<span class="go">225          NisSrv.exe                   8         6932       12           11251712</span>
+<span class="go">255          svchost.exe                  8         7036       3            21028864</span>
+<span class="go">240          PresentationFontCache.exe    8         6972       4            13692928</span>
+<span class="go">166          svchost.exe                  8         6312       3            8343552</span>
+<span class="go">465          svchost.exe                  8         7240       10           21708800</span>
+<span class="go">204          svchost.exe                  8         7588       4            11997184</span>
+<span class="go">1438         SearchIndexer.exe            8         8688       15           38604800</span>
+<span class="go">180          GoogleCrashHandler.exe       4         1476       3            1667072</span>
+<span class="go">162          GoogleCrashHandler64.exe     4         3208       3            380928</span>
+<span class="go">298          svchost.exe                  8         9452       11           11231232</span>
+<span class="go">433          svchost.exe                  8         4320       11           17502208</span>
+<span class="go">271          svchost.exe                  8         4748       1            14934016</span>
+<span class="go">107          SgrmBroker.exe               8         10968      9            8515584</span>
+<span class="go">301          svchost.exe                  8         1096       9            14266368</span>
+<span class="go">221          svchost.exe                  8         10844      8            9875456</span>
+<span class="go">313          SecurityHealthService.exe    8         6708       4            13230080</span>
+<span class="go">301          svchost.exe                  8         10448      6            14422016</span>
+<span class="go">379          svchost.exe                  8         1796       3            18661376</span>
+<span class="go">310          svchost.exe                  8         5336       4            14237696</span>
+<span class="go">115          conhost.exe                  8         1680       3            6094848</span>
+<span class="go">887          esrv.exe                     13        9752       62           26288128</span>
+<span class="go">4345         esrv_svc.exe                 13        7076       84           66383872</span>
+<span class="go">542          csrss.exe                    13        9620       13           6684672</span>
+<span class="go">273          winlogon.exe                 13        2736       5            10358784</span>
+<span class="go">33           fontdrvhost.exe              8         4556       5            5054464</span>
+<span class="go">1282         dwm.exe                      13        11320      19           113324032</span>
+<span class="go">397          svchost.exe                  8         8048       6            17281024</span>
+<span class="go">349          audiodg.exe                  8         2664       6            23326720</span>
+<span class="go">681          sihost.exe                   8         11692      12           31219712</span>
+<span class="go">141          svchost.exe                  8         9520       1            8892416</span>
+<span class="go">514          svchost.exe                  8         10496      14           34574336</span>
+<span class="go">676          svchost.exe                  8         1260       7            35971072</span>
+<span class="go">335          igfxEM.exe                   8         5284       3            13582336</span>
+<span class="go">268          taskhostw.exe                8         6920       8            15159296</span>
+<span class="go">4424         explorer.exe                 8         6724       90           204386304</span>
+<span class="go">271          svchost.exe                  8         12000      9            19947520</span>
+<span class="go">505          SynTPEnh.exe                 10        6172       10           21618688</span>
+<span class="go">107          crashpad_handler.exe         8         11836      6            5701632</span>
+<span class="go">841          StartMenuExperienceHost.exe  8         4624       10           79355904</span>
+<span class="go">1481         SearchHost.exe               8         11984      63           85770240</span>
+<span class="go">605          RuntimeBroker.exe            8         240        12           39628800</span>
+<span class="go">280          RuntimeBroker.exe            8         2352       2            26439680</span>
+<span class="go">133          svchost.exe                  8         7668       1            8335360</span>
+<span class="go">245          dllhost.exe                  8         6104       7            14032896</span>
+<span class="go">450          ctfmon.exe                   13        12084      12           20979712</span>
+<span class="go">1430         TextInputHost.exe            13        5432       33           100003840</span>
+<span class="go">357          RtkAudUService64.exe         8         7204       12           12718080</span>
+<span class="go">455          MiniSearchHost.exe           8         12644      11           48721920</span>
+<span class="go">1610         chrome.exe                   8         10644      25           214237184</span>
+<span class="go">209          chrome.exe                   8         392        7            7270400</span>
+<span class="go">839          chrome.exe                   10        8320       16           170676224</span>
+<span class="go">340          chrome.exe                   8         12008      12           44531712</span>
+<span class="go">213          chrome.exe                   8         2672       8            17076224</span>
+<span class="go">236          chrome.exe                   8         2460       15           34983936</span>
+<span class="go">247          chrome.exe                   8         7768       15           112562176</span>
+<span class="go">238          chrome.exe                   8         1744       15           35041280</span>
+<span class="go">238          chrome.exe                   8         9568       15           37675008</span>
+<span class="go">247          chrome.exe                   8         11528      11           19161088</span>
+<span class="go">936          Code.exe                     8         3100       29           87969792</span>
+<span class="go">222          Code.exe                     8         10424      7            25473024</span>
+<span class="go">647          Code.exe                     10        11464      17           221683712</span>
+<span class="go">291          Code.exe                     8         13440      13           39960576</span>
+<span class="go">588          Code.exe                     8         9412       20           216788992</span>
+<span class="go">239          chrome.exe                   8         11376      15           37822464</span>
+<span class="go">264          svchost.exe                  8         15152      4            13819904</span>
+<span class="go">384          Code.exe                     8         14752      23           81457152</span>
+<span class="go">233          Code.exe                     8         13332      16           56696832</span>
+<span class="go">244          svchost.exe                  8         11368      1            12328960</span>
+<span class="go">942          ShellExperienceHost.exe      8         15044      32           72110080</span>
+<span class="go">441          RuntimeBroker.exe            8         15296      11           26173440</span>
+<span class="go">185          Code.exe                     8         5260       14           69312512</span>
+<span class="go">298          Code.exe                     8         3200       17           145039360</span>
+<span class="go">107          conhost.exe                  8         6528       5            6479872</span>
+<span class="go">722          pwsh.exe                     8         3516       12           71077888</span>
+<span class="go">621          YourPhone.exe                8         9092       14           68878336</span>
+<span class="go">539          LockApp.exe                  8         9372       13           63373312</span>
+<span class="go">481          RuntimeBroker.exe            8         14072      10           36683776</span>
+<span class="go">196          svchost.exe                  8         14472      6            14159872</span>
+<span class="go">100          git.exe                      8         7304       11           6307840</span>
+<span class="go">181          RuntimeBroker.exe            8         2500       4            10215424</span>
+<span class="go">677          Widgets.exe                  8         11704      9            33959936</span>
+<span class="go">1069         msedgewebview2.exe           8         3356       28           43253760</span>
+<span class="go">145          msedgewebview2.exe           8         1884       7            6811648</span>
+<span class="go">643          msedgewebview2.exe           10        7856       15           9605120</span>
+<span class="go">276          msedgewebview2.exe           8         4276       10           31956992</span>
+<span class="go">198          msedgewebview2.exe           8         14488      7            18493440</span>
+<span class="go">410          msedgewebview2.exe           4         6396       14           34652160</span>
+<span class="go">590          SystemSettingsBroker.exe     8         9756       22           34607104</span>
+<span class="go">300          ApplicationFrameHost.exe     8         3180       1            27561984</span>
+<span class="go">136          svchost.exe                  8         2820       2            11051008</span>
+<span class="go">232          hpqwmiex.exe                 8         7524       5            11608064</span>
+<span class="go">322          chrome.exe                   4         5480       15           70184960</span>
+<span class="go">306          chrome.exe                   4         2452       17           98590720</span>
+<span class="go">221          chrome.exe                   4         12464      15           31698944</span>
+<span class="go">118          svchost.exe                  8         3164       2            7761920</span>
+<span class="go">159          svchost.exe                  8         9924       3            7409664</span>
+<span class="go">113          svchost.exe                  8         9296       3            6037504</span>
+<span class="go">212          Code.exe                     8         11972      13           183382016</span>
+<span class="go">109          conhost.exe                  8         11468      7            6721536</span>
+<span class="go">658          pwsh.exe                     8         12540      23           73854976</span>
+<span class="go">369          python.exe                   8         9884       8            44732416</span>
+<span class="go">189          WMIC.exe                     8         13696      8            12918784</span>
+<span class="go">163          WmiPrvSE.exe                 8         8136       9            9805824</span>
+</pre></div>
+</div>
+</section>
+<section id="hide-hides-any-item">
+<span id="hide"></span><h2>13. hide (hides any item)<a class="headerlink" href="#hide-hides-any-item" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">hide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p><code class="docutils literal notranslate"><span class="pre">hide</span></code> command hides any item on providing path.
+NOTE:- It hides the item from File Explorer, some third party explorers might still track it.</p>
+<p>Syntax:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">hide</span> <span class="n">superSecretLol</span><span class="o">.</span><span class="n">c</span>
+<span class="go">Successfully hidden item las with exit status 0</span>
+</pre></div>
+</div>
+<p>For a non-existent operand in <em>arg[1]</em>, it returns a non-existent error</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">hide</span> <span class="n">DoIExistsLol</span><span class="o">.</span><span class="n">bf</span>
+<span class="go">DoIExistsLol.bf does not exist</span>
+</pre></div>
+</div>
+</section>
 </section>
 
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="functions.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Understanding some important functions used to code commands</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="quickstart.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Quickstart Guide to the use of a Bash</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2022, Sannnidhya127
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            <div class="icons">
-              
-            </div>
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Commands</a><ul>
-<li><a class="reference internal" href="#ls-list-directory-items">1. ls (List Directory items)</a></li>
-<li><a class="reference internal" href="#rm-remove-item">2. rm (Remove Item)</a></li>
-<li><a class="reference internal" href="#mv-rename-item">3. mv (Rename Item)</a></li>
-<li><a class="reference internal" href="#crf-create-file">4. crf (Create File)</a></li>
-<li><a class="reference internal" href="#crd-create-directory">5. crd (Create Directory)</a></li>
-<li><a class="reference internal" href="#cd-current-directory-change-directory">6. cd (Current Directory/Change Directory)</a></li>
-<li><a class="reference internal" href="#sys-info-system-information-printer">7. sys –info (System Information Printer)</a></li>
-<li><a class="reference internal" href="#sr-search-directory">8. sr (Search Directory)</a></li>
-<li><a class="reference internal" href="#delf-deletes-only-files">9. delf (Deletes only files)</a></li>
-<li><a class="reference internal" href="#deld-delete-directory">10. deld (Delete Directory)</a></li>
-<li><a class="reference internal" href="#bash-sys-0-shutdown-system">11. bash –sys 0 (shutdown system)</a></li>
-</ul>
-</li>
-</ul>
 
+           </div>
           </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quickstart Guide to the use of a Bash" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="functions.html" class="btn btn-neutral float-right" title="Understanding some important functions used to code commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Sannnidhya127.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      
-      
-    </aside>
+    </section>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

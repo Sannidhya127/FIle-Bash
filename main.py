@@ -646,8 +646,6 @@ def hideItems(param):
                 print(f"Successfully hidden item {folder} with exit status 0")
                 # call(["attrib", "+h", folder])
                 os.system(f"attrib +h +s +r {folder}")
-                print(
-                    f"For issues type {fg('green_1')}'hdh'{attr('reset')} in the bash")
             else:
                 print(f"{folder} does not exist")
     except Exception:
@@ -1000,7 +998,7 @@ if __name__ == '__main__':
         elif comd == "udev":
             BashApi()
         elif comd[0:4] == "kill":
-            killTask(comd[4::])
+            killTask(comd)
         elif comd[0:3] == "uhd":
             unhide(comd)
         elif comd[0:2] == "cd":

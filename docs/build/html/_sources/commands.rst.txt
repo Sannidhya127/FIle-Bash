@@ -278,5 +278,237 @@ Here the operand ``MyDocs`` is the target directory to be deleted.
 11. bash --sys 0 (shutdown system)
 ----------------------------------
 
+.. py:function:: shutdown(arg=None)
+
 The ``bash --sys -`` command shuts down the system.
+
+.. _uid:
+
+12. process --uid (lists running process)
+-----------------------------------------
+
+.. py:function:: processes(arg=None)
+
+``process - - uid`` lists all running functions in a paginated format inclusive of their priority, 
+processId, ThreadCount, WorkingSetSize, HandleCount.
+
+The output is something like this:
+
+>>> C:\Users\Desktop\MyTestDir: process --uid
+b'HandleCount  Name                         Priority  ProcessId  ThreadCount  WorkingSetSize  
+0            System Idle Process          0         0          8            8192
+3981         System                       8         4          209          139264
+0            Registry                     8         120        4            50270208
+57           smss.exe                     11        448        2            999424
+732          csrss.exe                    13        716        14           6045696
+156          wininit.exe                  13        796        1            6537216
+729          services.exe                 9         936        6            9687040
+1386         lsass.exe                    9         980        8            19595264
+1855         svchost.exe                  8         572        11           35430400
+33           fontdrvhost.exe              8         992        5            2519040
+334          WUDFHost.exe                 13        1088       11           13987840
+1309         svchost.exe                  8         1144       12           15835136
+321          svchost.exe                  8         1184       6            8749056
+246          svchost.exe                  8         1360       3            8454144
+233          svchost.exe                  8         1368       2            12566528
+264          svchost.exe                  8         1376       6            11755520
+259          svchost.exe                  8         1452       4            10170368
+208          svchost.exe                  8         1540       5            10358784
+415          svchost.exe                  8         1548       1            7983104
+429          svchost.exe                  8         1564       7            15986688
+139          IntelCpHDCPSvc.exe           8         1580       3            6852608
+361          svchost.exe                  8         1604       10           8974336
+146          svchost.exe                  8         1760       3            8810496
+273          svchost.exe                  8         1848       6            11550720
+844          svchost.exe                  8         1864       11           15884288
+138          IntelCpHeciSvc.exe           8         1924       3            6909952
+233          svchost.exe                  8         1156       5            12779520
+171          svchost.exe                  8         2088       2            5853184
+205          svchost.exe                  8         2260       2            7581696
+329          SynTPEnhService.exe          8         2268       7            9375744
+195          dasHost.exe                  8         2444       2            10842112
+286          svchost.exe                  8         2472       11           8298496
+205          svchost.exe                  8         2480       1            8986624
+466          svchost.exe                  8         2556       7            16777216
+184          svchost.exe                  8         2612       6            7393280
+226          svchost.exe                  8         2624       3            14372864
+213          svchost.exe                  8         2640       4            5562368
+0            Memory Compression           8         2744       46           127373312
+187          svchost.exe                  8         2760       3            8433664
+115          svchost.exe                  8         2824       1            6246400
+176          igfxCUIService.exe           8         2868       2            8781824
+151          svchost.exe                  8         2904       7            7557120
+240          svchost.exe                  8         2912       4            8851456
+224          svchost.exe                  8         3068       6            7184384
+502          svchost.exe                  8         2136       13           15527936
+419          svchost.exe                  8         1268       6            9314304
+265          svchost.exe                  8         2964       8            7606272
+148          svchost.exe                  8         2532       3            6266880
+351          svchost.exe                  8         3232       4            15683584        
+180          svchost.exe                  8         3272       3            7065600
+533          svchost.exe                  8         3384       12           18837504
+240          svchost.exe                  8         3408       4            14442496
+437          spoolsv.exe                  8         3436       7            12025856
+428          svchost.exe                  8         3496       13           16584704
+169          svchost.exe                  8         3552       3            7290880
+193          wlanext.exe                  8         3736       9            7966720
+82           conhost.exe                  8         3764       2            4718592
+608          svchost.exe                  8         3912       11           29700096
+390          svchost.exe                  8         3920       9            14319616
+386          svchost.exe                  8         3928       16           23179264
+267          svchost.exe                  8         3956       5            7868416
+687          DSAService.exe               8         3972       12           21864448
+779          OneApp.IGCC.WinService.exe   8         3988       7            25911296
+785          OfficeClickToRun.exe         8         4008       21           39268352
+364          svchost.exe                  8         4020       5            10805248
+163          svchost.exe                  8         4044       3            7069696
+106          esif_uf.exe                  13        4084       3            5554176
+145          svchost.exe                  8         3524       1            6361088
+218          LMS.exe                      8         4120       3            8421376
+205          svchost.exe                  8         4136       5            8978432
+191          svchost.exe                  8         4160       4            9445376
+168          setup.exe                    8         4168       2            6565888
+350          RtkAudUService64.exe         8         4180       14           11735040
+130          RstMwService.exe             8         4188       3            5844992
+178          SynAudSrv.exe                8         4196       5            7868416
+145          SECOMN64.exe                 8         4204       4            8577024
+157          RtkBtManServ.exe             8         4220       2            7565312
+316          CxAudioSvc.exe               8         4240       8            23183360
+777          SurSvc.exe                   4         4284       9            70680576
+1630         MsMpEng.exe                  8         4348       40           245993472
+457          svchost.exe                  8         4360       13           18546688
+413          svchost.exe                  8         4400       8            22011904
+141          svchost.exe                  8         4416       3            5369856
+492          XtuService.exe               8         4504       14           29057024
+133          jhi_service.exe              8         4604       2            5873664
+438          svchost.exe                  8         4952       12           12165120
+256          svchost.exe                  8         5324       8            8536064
+90           AggregatorHost.exe           8         5700       3            5431296
+313          WmiPrvSE.exe                 8         6604       6            16785408
+431          DSAUpdateService.exe         8         6688       7            27566080
+202          dllhost.exe                  8         6292       4            10850304
+225          NisSrv.exe                   8         6932       12           11251712
+255          svchost.exe                  8         7036       3            21028864
+240          PresentationFontCache.exe    8         6972       4            13692928
+166          svchost.exe                  8         6312       3            8343552
+465          svchost.exe                  8         7240       10           21708800
+204          svchost.exe                  8         7588       4            11997184
+1438         SearchIndexer.exe            8         8688       15           38604800
+180          GoogleCrashHandler.exe       4         1476       3            1667072
+162          GoogleCrashHandler64.exe     4         3208       3            380928
+298          svchost.exe                  8         9452       11           11231232
+433          svchost.exe                  8         4320       11           17502208
+271          svchost.exe                  8         4748       1            14934016
+107          SgrmBroker.exe               8         10968      9            8515584
+301          svchost.exe                  8         1096       9            14266368
+221          svchost.exe                  8         10844      8            9875456
+313          SecurityHealthService.exe    8         6708       4            13230080
+301          svchost.exe                  8         10448      6            14422016
+379          svchost.exe                  8         1796       3            18661376
+310          svchost.exe                  8         5336       4            14237696
+115          conhost.exe                  8         1680       3            6094848
+887          esrv.exe                     13        9752       62           26288128
+4345         esrv_svc.exe                 13        7076       84           66383872
+542          csrss.exe                    13        9620       13           6684672
+273          winlogon.exe                 13        2736       5            10358784
+33           fontdrvhost.exe              8         4556       5            5054464
+1282         dwm.exe                      13        11320      19           113324032
+397          svchost.exe                  8         8048       6            17281024
+349          audiodg.exe                  8         2664       6            23326720
+681          sihost.exe                   8         11692      12           31219712
+141          svchost.exe                  8         9520       1            8892416
+514          svchost.exe                  8         10496      14           34574336
+676          svchost.exe                  8         1260       7            35971072
+335          igfxEM.exe                   8         5284       3            13582336
+268          taskhostw.exe                8         6920       8            15159296
+4424         explorer.exe                 8         6724       90           204386304
+271          svchost.exe                  8         12000      9            19947520
+505          SynTPEnh.exe                 10        6172       10           21618688
+107          crashpad_handler.exe         8         11836      6            5701632
+841          StartMenuExperienceHost.exe  8         4624       10           79355904
+1481         SearchHost.exe               8         11984      63           85770240
+605          RuntimeBroker.exe            8         240        12           39628800
+280          RuntimeBroker.exe            8         2352       2            26439680
+133          svchost.exe                  8         7668       1            8335360
+245          dllhost.exe                  8         6104       7            14032896
+450          ctfmon.exe                   13        12084      12           20979712
+1430         TextInputHost.exe            13        5432       33           100003840
+357          RtkAudUService64.exe         8         7204       12           12718080
+455          MiniSearchHost.exe           8         12644      11           48721920
+1610         chrome.exe                   8         10644      25           214237184
+209          chrome.exe                   8         392        7            7270400
+839          chrome.exe                   10        8320       16           170676224
+340          chrome.exe                   8         12008      12           44531712
+213          chrome.exe                   8         2672       8            17076224
+236          chrome.exe                   8         2460       15           34983936
+247          chrome.exe                   8         7768       15           112562176
+238          chrome.exe                   8         1744       15           35041280
+238          chrome.exe                   8         9568       15           37675008
+247          chrome.exe                   8         11528      11           19161088
+936          Code.exe                     8         3100       29           87969792
+222          Code.exe                     8         10424      7            25473024
+647          Code.exe                     10        11464      17           221683712
+291          Code.exe                     8         13440      13           39960576        
+588          Code.exe                     8         9412       20           216788992
+239          chrome.exe                   8         11376      15           37822464
+264          svchost.exe                  8         15152      4            13819904
+384          Code.exe                     8         14752      23           81457152
+233          Code.exe                     8         13332      16           56696832
+244          svchost.exe                  8         11368      1            12328960
+942          ShellExperienceHost.exe      8         15044      32           72110080
+441          RuntimeBroker.exe            8         15296      11           26173440
+185          Code.exe                     8         5260       14           69312512
+298          Code.exe                     8         3200       17           145039360
+107          conhost.exe                  8         6528       5            6479872
+722          pwsh.exe                     8         3516       12           71077888
+621          YourPhone.exe                8         9092       14           68878336
+539          LockApp.exe                  8         9372       13           63373312
+481          RuntimeBroker.exe            8         14072      10           36683776
+196          svchost.exe                  8         14472      6            14159872
+100          git.exe                      8         7304       11           6307840
+181          RuntimeBroker.exe            8         2500       4            10215424
+677          Widgets.exe                  8         11704      9            33959936
+1069         msedgewebview2.exe           8         3356       28           43253760
+145          msedgewebview2.exe           8         1884       7            6811648
+643          msedgewebview2.exe           10        7856       15           9605120
+276          msedgewebview2.exe           8         4276       10           31956992
+198          msedgewebview2.exe           8         14488      7            18493440
+410          msedgewebview2.exe           4         6396       14           34652160
+590          SystemSettingsBroker.exe     8         9756       22           34607104
+300          ApplicationFrameHost.exe     8         3180       1            27561984
+136          svchost.exe                  8         2820       2            11051008
+232          hpqwmiex.exe                 8         7524       5            11608064
+322          chrome.exe                   4         5480       15           70184960
+306          chrome.exe                   4         2452       17           98590720
+221          chrome.exe                   4         12464      15           31698944
+118          svchost.exe                  8         3164       2            7761920
+159          svchost.exe                  8         9924       3            7409664
+113          svchost.exe                  8         9296       3            6037504
+212          Code.exe                     8         11972      13           183382016
+109          conhost.exe                  8         11468      7            6721536
+658          pwsh.exe                     8         12540      23           73854976
+369          python.exe                   8         9884       8            44732416
+189          WMIC.exe                     8         13696      8            12918784
+163          WmiPrvSE.exe                 8         8136       9            9805824
+
+
+.. _hide:
+
+13. hide (hides any item)
+-------------------------
+
+.. py:function:: hide(arg=item)
+
+``hide`` command hides any item on providing path.
+NOTE:- It hides the item from File Explorer, some third party explorers might still track it.
+
+Syntax:
+
+>>> C:\Users\Desktop\MyTestDir: hide superSecretLol.c
+Successfully hidden item las with exit status 0
+
+For a non-existent operand in *arg[1]*, it returns a non-existent error
+
+>>> C:\Users\Desktop\MyTestDir: hide DoIExistsLol.bf
+DoIExistsLol.bf does not exist
 
