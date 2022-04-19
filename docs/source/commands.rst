@@ -271,3 +271,12 @@ Here the operand ``MyDocs`` is the target directory to be deleted.
 .. py:exception:: OperandNotFolderError
 
     Raised when entered operand is not a folder but a file.
+
+
+.. _bash0:
+
+11. bash --sys 0 (shutdown system)
+----------------------------------
+
+The ``bash --sys -`` command shuts down the system.
+
