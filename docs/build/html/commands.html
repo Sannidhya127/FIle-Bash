@@ -54,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#bash-sys-0-shutdown-system">11. bash –sys 0 (shutdown system)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#process-uid-lists-running-process">12. process –uid (lists running process)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hide-hides-any-item">13. hide (hides any item)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uhd-unhide">14 uhd (unhide)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Understanding some important functions used to code commands</a></li>
@@ -580,7 +581,7 @@ processId, ThreadCount, WorkingSetSize, HandleCount.</p>
 NOTE:- It hides the item from File Explorer, some third party explorers might still track it.</p>
 <p>Syntax:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">hide</span> <span class="n">superSecretLol</span><span class="o">.</span><span class="n">c</span>
-<span class="go">Successfully hidden item las with exit status 0</span>
+<span class="go">Successfully hidden item superSecretLol.c with exit status 0</span>
 </pre></div>
 </div>
 <p>For a non-existent operand in <em>arg[1]</em>, it returns a non-existent error</p>
@@ -588,6 +589,25 @@ NOTE:- It hides the item from File Explorer, some third party explorers might st
 <span class="go">DoIExistsLol.bf does not exist</span>
 </pre></div>
 </div>
+</section>
+<section id="uhd-unhide">
+<span id="uhd"></span><h2>14 uhd (unhide)<a class="headerlink" href="#uhd-unhide" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="unide">
+<span class="sig-name descname"><span class="pre">unide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">HiddenItem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unide" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p><code class="docutils literal notranslate"><span class="pre">uhd</span></code> command unhides the target file or directory (is hidden).</p>
+<p>Syntax:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">uhd</span> <span class="n">superSecretLol</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>The above command unhides the file <code class="docutils literal notranslate"><span class="pre">superSecretLol.c</span></code></p>
+<ul class="simple">
+<li><p>For missing operand, no output is supplied</p></li>
+<li><p>For an operand with valid path but not hidden, no output is supplied</p></li>
+<li><p>For an invalid operand path, it returns a <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">not</span> <span class="pre">found</span> <span class="pre">-</span> <span class="pre">FileName</span></code> error</p></li>
+</ul>
 </section>
 </section>
 

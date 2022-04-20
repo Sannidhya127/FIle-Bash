@@ -505,10 +505,30 @@ NOTE:- It hides the item from File Explorer, some third party explorers might st
 Syntax:
 
 >>> C:\Users\Desktop\MyTestDir: hide superSecretLol.c
-Successfully hidden item las with exit status 0
+Successfully hidden item superSecretLol.c with exit status 0
 
 For a non-existent operand in *arg[1]*, it returns a non-existent error
 
 >>> C:\Users\Desktop\MyTestDir: hide DoIExistsLol.bf
 DoIExistsLol.bf does not exist
+
+
+.. _uhd:
+
+14 uhd (unhide)
+---------------
+
+.. py:function:: unide(arg=HiddenItem)
+
+``uhd`` command unhides the target file or directory (is hidden).
+
+Syntax:
+
+>>> C:\Users\Desktop\MyTestDir: uhd superSecretLol.c
+
+The above command unhides the file ``superSecretLol.c``
+
+- For missing operand, no output is supplied
+- For an operand with valid path but not hidden, no output is supplied
+- For an invalid operand path, it returns a ``File not found - FileName`` error
 
