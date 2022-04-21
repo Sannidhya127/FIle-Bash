@@ -103,3 +103,8 @@ v0.5.3 [18/04/2022 19:24]
 - Added ``process --uid`` command
 - Added ``hide`` command
 - Changed theme to **sphinx_rtd_theme**
+
+v0.5.4 [20/04/2022 13:12]
+-------------------------
+- Adomnition to the Rooter page regarding its launch time.
+- ``uhd`` (unhide) command added

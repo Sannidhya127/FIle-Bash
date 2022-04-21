@@ -30,7 +30,7 @@ To print a list of all items in the current directory, use the ``ls`` command:
    :param --progs: lists all items in directory with extensions .py, .c, .c++, .cpp, .exe, .rb, .r, .php, .js, .html, .java, .css
 
 
-The ``ls`` command parameters can only track files with specifiend extensions. Other extensions will be *ignored* even if they fall in the requested category
+The ``ls`` command attributes can only track files with specifiend extensions. Other extensions will be *ignored* even if they fall in the requested category
 
 .. _rm:
 
@@ -532,3 +532,41 @@ The above command unhides the file ``superSecretLol.c``
 - For an operand with valid path but not hidden, no output is supplied
 - For an invalid operand path, it returns a ``File not found - FileName`` error
 
+
+
+.. _read:
+
+15. read (prints file content)
+
+.. py:function:: read(arg=File)
+
+The ``read`` command is used to print the contents of a given file in the console. argument[1] is the target file to be read
+
+For example, there is a file called HelloWorld.txt whose content is
+
+Hello World
+^^^^^^^^^^^
+
+For reading the content of this file, we will have to use the ``read`` command with the following syntax applied
+
+>>> C:\Users\Desktop\MyTestDir: read HelloWorld.txt
+    Hello World!
+
+If a file has a larger content size, like
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt voluptatum tenetur libero nulla esse veritatis 
+accusantium earum commodi hic voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam
+
+The output will be: 
+
+>>> C:\Users\Desktop\MyTestDir: read LoremIpsum.txt
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt voluptatum tenetur libero nulla esse veritatis 
+    accusantium earum commodi hic voluptatem officia culpa optio atque. Quaerat sed quibusdam ratione nam
+
+.. py:exception:: UNICODE.characters.execeptionError()
+
+    Raised when a file with binary characters/unicode characters is passed
+
+.. py:exception:: isFolderError()
+    
+    Raised when target item is folder
