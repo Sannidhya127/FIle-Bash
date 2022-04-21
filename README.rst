@@ -6,6 +6,13 @@ File Bash
 For the File Bash Documentation, please refer to docs/build/html/index.html
 ***************************************************************************
 
+Installation
+------------
+
+.. important::
+   The File Bash Installation Wizard is under development and is expected in an ETA of 3-4 months (might change). Till then users cannot use File Bash on their local     computers(not with ease atleast)
+
+
 LICENSE
 -------
 
@@ -32,4 +39,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-For more details refer to the File Bash Documentation at https://github.com/Sannidhya127/FIle-Bash/tree/master/docs/build/html (path -> docs/build/html/index.html).
