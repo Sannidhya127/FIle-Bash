@@ -537,6 +537,7 @@ The above command unhides the file ``superSecretLol.c``
 .. _read:
 
 15. read (prints file content)
+------------------------------
 
 .. py:function:: read(arg=File)
 
@@ -545,7 +546,6 @@ The ``read`` command is used to print the contents of a given file in the consol
 For example, there is a file called HelloWorld.txt whose content is
 
 Hello World
-^^^^^^^^^^^
 
 For reading the content of this file, we will have to use the ``read`` command with the following syntax applied
 
@@ -568,5 +568,36 @@ The output will be:
     Raised when a file with binary characters/unicode characters is passed
 
 .. py:exception:: isFolderError()
-    
+
     Raised when target item is folder
+
+
+.. _write:
+
+
+16. write (write to a file)
+---------------------------
+
+The ``write`` command is used for editing a file. The default text editor is Notepad.
+
+To use the ``write`` command, follow the given syntax
+
+>>> C:\Users\Desktop\MyTestDir: write LoremIpsum.txt
+
+On running this command File Bash launches the target file ``LoremIpsum.txt`` in Notepad. The few instances during and after running this command look like this:
+
+.. image:: https://i.imgur.com/t9W27DC.png
+
+.. image:: https://i.imgur.com/whDjZJE.png
+
+.. image:: https://i.imgur.com/VDiqihG.png
+
+.. image:: https://i.imgur.com/6cRB9qJ.png
+
+One of the primary advantages of the ``write`` command is that it displays the additions and deletions made to a file.
+
+.. py:exception:: IsDirectoryError()
+
+    Raised when target is a Directory and not a file. The bash responds by saying ``It's a dir good sir :)``
+
+If a non-existent file is targeted, File Bash prompts the user if he/she wants to create a file with that name, if not created, it returns a ``Failed to read file`` error and a ``Could not load file changes (file unexistent)`` error

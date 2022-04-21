@@ -108,3 +108,11 @@ v0.5.4 [20/04/2022 13:12]
 -------------------------
 - Adomnition to the Rooter page regarding its launch time.
 - ``uhd`` (unhide) command added
+
+v0.5.5 [21/04/2022 19:55]
+-------------------------
+
+- Added ``read`` command
+- Added ``write`` command
+- Fixed issue about the crashing of File Bash when directory name is given to ``write`` command
+- Made a new API page cause some new plans are being cooked

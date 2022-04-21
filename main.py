@@ -577,34 +577,38 @@ def readFile(filename):
 
 
 def editFile(IO):
-    print("OPENING FILE:")
-    file = IO[6::]
-    print(file)
-    try:
-        f = open(file, "r")
-        t = f.read()
-        text = t.splitlines()
-        f.close()
-    except Exception:
-        print("failed to read file")
-        # print(e)
-    subprocess.run(f"notepad {file}")
-    try:
-        nf = open(file, "r")
-        nt = nf.read()
-        ntext = nt.splitlines()
-        dif = Differ()
-        df = list(dif.compare(text, ntext))
-        for i in df:
-            if i[0] == "+":
-                print(f"{fg('green')}{i}{attr('reset')}")
-            elif i[0] == "-":
-                print(f"{fg('red_1')}{i}{attr('reset')}")
-            else:
-                pass
-        print("Succesfully edited with exit code 0")
-    except FileNotFoundError:
-        print("Could not load file changes (file unexistent)")
+    dircheck =  os.path.isdir(IO[6::])
+    if dircheck == True:
+        print("It's a dir good sir :)")
+    else:
+        print("OPENING FILE:")
+        file = IO[6::]
+        print(file)
+        try:
+            f = open(file, "r")
+            t = f.read()
+            text = t.splitlines()
+            f.close()
+        except Exception:
+            print("failed to read file")
+            # print(e)
+        subprocess.run(f"notepad {file}")
+        try:
+            nf = open(file, "r")
+            nt = nf.read()
+            ntext = nt.splitlines()
+            dif = Differ()
+            df = list(dif.compare(text, ntext))
+            for i in df:
+                if i[0] == "+":
+                    print(f"{fg('green')}{i}{attr('reset')}")
+                elif i[0] == "-":
+                    print(f"{fg('red_1')}{i}{attr('reset')}")
+                else:
+                    pass
+            print("Succesfully edited with exit code 0")
+        except FileNotFoundError:
+            print("Could not load file changes (file unexistent)")
 
 
 def searchDir(query):

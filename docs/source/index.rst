@@ -49,6 +49,7 @@ Table Of Contents
    commands
    functions
    root
+   api
    conduct
    about
    contribute
