@@ -3,6 +3,8 @@ File Bash
 
 **File Bash** is a simple command line interface application developed and maintained in *The Python Programming Language*. Inspired by the *Linux Terminal* and the *Windows Powershell*, File Bash tries to frame the basic commands of a command prompt coded completely in python.
 
+``For the File Bash Documentation, please refer to docs/build/index.html``
+
 LICENSE
 -------
 
