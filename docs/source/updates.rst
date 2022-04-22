@@ -116,3 +116,10 @@ v0.5.5 [21/04/2022 19:55]
 - Added ``write`` command
 - Fixed issue about the crashing of File Bash when directory name is given to ``write`` command
 - Made a new API page cause some new plans are being cooked
+
+v0.6.0 [22/04/2022 20:35]
+-------------------------
+
+- Added the first ever **API** of File Bash
+- The api is framed over the ``rm`` command
+- On running the api command, the rm command returns the ``item``, ``type``, ``version``, ``time`` and ``existence`` details of given item.

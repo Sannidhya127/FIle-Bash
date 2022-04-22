@@ -1,11 +1,13 @@
 # copyright @github.com/Sannidhya127
 
+from ensurepip import version
 import os  
 import sys
 import shutil
 import time as t
 import webbrowser
 import pathlib
+import json
 import time
 from colored import fg, bg, attr
 from colored.colored import colored
@@ -51,6 +53,12 @@ import logging
 import math
 import shutil
 import multiprocessing
+
+version = "v0.6.0"
+
+now = datetime.now()
+
+current_time = now.strftime("%H:%M:%S")
 
 time = datetime.now()
 
@@ -363,23 +371,86 @@ def DelFile(command):
 
 def Delete(input):
     try:
-        blank = ""
-        Existence = os.path.exists(input[3::])
-        if Existence == True:
+        start_time = datetime.now()
+        if "-a -h --rm" in input:
+            input = input.replace("-a -h --rm","")
+            input = input.strip()
+            api = {
+            "item" : input[3::],
+            "IsFile" : "",
+            "version" : version
+        }
+            size = os.path.getsize(input[3::])
             fileCheck = os.path.isfile(input[3::])
             folderCheck = os.path.isdir(input[3::])
-            if input[3::] == blank:
-                print("No file/folder name given")
-            elif fileCheck== True and folderCheck == False:
-                os.remove(input[3::])
-            elif fileCheck == False and folderCheck ==  True:
-                shutil.rmtree(input[3::])
-            else:
-                print("I see no name")
+            blank = ""
+            Existence = os.path.exists(input[3::])
+            if Existence == True:
+                if input[3::] == blank:
+                    api = {
+                    "item" : input[3::],
+                    "type" : "",
+                    "version" : version,
+                    "time" : current_time,
+                    "Existence" : True
+                }
+                    print("No file/folder name given")
+                elif fileCheck== True and folderCheck == False:
+                    api = {
+                    "item" : input[3::],
+                    "type" : "File",
+                    "version" :version,
+                    "time" : current_time,
+                    "Existence" : True
+                }
+                    os.remove(input[3::])
+                    end_time = datetime.now()
+                elif fileCheck == False and folderCheck ==  True:
+                    api = {
+                    "item" : input[3::],
+                    "type" : "Directory",
+                    "version" : version,
+                    "time" : current_time,
+                    "Existence" : True
+                }
+                    shutil.rmtree(input[3::])
+                    end_time = datetime.now()
+                else:
+                    api = {
+                    "item" : input[3::],
+                    "type" : "None",
+                    "version" : version,
+                    "time" : current_time,
+                    "Existence" : False
+                }
+
+                    print("I see no name")
+
+                ApiData = json.dumps(api, indent=4, separators=(", ", " : "))
+                print(ApiData)
+                print(f"Successfully run api with exit code 0")
+            elif Existence==False:
+                print(f"{fg('red_1')}The given item does not exist{attr('reset')}")
         else:
-            print(f"{fg('red_1')}The given item does not exist{attr('reset')}")
+            fileCheck = os.path.isfile(input[3::])
+            folderCheck = os.path.isdir(input[3::])
+            blank = ""
+            Existence = os.path.exists(input[3::])
+            if Existence == True:
+                if input[3::] == blank:
+                    print("No file/folder name given")
+                elif fileCheck== True and folderCheck == False:
+                    os.remove(input[3::])
+                elif fileCheck == False and folderCheck ==  True:
+                    shutil.rmtree(input[3::])
+                else:
+                    print("I see no name")
+            else:
+                print(f"{fg('red_1')}The given item does not exist{attr('reset')}")
     except Exception:
-        print(f"{fg('red_1')}Unable to access file. Might be because it is encrypted{attr('reset')}")
+        print(f"{fg('red_1')}Unable to access file.{attr('reset')}")
+
+
 
 def DelDir(input):
     '''

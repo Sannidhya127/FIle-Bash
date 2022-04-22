@@ -1,6 +1,7 @@
-[2022-04-21] 19:31:29 -  INFO   - CreateFile - main.py - 426 - Opened file loremipsum.txt in append mode
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
+[2022-04-22] 20:34:20 -  INFO   - CreateFile - main.py - 497 - Opened file index.c in append mode
+[2022-04-22] 20:32:15 -  INFO   - CreateFile - main.py - 497 - Opened file index.c in append mode
+[2022-04-22] 20:32:29 -  INFO   - CreateFile - main.py - 497 - Opened file index.c -a -h -rm in append mode
+with ls
 [2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
 [2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
 [2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
