@@ -61,4 +61,11 @@ html_static_path = ["_static"]
 # html_logo = "FileBash.png"
 extensions = [
     'sphinx.ext.duration',
+    "sphinx_copybutton",
+    "sphinx_issues",
+    "sphinx_removed_in",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.intersphinx",
+    "sphinxcontrib.httpdomain", 
+    "sphinx.ext.viewcode",
 ]

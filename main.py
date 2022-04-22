@@ -372,8 +372,8 @@ def DelFile(command):
 def Delete(input):
     try:
         start_time = datetime.now()
-        if "-a -h --rm" in input:
-            input = input.replace("-a -h --rm","")
+        if "-a -h" in input:
+            input = input.replace("-a -h","")
             input = input.strip()
             api = {
             "item" : input[3::],

@@ -123,3 +123,9 @@ v0.6.0 [22/04/2022 20:35]
 - Added the first ever **API** of File Bash
 - The api is framed over the ``rm`` command
 - On running the api command, the rm command returns the ``item``, ``type``, ``version``, ``time`` and ``existence`` details of given item.
+
+v0.6.1 [22/04/2022 21:32]
+-------------------------
+
+- Added ``rm api`` to API references page
+- Changed api call attribute from ``-a -h --rm`` to ``-a -h`` for ``rm api``
