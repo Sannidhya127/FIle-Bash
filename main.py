@@ -13,6 +13,9 @@ from colored import fg, bg, attr
 from colored.colored import colored
 import pyttsx3
 import importlib
+import datetime
+import time
+from datetime import *
 from datetime import date
 from datetime import time
 from datetime import datetime
@@ -54,7 +57,7 @@ import math
 import shutil
 import multiprocessing
 
-version = "v0.6.0"
+version = "v0.6.3"
 
 now = datetime.now()
 
@@ -371,16 +374,14 @@ def DelFile(command):
 
 def Delete(input):
     try:
-        start_time = datetime.now()
-        if "-a -h" in input:
-            input = input.replace("-a -h","")
+        if "--a -j" in input:
+            input = input.replace("--a -j","")
             input = input.strip()
             api = {
             "item" : input[3::],
             "IsFile" : "",
             "version" : version
         }
-            size = os.path.getsize(input[3::])
             fileCheck = os.path.isfile(input[3::])
             folderCheck = os.path.isdir(input[3::])
             blank = ""
@@ -391,27 +392,39 @@ def Delete(input):
                     "item" : input[3::],
                     "type" : "",
                     "version" : version,
-                    "time" : current_time,
+                    "current time" : current_time,
                     "Existence" : True
                 }
                     print("No file/folder name given")
                 elif fileCheck== True and folderCheck == False:
+                    m_time = os.path.getmtime(input[3::])
+                    c_time = os.path.getctime(input[3::])
+                    y,m,d,h,mi,s=t.localtime(c_time)[:-3]
+                    year,month,day,hour,minute,second=t.localtime(m_time)[:-3]
                     api = {
                     "item" : input[3::],
                     "type" : "File",
                     "version" :version,
-                    "time" : current_time,
-                    "Existence" : True
+                    "current time" : current_time,
+                    "Existence" : True,
+                    "Creation Time" : "Date created: %02d/%02d/%d %02d:%02d:%02d"%(d,m,y,h,mi,s),
+                    "Last Modified" : "Date modified: %02d/%02d/%d %02d:%02d:%02d"%(day,month,year,hour,minute,second)
                 }
                     os.remove(input[3::])
                     end_time = datetime.now()
                 elif fileCheck == False and folderCheck ==  True:
+                    m_time = os.path.getmtime(input[3::])
+                    c_time = os.path.getctime(input[3::])
+                    y,m,d,h,mi,s=t.localtime(c_time)[:-3]
+                    year,month,day,hour,minute,second=t.localtime(m_time)[:-3]
                     api = {
                     "item" : input[3::],
                     "type" : "Directory",
                     "version" : version,
-                    "time" : current_time,
-                    "Existence" : True
+                    "current time" : current_time,
+                    "Existence" : True,
+                    "Creation Time" : "Date created: %02d/%02d/%d %02d:%02d:%02d"%(d,m,y,h,mi,s),
+                    "Last Modified" : "Date modified: %02d/%02d/%d %02d:%02d:%02d"%(day,month,year,hour,minute,second)
                 }
                     shutil.rmtree(input[3::])
                     end_time = datetime.now()
@@ -420,7 +433,7 @@ def Delete(input):
                     "item" : input[3::],
                     "type" : "None",
                     "version" : version,
-                    "time" : current_time,
+                    "current time" : current_time,
                     "Existence" : False
                 }
 
@@ -447,7 +460,8 @@ def Delete(input):
                     print("I see no name")
             else:
                 print(f"{fg('red_1')}The given item does not exist{attr('reset')}")
-    except Exception:
+    except Exception as e:
+        print(e)
         print(f"{fg('red_1')}Unable to access file.{attr('reset')}")
 
 

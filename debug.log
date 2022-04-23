@@ -1,4 +1,5 @@
-[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
+[2022-04-23] 20:22:47 -  INFO   - CreateFile - main.py - 505 - Opened file test.txt in append mode
+es
 [2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
 [2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
 [2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
