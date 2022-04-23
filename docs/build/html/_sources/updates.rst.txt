@@ -137,3 +137,11 @@ v0.6.2 [23/04/2022 12:06]
 - Added ``help`` command to docs
 - Added git and python commands reference
 - Added ``exit`` command to docs
+
+v0.6.3 [23/04/2022 20:29]
+-------------------------
+
+- Added ``creation time`` and ``modification time`` tracker to ``rm api``
+- Framed rooter's first functionality
+- Changed theme to ``python-docs``
+- Changed documentation intro
