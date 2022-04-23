@@ -1,115 +1,167 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; File Bash v0.1.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-    <script src="_static/js/theme.js"></script>
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Changelog &#8212; File Bash v0.1.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?2022.1" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="License" href="liscense.html" /> 
-</head>
-
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> File Bash
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide to the use of a Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">Understanding some important functions used to code commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="root.html">Rooter: An efficient application for testing File Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">File Bash API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conduct.html">Contributor Covenant Code of Conduct</a></li>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liscense.html">License</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#v0-0-1-beta-15-04-2022-15-08">v0.0.1-beta [15/04/2022 15:08]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-0-2-beta-15-04-2022-13-09">v0.0.2-beta [15/04/2022 13:09]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-0-3-beta-15-04-2022-18-10">v0.0.3-beta [15/04/2022 18:10]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-1-0-16-04-2022-12-12">v0.1.0 [16/04/2022 12:12 ]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-1-1-16-04-2022-12-15">v0.1.1 [16/04/2022 12:15]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-1-2-16-04-2022-17-17">v0.1.2 [16/04/2022 17:17]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-1-3-16-04-2022-18-18">v0.1.3 [16/04/2022 18:18]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-1-4-16-04-2022-18-47">v0.1.4 [16/04/2022 18:47]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-2-0-16-04-2022-20-15">v0.2.0 [16/04/2022 20:15]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v-0-3-0-17-04-2022-1-03">v.0.3.0 [17/04/2022 1:03]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v-0-4-0-17-04-2022-12-13">v.0.4.0 [17/04/2022 12:13]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-5-1-17-04-2022-20-21">v0.5.1 [17/04/2022 20:21]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-5-2-18-04-2022-22-21">v0.5.2 [18/04/2022 22:21]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-5-3-18-04-2022-19-24">v0.5.3 [18/04/2022 19:24]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-5-4-20-04-2022-13-12">v0.5.4 [20/04/2022 13:12]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-5-5-21-04-2022-19-55">v0.5.5 [21/04/2022 19:55]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-6-0-22-04-2022-20-35">v0.6.0 [22/04/2022 20:35]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-6-1-22-04-2022-21-32">v0.6.1 [22/04/2022 21:32]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-6-2-23-04-2022-12-06">v0.6.2 [23/04/2022 12:06]</a></li>
+    <link rel="prev" title="License" href="liscense.html" /><link rel="shortcut icon" type="image/png" href="_static/py.svg" />
+            <script type="text/javascript" src="_static/copybutton.js"></script>
+            <script type="text/javascript" src="_static/menu.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu" />
+    <label for="menuToggler" class="toggler__label">
+        <span></span>
+    </label>
+    <nav class="nav-content" role="navigation">
+         <a href="https://www.python.org/" class="nav-logo">
+             <img src="_static/py.svg" alt="Logo"/>
+         </a>
+        <div class="version_switcher_placeholder"></div>
+        <form role="search" class="search" action="search.html" method="get">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                <path fill-rule="nonzero"
+                        d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#444"></path>
+            </svg>
+            <input type="text" name="q" aria-label="Quick search"/>
+            <input type="submit" value="Go"/>
+        </form>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#v0-0-1-beta-15-04-2022-15-08">v0.0.1-beta [15/04/2022 15:08]</a></li>
+<li><a class="reference internal" href="#v0-0-2-beta-15-04-2022-13-09">v0.0.2-beta [15/04/2022 13:09]</a></li>
+<li><a class="reference internal" href="#v0-0-3-beta-15-04-2022-18-10">v0.0.3-beta [15/04/2022 18:10]</a></li>
+<li><a class="reference internal" href="#v0-1-0-16-04-2022-12-12">v0.1.0 [16/04/2022 12:12 ]</a></li>
+<li><a class="reference internal" href="#v0-1-1-16-04-2022-12-15">v0.1.1 [16/04/2022 12:15]</a></li>
+<li><a class="reference internal" href="#v0-1-2-16-04-2022-17-17">v0.1.2 [16/04/2022 17:17]</a></li>
+<li><a class="reference internal" href="#v0-1-3-16-04-2022-18-18">v0.1.3 [16/04/2022 18:18]</a></li>
+<li><a class="reference internal" href="#v0-1-4-16-04-2022-18-47">v0.1.4 [16/04/2022 18:47]</a></li>
+<li><a class="reference internal" href="#v0-2-0-16-04-2022-20-15">v0.2.0 [16/04/2022 20:15]</a></li>
+<li><a class="reference internal" href="#v-0-3-0-17-04-2022-1-03">v.0.3.0 [17/04/2022 1:03]</a></li>
+<li><a class="reference internal" href="#v-0-4-0-17-04-2022-12-13">v.0.4.0 [17/04/2022 12:13]</a></li>
+<li><a class="reference internal" href="#v0-5-1-17-04-2022-20-21">v0.5.1 [17/04/2022 20:21]</a></li>
+<li><a class="reference internal" href="#v0-5-2-18-04-2022-22-21">v0.5.2 [18/04/2022 22:21]</a></li>
+<li><a class="reference internal" href="#v0-5-3-18-04-2022-19-24">v0.5.3 [18/04/2022 19:24]</a></li>
+<li><a class="reference internal" href="#v0-5-4-20-04-2022-13-12">v0.5.4 [20/04/2022 13:12]</a></li>
+<li><a class="reference internal" href="#v0-5-5-21-04-2022-19-55">v0.5.5 [21/04/2022 19:55]</a></li>
+<li><a class="reference internal" href="#v0-6-0-22-04-2022-20-35">v0.6.0 [22/04/2022 20:35]</a></li>
+<li><a class="reference internal" href="#v0-6-1-22-04-2022-21-32">v0.6.1 [22/04/2022 21:32]</a></li>
+<li><a class="reference internal" href="#v0-6-2-23-04-2022-12-06">v0.6.2 [23/04/2022 12:06]</a></li>
 </ul>
 </li>
 </ul>
 
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">File Bash</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Changelog</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/updates.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="liscense.html"
+                          title="previous chapter">License</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/updates.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+<script>$('#searchbox').show(0);</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="liscense.html" title="License"
+             accesskey="P">previous</a> |</li>
+          <li><img src="_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">File Bash v0.1.1 documentation</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href="">Changelog</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+                     |
+                </li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <section id="changelog">
-<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline"></a></h1>
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
 <p>Timestamps according to 24-hour clock system</p>
 <section id="v0-0-1-beta-15-04-2022-15-08">
-<h2>v0.0.1-beta [15/04/2022 15:08]<a class="headerlink" href="#v0-0-1-beta-15-04-2022-15-08" title="Permalink to this headline"></a></h2>
+<h2>v0.0.1-beta [15/04/2022 15:08]<a class="headerlink" href="#v0-0-1-beta-15-04-2022-15-08" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>First setup of this Documentation.</p></li>
 <li><p>The versioning will follow the semantic versioning of <a class="reference external" href="https://semver.org/">https://semver.org/</a>.</p></li>
 </ul>
 </section>
 <section id="v0-0-2-beta-15-04-2022-13-09">
-<h2>v0.0.2-beta [15/04/2022 13:09]<a class="headerlink" href="#v0-0-2-beta-15-04-2022-13-09" title="Permalink to this headline"></a></h2>
+<h2>v0.0.2-beta [15/04/2022 13:09]<a class="headerlink" href="#v0-0-2-beta-15-04-2022-13-09" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>First developmental release inclusive of documentation.</p></li>
 <li><p>The documentation is being developed with sphinx and is yet to be completed.</p></li>
@@ -125,33 +177,33 @@
 </ul>
 </section>
 <section id="v0-0-3-beta-15-04-2022-18-10">
-<h2>v0.0.3-beta [15/04/2022 18:10]<a class="headerlink" href="#v0-0-3-beta-15-04-2022-18-10" title="Permalink to this headline"></a></h2>
+<h2>v0.0.3-beta [15/04/2022 18:10]<a class="headerlink" href="#v0-0-3-beta-15-04-2022-18-10" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added new commands to commands page and a quickstart guide page for beginners.</p></li>
 </ul>
 </section>
 <section id="v0-1-0-16-04-2022-12-12">
-<h2>v0.1.0 [16/04/2022 12:12 ]<a class="headerlink" href="#v0-1-0-16-04-2022-12-12" title="Permalink to this headline"></a></h2>
+<h2>v0.1.0 [16/04/2022 12:12 ]<a class="headerlink" href="#v0-1-0-16-04-2022-12-12" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Transfered the complete documentation setup to a seperate folder with git repository initialisation for hosting the page on GitHub Pages.</p></li>
 </ul>
 </section>
 <section id="v0-1-1-16-04-2022-12-15">
-<h2>v0.1.1 [16/04/2022 12:15]<a class="headerlink" href="#v0-1-1-16-04-2022-12-15" title="Permalink to this headline"></a></h2>
+<h2>v0.1.1 [16/04/2022 12:15]<a class="headerlink" href="#v0-1-1-16-04-2022-12-15" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Brought back the docs as github pages failed to host the site for it not being fully static.</p></li>
 <li><p>Documentation will be accessed as a local file and not a website hosted on a server.</p></li>
 </ul>
 </section>
 <section id="v0-1-2-16-04-2022-17-17">
-<h2>v0.1.2 [16/04/2022 17:17]<a class="headerlink" href="#v0-1-2-16-04-2022-17-17" title="Permalink to this headline"></a></h2>
+<h2>v0.1.2 [16/04/2022 17:17]<a class="headerlink" href="#v0-1-2-16-04-2022-17-17" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Changed changelog.rst to update.rst and removed Changelog sub heading. It is now displayed as a link just like commands and quickstart pages.</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">sys</span> <span class="pre">--info</span></code> command to commands page. Details regarding GPU information missing and screenshots provided.</p></li>
 </ul>
 </section>
 <section id="v0-1-3-16-04-2022-18-18">
-<h2>v0.1.3 [16/04/2022 18:18]<a class="headerlink" href="#v0-1-3-16-04-2022-18-18" title="Permalink to this headline"></a></h2>
+<h2>v0.1.3 [16/04/2022 18:18]<a class="headerlink" href="#v0-1-3-16-04-2022-18-18" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Added several pages according to a pre-designed blueprint to the documentation. The pages are:</dt><dd><ul>
@@ -168,20 +220,20 @@
 </ul>
 </section>
 <section id="v0-1-4-16-04-2022-18-47">
-<h2>v0.1.4 [16/04/2022 18:47]<a class="headerlink" href="#v0-1-4-16-04-2022-18-47" title="Permalink to this headline"></a></h2>
+<h2>v0.1.4 [16/04/2022 18:47]<a class="headerlink" href="#v0-1-4-16-04-2022-18-47" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added a command named <code class="docutils literal notranslate"><span class="pre">documentation</span></code> which when entered opens the documentation in the default web browser</p></li>
 </ul>
 </section>
 <section id="v0-2-0-16-04-2022-20-15">
-<h2>v0.2.0 [16/04/2022 20:15]<a class="headerlink" href="#v0-2-0-16-04-2022-20-15" title="Permalink to this headline"></a></h2>
+<h2>v0.2.0 [16/04/2022 20:15]<a class="headerlink" href="#v0-2-0-16-04-2022-20-15" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added LICENSE.md file containing the MIT License in repository</p></li>
 <li><p>Same text as in LICENSE is copied to <a class="reference internal" href="liscense.html"><span class="doc">License</span></a> in documentation.</p></li>
 </ul>
 </section>
 <section id="v-0-3-0-17-04-2022-1-03">
-<h2>v.0.3.0 [17/04/2022 1:03]<a class="headerlink" href="#v-0-3-0-17-04-2022-1-03" title="Permalink to this headline"></a></h2>
+<h2>v.0.3.0 [17/04/2022 1:03]<a class="headerlink" href="#v-0-3-0-17-04-2022-1-03" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added Code Of Conduct File in repo and also in documentation.</p></li>
 <li><p>Added details of File Bash in <a class="reference internal" href="about.html"><span class="doc">About</span></a> section</p></li>
@@ -189,7 +241,7 @@
 </ul>
 </section>
 <section id="v-0-4-0-17-04-2022-12-13">
-<h2>v.0.4.0 [17/04/2022 12:13]<a class="headerlink" href="#v-0-4-0-17-04-2022-12-13" title="Permalink to this headline"></a></h2>
+<h2>v.0.4.0 [17/04/2022 12:13]<a class="headerlink" href="#v-0-4-0-17-04-2022-12-13" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">license</span></code> command that prints license document</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">of</span> <span class="pre">conduct</span></code> command that prints the Code Of Conduct document</p></li>
@@ -198,7 +250,7 @@
 </ul>
 </section>
 <section id="v0-5-1-17-04-2022-20-21">
-<h2>v0.5.1 [17/04/2022 20:21]<a class="headerlink" href="#v0-5-1-17-04-2022-20-21" title="Permalink to this headline"></a></h2>
+<h2>v0.5.1 [17/04/2022 20:21]<a class="headerlink" href="#v0-5-1-17-04-2022-20-21" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">sr</span></code> command to <a class="reference internal" href="commands.html"><span class="doc">Commands</span></a></p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">delf</span></code> command to <a class="reference internal" href="commands.html"><span class="doc">Commands</span></a></p></li>
@@ -209,13 +261,13 @@
 </ul>
 </section>
 <section id="v0-5-2-18-04-2022-22-21">
-<h2>v0.5.2 [18/04/2022 22:21]<a class="headerlink" href="#v0-5-2-18-04-2022-22-21" title="Permalink to this headline"></a></h2>
+<h2>v0.5.2 [18/04/2022 22:21]<a class="headerlink" href="#v0-5-2-18-04-2022-22-21" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">deld</span></code> command’s remaining details</p></li>
 </ul>
 </section>
 <section id="v0-5-3-18-04-2022-19-24">
-<h2>v0.5.3 [18/04/2022 19:24]<a class="headerlink" href="#v0-5-3-18-04-2022-19-24" title="Permalink to this headline"></a></h2>
+<h2>v0.5.3 [18/04/2022 19:24]<a class="headerlink" href="#v0-5-3-18-04-2022-19-24" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">--sys</span> <span class="pre">0</span></code> command</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">process</span> <span class="pre">--uid</span></code> command</p></li>
@@ -224,14 +276,14 @@
 </ul>
 </section>
 <section id="v0-5-4-20-04-2022-13-12">
-<h2>v0.5.4 [20/04/2022 13:12]<a class="headerlink" href="#v0-5-4-20-04-2022-13-12" title="Permalink to this headline"></a></h2>
+<h2>v0.5.4 [20/04/2022 13:12]<a class="headerlink" href="#v0-5-4-20-04-2022-13-12" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Adomnition to the Rooter page regarding its launch time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uhd</span></code> (unhide) command added</p></li>
 </ul>
 </section>
 <section id="v0-5-5-21-04-2022-19-55">
-<h2>v0.5.5 [21/04/2022 19:55]<a class="headerlink" href="#v0-5-5-21-04-2022-19-55" title="Permalink to this headline"></a></h2>
+<h2>v0.5.5 [21/04/2022 19:55]<a class="headerlink" href="#v0-5-5-21-04-2022-19-55" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">read</span></code> command</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">write</span></code> command</p></li>
@@ -240,7 +292,7 @@
 </ul>
 </section>
 <section id="v0-6-0-22-04-2022-20-35">
-<h2>v0.6.0 [22/04/2022 20:35]<a class="headerlink" href="#v0-6-0-22-04-2022-20-35" title="Permalink to this headline"></a></h2>
+<h2>v0.6.0 [22/04/2022 20:35]<a class="headerlink" href="#v0-6-0-22-04-2022-20-35" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added the first ever <strong>API</strong> of File Bash</p></li>
 <li><p>The api is framed over the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command</p></li>
@@ -248,14 +300,14 @@
 </ul>
 </section>
 <section id="v0-6-1-22-04-2022-21-32">
-<h2>v0.6.1 [22/04/2022 21:32]<a class="headerlink" href="#v0-6-1-22-04-2022-21-32" title="Permalink to this headline"></a></h2>
+<h2>v0.6.1 [22/04/2022 21:32]<a class="headerlink" href="#v0-6-1-22-04-2022-21-32" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">api</span></code> to API references page</p></li>
 <li><p>Changed api call attribute from <code class="docutils literal notranslate"><span class="pre">-a</span> <span class="pre">-h</span> <span class="pre">--rm</span></code> to <code class="docutils literal notranslate"><span class="pre">-a</span> <span class="pre">-h</span></code> for <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">api</span></code></p></li>
 </ul>
 </section>
 <section id="v0-6-2-23-04-2022-12-06">
-<h2>v0.6.2 [23/04/2022 12:06]<a class="headerlink" href="#v0-6-2-23-04-2022-12-06" title="Permalink to this headline"></a></h2>
+<h2>v0.6.2 [23/04/2022 12:06]<a class="headerlink" href="#v0-6-2-23-04-2022-12-06" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span></code> command to docs</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">help</span></code> command to docs</p></li>
@@ -266,33 +318,127 @@
 </section>
 
 
-           </div>
+            <div class="clearer"></div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="liscense.html" class="btn btn-neutral float-left" title="License" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Sannnidhya127.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#v0-0-1-beta-15-04-2022-15-08">v0.0.1-beta [15/04/2022 15:08]</a></li>
+<li><a class="reference internal" href="#v0-0-2-beta-15-04-2022-13-09">v0.0.2-beta [15/04/2022 13:09]</a></li>
+<li><a class="reference internal" href="#v0-0-3-beta-15-04-2022-18-10">v0.0.3-beta [15/04/2022 18:10]</a></li>
+<li><a class="reference internal" href="#v0-1-0-16-04-2022-12-12">v0.1.0 [16/04/2022 12:12 ]</a></li>
+<li><a class="reference internal" href="#v0-1-1-16-04-2022-12-15">v0.1.1 [16/04/2022 12:15]</a></li>
+<li><a class="reference internal" href="#v0-1-2-16-04-2022-17-17">v0.1.2 [16/04/2022 17:17]</a></li>
+<li><a class="reference internal" href="#v0-1-3-16-04-2022-18-18">v0.1.3 [16/04/2022 18:18]</a></li>
+<li><a class="reference internal" href="#v0-1-4-16-04-2022-18-47">v0.1.4 [16/04/2022 18:47]</a></li>
+<li><a class="reference internal" href="#v0-2-0-16-04-2022-20-15">v0.2.0 [16/04/2022 20:15]</a></li>
+<li><a class="reference internal" href="#v-0-3-0-17-04-2022-1-03">v.0.3.0 [17/04/2022 1:03]</a></li>
+<li><a class="reference internal" href="#v-0-4-0-17-04-2022-12-13">v.0.4.0 [17/04/2022 12:13]</a></li>
+<li><a class="reference internal" href="#v0-5-1-17-04-2022-20-21">v0.5.1 [17/04/2022 20:21]</a></li>
+<li><a class="reference internal" href="#v0-5-2-18-04-2022-22-21">v0.5.2 [18/04/2022 22:21]</a></li>
+<li><a class="reference internal" href="#v0-5-3-18-04-2022-19-24">v0.5.3 [18/04/2022 19:24]</a></li>
+<li><a class="reference internal" href="#v0-5-4-20-04-2022-13-12">v0.5.4 [20/04/2022 13:12]</a></li>
+<li><a class="reference internal" href="#v0-5-5-21-04-2022-19-55">v0.5.5 [21/04/2022 19:55]</a></li>
+<li><a class="reference internal" href="#v0-6-0-22-04-2022-20-35">v0.6.0 [22/04/2022 20:35]</a></li>
+<li><a class="reference internal" href="#v0-6-1-22-04-2022-21-32">v0.6.1 [22/04/2022 21:32]</a></li>
+<li><a class="reference internal" href="#v0-6-2-23-04-2022-12-06">v0.6.2 [23/04/2022 12:06]</a></li>
+</ul>
+</li>
+</ul>
 
-</body>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="liscense.html"
+                          title="previous chapter">License</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/updates.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="liscense.html" title="License"
+             >previous</a> |</li>
+          <li><img src="_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">File Bash v0.1.1 documentation</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href="">Changelog</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+                     |
+                </li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; Copyright 2022, Sannnidhya127.
+    <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    Last updated on None.
+    
+    <br />
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+
+  </body>
 </html>
