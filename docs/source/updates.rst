@@ -129,3 +129,11 @@ v0.6.1 [22/04/2022 21:32]
 
 - Added ``rm api`` to API references page
 - Changed api call attribute from ``-a -h --rm`` to ``-a -h`` for ``rm api``
+
+v0.6.2 [23/04/2022 12:06]
+-------------------------
+
+- Added ``rm -rf`` command to docs
+- Added ``help`` command to docs
+- Added git and python commands reference
+- Added ``exit`` command to docs

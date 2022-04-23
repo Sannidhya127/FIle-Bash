@@ -601,3 +601,30 @@ One of the primary advantages of the ``write`` command is that it displays the a
     Raised when target is a Directory and not a file. The bash responds by saying ``It's a dir good sir :)``
 
 If a non-existent file is targeted, File Bash prompts the user if he/she wants to create a file with that name, if not created, it returns a ``Failed to read file`` error and a ``Could not load file changes (file unexistent)`` error
+
+.. _rmrf:
+
+17. rm -rf (Delete a git repository)
+------------------------------------
+
+**This is a Git Software Command, but due to certain unspecifiable reasons, it is mentioned individually here**
+
+The ``rm -rf`` command simply deletes the git repository, if the cwd is one
+
+For details of this command, visit the Git Documentation at https://git-scm.com/doc
+
+18. help (Use your brain)
+-------------------------
+
+Prints the help text. (what else do you expect it to do??)
+
+19. Git and python commands (selective)
+---------------------------------------
+
+Supports 99% of the Git commands and 74% of the Python commands.
+
+
+20. exit (Exits bash)
+---------------------
+
+Exits File Bash, my friend
