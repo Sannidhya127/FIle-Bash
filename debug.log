@@ -1,20 +1,20 @@
-[2022-04-22] 21:30:31 -  INFO   - CreateFile - main.py - 498 - Opened file l.t in append mode
-[2022-04-22] 21:25:29 -  INFO   - CreateFile - main.py - 501 - Tracker has tracked that the mentioned file already exists. ReFileCreationError raised. File: l.t
-[2022-04-22] 21:26:18 -  INFO   - CreateFile - main.py - 497 - Opened file test.txt in append mode
-s - main.py - 228 - ls command successfully printed all files
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 231 - Succesfully printed all directories with ls
-[2022-04-21] 19:31:30 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 239 - Succesfully printed all directories with ls
+[2022-04-23] 17:45:51 -  INFO   - AllFiles - main.py - 236 - ls command successfully printed all files
 ls
 [2022-04-21] 14:52:04 -  INFO   - AllFiles - main.py - 228 - ls command successfully printed all files
 -  INFO   - AllFiles - main.py - 227 - ls command successfully printed all files
