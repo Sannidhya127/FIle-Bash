@@ -1028,7 +1028,6 @@ if __name__ == '__main__':
         d = os.getcwd()
         # if color == False:
         comd = input(f"{fg('46')}{d}: {attr('reset')}")
-        comd = comd.lower()
         commands = ["ls", "ls --docs", "ls --imgs", "ls --aud" , "ls --med", "ls --progs", "delf","deld","crf","crd","sys --info", "mv", "rm", "cd", "sr", "bash --sys 0","process --uid", "hide", "uhd","read","write","rm -rf", "exit", "help"]
         if comd == "ls":
             AllFiles()
