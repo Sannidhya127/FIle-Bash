@@ -583,7 +583,7 @@ def CreateDir(input):
 
 
 def sys_info():
-    os.system("sys_info.py")
+    os.system("src\sys_info.py")
 
 def cwdPrint():
     '''
@@ -800,7 +800,7 @@ def killTask(process):
     os.kill(PidProcess[0], PidProcess[1])
 
 def reloadProgram():
-    os.system("reload.py")
+    os.system("src\\reload.py")
     exit()
     # from colored import fg, bg, attr
 
