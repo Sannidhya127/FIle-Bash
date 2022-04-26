@@ -145,3 +145,9 @@ v0.6.3 [23/04/2022 20:29]
 - Framed rooter's first functionality
 - Changed theme to ``python-docs``
 - Changed documentation intro
+
+v0.7.0 [25/04/2022 22:59]
+-------------------------
+
+- Started making the ``FullScan()`` function, for now it scans ``ls`` command
+- Added logging to rooter for saving reports
