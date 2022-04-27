@@ -134,13 +134,14 @@
   <section id="file-bash-api-reference">
 <h1>File Bash API Reference<a class="headerlink" href="#file-bash-api-reference" title="Permalink to this headline">¶</a></h1>
 <dl class="http get">
-<dt class="sig sig-object http" id="get-rm item --a -j">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">rm</span> <span class="pre">item</span> <span class="pre">--a</span> <span class="pre">-j</span></span><a class="headerlink" href="#get-rm item --a -j" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object http" id="get-rm item -GET">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">rm</span> <span class="pre">item</span> <span class="pre">-GET</span></span><a class="headerlink" href="#get-rm item -GET" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<hr class="docutils" />
 <p>Retrieves set of data interpreted by the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command during runtime</p>
 <p><strong>Request Command</strong></p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">USER</span>\<span class="n">Desktop</span>\<span class="n">Altogether</span>\<span class="n">Code</span><span class="p">:</span> <span class="n">rm</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">a</span> <span class="o">-</span><span class="n">j</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">USER</span>\<span class="n">Desktop</span>\<span class="n">Altogether</span>\<span class="n">Code</span><span class="p">:</span> <span class="n">rm</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">GET</span>
 </pre></div>
 </div>
 <p>The above request retrieves the following data in format <code class="docutils literal notranslate"><span class="pre">json</span></code></p>
@@ -155,6 +156,27 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<dl class="http get">
+<dt class="sig sig-object http" id="get-crf item -GET">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">crf</span> <span class="pre">item</span> <span class="pre">-GET</span></span><a class="headerlink" href="#get-crf item -GET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<hr class="docutils" />
+<p>Retrieves set of interpreted data by the <code class="docutils literal notranslate"><span class="pre">crf</span></code> command during runtime</p>
+<p><strong>Request Command</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">USER</span>\<span class="n">Desktop</span>\<span class="n">Altogether</span>\<span class="n">Code</span><span class="p">:</span> <span class="n">crf</span> <span class="n">HelloWorld</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">GET</span>
+</pre></div>
+</div>
+<p>The above request retrieves the following data in format <code class="docutils literal notranslate"><span class="pre">json</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;item&quot;</span> <span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;version&quot;</span> <span class="p">:</span> <span class="n">version</span><span class="p">,</span>
+    <span class="s2">&quot;Existence&quot;</span> <span class="p">:</span> <span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;Creation Time&quot;</span> <span class="p">:</span> <span class="n">Time</span> <span class="n">Of</span> <span class="n">Creation</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More values are expected to be added in future updates</p>
 </section>
 
 
