@@ -1,6 +1,7 @@
-[2022-04-26] 13:09:02 -  INFO   - AllFiles - main.py - 239 - ls command successfully printed all files
-[2022-04-26] 13:09:02 -  INFO   - AllFiles - main.py - 242 - Succesfully printed all directories with ls
-[2022-04-26] 13:09:02 -  INFO   - AllFiles - main.py - 239 - ls command successfully printed all files
+[2022-04-27] 21:10:03 -  INFO   - CreateFile - main.py - 523 - Opened file w.txt in append mode
+oned file already exists. ReFileCreationError raised. File: w.txt
+[2022-04-27] 21:08:54 -  INFO   - CreateFile - main.py - 523 - Opened file w.txt in append mode
+y - 239 - ls command successfully printed all files
 [2022-04-26] 13:09:02 -  INFO   - AllFiles - main.py - 239 - ls command successfully printed all files
 [2022-04-26] 13:09:02 -  INFO   - AllFiles - main.py - 242 - Succesfully printed all directories with ls
 [2022-04-26] 13:09:02 -  INFO   - AllFiles - main.py - 242 - Succesfully printed all directories with ls

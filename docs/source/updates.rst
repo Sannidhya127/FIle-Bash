@@ -151,3 +151,8 @@ v0.7.0 [25/04/2022 22:59]
 
 - Started making the ``FullScan()`` function, for now it scans ``ls`` command
 - Added logging to rooter for saving reports
+
+v0.7.1 [27/04/2022 20:52]
+-------------------------
+
+- Added full scan fucntion in rooter with command ``rooter -sc 0``. The function is still under development

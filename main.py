@@ -57,7 +57,7 @@ import math
 import shutil
 import multiprocessing
 
-version = "v0.7.0"
+version = "v0.7.1"
 
 now = datetime.now()
 
@@ -374,8 +374,8 @@ def DelFile(command):
 
 def Delete(input):
     try:
-        if "--a -j" in input:
-            input = input.replace("--a -j","")
+        if "-GET" in input:
+            input = input.replace("-GET","")
             input = input.strip()
             api = {
             "item" : input[3::],
@@ -503,26 +503,78 @@ def CreateFile(input):
     '''
     try:
 
-        comd.split(".")
+        if "-GET" in input:
+            input = input.replace("-GET","")
+            input = input.strip()
+            api = {
+            "item" : input[4::],
+            "version" : version
+        }
 
-        existion = os.path.exists(input[4::])
+            existion = os.path.exists(input[4::])
 
-        if existion == False:
-            logging.info(f"Opened file {input[4::]} in append mode")
-            open((input[4::]), "a")
+            api = {
+            "item" : input[4::],
+            "Existion" : "",
+            "version" : version
+        }
 
-        elif existion == True:
-            logging.info(
-                f"Tracker has tracked that the mentioned file already exists. ReFileCreationError raised. File: {input[4::]}")
-            print(
-                f"{fg('sandy_brown')}fatal: {input[4::]} already exists{attr('reset')}")
+            if existion == False:
+                logging.info(f"Opened file {input[4::]} in append mode")
+                open((input[4::]), "a")
+                api = {
+                "item" : input[4::],
+                "Existion" : "False(Initially)",
+                "Creation Time" : current_time,
+                "version" : version
+            }
 
-        else:
+            elif existion == True:
+                api = {
+                "item" : input[4::],
+                "Existion" : "True",
+                "Creation Time" : "None",
+                "version" : version
+            }
+                logging.info(
+                    f"Tracker has tracked that the mentioned file already exists. ReFileCreationError raised. File: {input[4::]}")
+                print(
+                    f"{fg('sandy_brown')}fatal: {input[4::]} already exists{attr('reset')}")
 
-            print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
+            else:
+                api = {
+            "item" : input[4::],
+            "Existion" : "Untracked",
+            "version" : version
+        }
+                print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
 
-    except Exception:
 
+
+            ApiData = json.dumps(api, indent=4, separators=(", ", " : "))
+            print(ApiData)
+            print(f"Successfully run api with exit code 0")
+
+        else: 
+
+            existion = os.path.exists(input[4::])
+
+            if existion == False:
+                logging.info(f"Opened file {input[4::]} in append mode")
+                open((input[4::]), "a")
+
+            elif existion == True:
+                logging.info(
+                    f"Tracker has tracked that the mentioned file already exists. ReFileCreationError raised. File: {input[4::]}")
+                print(
+                    f"{fg('sandy_brown')}fatal: {input[4::]} already exists{attr('reset')}")
+
+            else:
+
+                print("File Bash is facing issues while reading your disk.\nEmail us at filebash33@gmail.com for feedback")
+
+    except Exception as e:
+        print(e)
         print(
             f"{fg('red_1')}fatal: no name mentioned{attr('reset')}")
 
@@ -802,7 +854,6 @@ def killTask(process):
 def reloadProgram():
     os.system("src\\reload.py")
     exit()
-    # from colored import fg, bg, attr
 
 def helpText():
     try:
