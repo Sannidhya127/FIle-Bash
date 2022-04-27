@@ -156,3 +156,6 @@ v0.7.1 [27/04/2022 20:52]
 -------------------------
 
 - Added full scan fucntion in rooter with command ``rooter -sc 0``. The function is still under development
+- Made ``crf api``
+- Changed api call function to ``-GET``
+- Updates API Documentation
