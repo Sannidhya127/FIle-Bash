@@ -1116,6 +1116,8 @@ if __name__ == '__main__':
             InstallationCheck()
         elif comd[0:2] == "rm":
             Delete(comd)
+        elif comd == "cls" or comd=="clear":
+            os.system("cls")
         elif comd[0:2] == "sr":
             searchDir(comd)
             # notify
@@ -1197,4 +1199,4 @@ if __name__ == '__main__':
                 print(
                     f"{fg('red')}{attr('blink')}\t{data}{attr('reset')}")
                 continue
-            print("Use bash --help for commands list")
+            print("\nType Help for commands list")
