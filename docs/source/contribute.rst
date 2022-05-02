@@ -1,7 +1,7 @@
 Contribute
 ==========
 
-All sorts of contributions are always welcomed in File Bash. To propose an edit to File Bash, use the pull request option available in the github repository of File Bash.
+All sorts of contributions are always welcomed in File Bash. To propose an edit to File Bash, use the pull request option available in the github repository of File Bash. All pull requests, to the main file or the documentation shall be entertained
 
 .. image:: https://i.imgur.com/VbYoGBq.png
 

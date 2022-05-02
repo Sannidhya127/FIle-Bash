@@ -7,6 +7,16 @@ File Bash Documentation
 
 Yes, there are suffice reasons to justify the practical use of this project. This project might not be worth market value as there tons of free softwares like this. But this project can certainly be used for educational purposes. Every functionality of this cmd has been codes completely in python without plagiarism or modules that make things in just one line (except of core-python modules like os, time, win32, etc). Programmers can certainly study the code and also make contributions to the code and its logic.
 
+
+
+Indices and Search
+==================
+
+* :ref:`genindex`
+* :ref:`search`
+
+
+
 Source Code
 -----------
 
@@ -49,15 +59,6 @@ To install File Bash, follow the steps accordingly (For users installing with gi
    :caption: Contents:
 
 
-
-.. Indices and tables
-.. ==================
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
-
-
 Contents
 --------
 
@@ -72,12 +73,13 @@ Contents
    contribute
    liscense
    updates
+   author
 
 
 Documentation Acknowledgements
 ------------------------------
 
-This documentation is powered by the Python module *sphinx*. The documentation code is written in pure RestructeredText and is converted to html with reference to the configuration written in python by sphinx. The theme used in this documentation is the *tibas.tt* theme by Pradyun Gedam. Important reference links are provided below:
+This documentation is powered by the Python module *sphinx*. The documentation code is written in pure RestructeredText and is converted to html with reference to the configuration written in python by sphinx. The theme used in this documentation is the *tibas.tt* theme by Pradyun Gedam. A part of the :doc:`about` page has been borrowed from the Python Documentation with nessescary changes applied. Important reference links are provided below:
 
 - Sphinx Module Documentation - https://www.sphinx-doc.org/
 - tibas-tt documentation - https://sphinx-themes.org/sample-sites/tibas-tt/
@@ -92,6 +94,12 @@ This section documents changes that have been planned and drafted for implementa
 - Complete the development of Rooter [ETA - 15/07/2022]
 - Configuration system for users, like login and password [ETA - 30/05/2022]
 - Complete the Documentation :) [ETA - ¯\\_(ツ)_/¯]
+
+
+Troubleshoot
+------------
+
+For any kind of bugs that you come across while using File Bash, you are encouraged to attempt to fix it by making pull request in its github repository. If not possible for you to fix, you can open an issue in the repository or mail me at sannidhya127@gmail.com.
 
 Support Me
 ----------
