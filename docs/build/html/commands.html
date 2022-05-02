@@ -6,158 +6,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Commands &#8212; File Bash v0.1.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Commands &#8212; File Bash v0.1.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?2022.1" />
+    <link rel="stylesheet" type="text/css" href="_static/tt.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Understanding some important functions used to code commands" href="functions.html" />
-    <link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" /><link rel="shortcut icon" type="image/png" href="_static/py.svg" />
-            <script type="text/javascript" src="_static/copybutton.js"></script>
-            <script type="text/javascript" src="_static/menu.js"></script> 
-  </head>
-<body>
-<div class="mobile-nav">
-    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
-           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu" />
-    <label for="menuToggler" class="toggler__label">
-        <span></span>
-    </label>
-    <nav class="nav-content" role="navigation">
-         <a href="https://www.python.org/" class="nav-logo">
-             <img src="_static/py.svg" alt="Logo"/>
-         </a>
-        <div class="version_switcher_placeholder"></div>
-        <form role="search" class="search" action="search.html" method="get">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
-                <path fill-rule="nonzero"
-                        d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#444"></path>
-            </svg>
-            <input type="text" name="q" aria-label="Quick search"/>
-            <input type="submit" value="Go"/>
-        </form>
-    </nav>
-    <div class="menu-wrapper">
-        <nav class="menu" role="navigation" aria-label="main navigation">
-            <div class="language_switcher_placeholder"></div>
-  <div>
-    <h3><a href="index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Commands</a><ul>
-<li><a class="reference internal" href="#ls-list-directory-items">1. ls (List Directory items)</a></li>
-<li><a class="reference internal" href="#rm-remove-item">2. rm (Remove Item)</a></li>
-<li><a class="reference internal" href="#mv-rename-item">3. mv (Rename Item)</a></li>
-<li><a class="reference internal" href="#crf-create-file">4. crf (Create File)</a></li>
-<li><a class="reference internal" href="#crd-create-directory">5. crd (Create Directory)</a></li>
-<li><a class="reference internal" href="#cd-current-directory-change-directory">6. cd (Current Directory/Change Directory)</a></li>
-<li><a class="reference internal" href="#sys-info-system-information-printer">7. sys –info (System Information Printer)</a></li>
-<li><a class="reference internal" href="#sr-search-directory">8. sr (Search Directory)</a></li>
-<li><a class="reference internal" href="#delf-deletes-only-files">9. delf (Deletes only files)</a></li>
-<li><a class="reference internal" href="#deld-delete-directory">10. deld (Delete Directory)</a></li>
-<li><a class="reference internal" href="#bash-sys-0-shutdown-system">11. bash –sys 0 (shutdown system)</a></li>
-<li><a class="reference internal" href="#process-uid-lists-running-process">12. process –uid (lists running process)</a></li>
-<li><a class="reference internal" href="#hide-hides-any-item">13. hide (hides any item)</a></li>
-<li><a class="reference internal" href="#uhd-unhide">14 uhd (unhide)</a></li>
-<li><a class="reference internal" href="#read-prints-file-content">15. read (prints file content)</a></li>
-<li><a class="reference internal" href="#write-write-to-a-file">16. write (write to a file)</a></li>
-<li><a class="reference internal" href="#rm-rf-delete-a-git-repository">17. rm -rf (Delete a git repository)</a></li>
-<li><a class="reference internal" href="#help-use-your-brain">18. help (Use your brain)</a></li>
-<li><a class="reference internal" href="#git-and-python-commands-selective">19. Git and python commands (selective)</a></li>
-<li><a class="reference internal" href="#exit-exits-bash">20. exit (Exits bash)</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="quickstart.html"
-                          title="previous chapter">Quickstart Guide to the use of a Bash</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="functions.html"
-                          title="next chapter">Understanding some important functions used to code commands</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/commands.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </nav>
-    </div>
-</div>
+    <link rel="prev" title="Quickstart Guide to the use of a Bash" href="quickstart.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="http-routingtable.html" title="HTTP Routing Table"
-             >routing table</a> |</li>
-        <li class="right" >
-          <a href="functions.html" title="Understanding some important functions used to code commands"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="quickstart.html" title="Quickstart Guide to the use of a Bash"
-             accesskey="P">previous</a> |</li>
-          <li><img src="_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
-          <li><a href="https://www.python.org/">Python</a> &#187;</li>
-          <li class="switchers">
-            <div class="language_switcher_placeholder"></div>
-            <div class="version_switcher_placeholder"></div>
-          </li>
-          <li>
-              
-              <a href="index.html">File Bash v0.1.1 documentation</a> &#187;
-              
-          </li>
-        <li class="nav-item nav-item-this"><a href="">Commands</a></li>
-                <li class="right">
-                    
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-    <div class="inline-search" role="search">
-        <form class="inline-search" action="search.html" method="get">
-          <input placeholder="Quick search" aria-label="Quick search" type="text" name="q" />
-          <input type="submit" value="Go" />
-          <input type="hidden" name="check_keywords" value="yes" />
-          <input type="hidden" name="area" value="default" />
-        </form>
-    </div>
-                     |
-                </li>
-            
-      </ul>
-    </div>    
+  </head><body>
+  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <section id="commands">
@@ -758,8 +635,8 @@ accusantium earum commodi hic voluptatem officia culpa optio atque. Quaerat sed 
 </section>
 
 
-            <div class="clearer"></div>
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -792,17 +669,15 @@ accusantium earum commodi hic voluptatem officia culpa optio atque. Quaerat sed 
 </li>
 </ul>
 
-  </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="quickstart.html"
-                          title="previous chapter">Quickstart Guide to the use of a Bash</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="functions.html"
-                          title="next chapter">Understanding some important functions used to code commands</a></p>
-  </div>
+  </div><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="quickstart.html" title="previous chapter">Quickstart Guide to the use of a Bash</a></li>
+      <li>Next: <a href="functions.html" title="next chapter">Understanding some important functions used to code commands</a></li>
+  </ul></li>
+</ul>
+</div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -823,71 +698,23 @@ accusantium earum commodi hic voluptatem officia culpa optio atque. Quaerat sed 
         </div>
       </div>
       <div class="clearer"></div>
-    </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="http-routingtable.html" title="HTTP Routing Table"
-             >routing table</a> |</li>
-        <li class="right" >
-          <a href="functions.html" title="Understanding some important functions used to code commands"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="quickstart.html" title="Quickstart Guide to the use of a Bash"
-             >previous</a> |</li>
-          <li><img src="_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
-          <li><a href="https://www.python.org/">Python</a> &#187;</li>
-          <li class="switchers">
-            <div class="language_switcher_placeholder"></div>
-            <div class="version_switcher_placeholder"></div>
-          </li>
-          <li>
-              
-              <a href="index.html">File Bash v0.1.1 documentation</a> &#187;
-              
-          </li>
-        <li class="nav-item nav-item-this"><a href="">Commands</a></li>
-                <li class="right">
-                    
-
-    <div class="inline-search" role="search">
-        <form class="inline-search" action="search.html" method="get">
-          <input placeholder="Quick search" aria-label="Quick search" type="text" name="q" />
-          <input type="submit" value="Go" />
-          <input type="hidden" name="check_keywords" value="yes" />
-          <input type="hidden" name="area" value="default" />
-        </form>
     </div>
-                     |
-                </li>
-            
-      </ul>
-    </div>  
     <div class="footer">
-    &copy; Copyright 2022, Sannnidhya127.
-    <br />
-    This page is licensed under the Python Software Foundation License Version 2.
-    <br />
-    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
-    <br />
-    
-    <br />
 
-    The Python Software Foundation is a non-profit corporation.
-<a href="https://www.python.org/psf/donations/">Please donate.</a>
-<br />
-    <br />
+      ▒▒░
 
-    Last updated on None.
-    
-    <br />
-
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      &copy;2022, Sannnidhya127.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      
+      |
+      <a href="_sources/commands.rst.txt"
+          rel="nofollow">Page source</a>
     </div>
 
+    
+
+    
   </body>
 </html>

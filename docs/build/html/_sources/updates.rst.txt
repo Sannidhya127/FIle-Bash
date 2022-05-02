@@ -159,3 +159,11 @@ v0.7.1 [27/04/2022 20:52]
 - Made ``crf api``
 - Changed api call function to ``-GET``
 - Updates API Documentation
+
+v0.7.2 [02/05/2022 18:48]
+-------------------------
+
+- Added ``blockPrint()`` and ``enablePrint()`` functions to rooter to show or hide the function outputs during test run.
+- Added  ``printImg()``, ``printMed()``, ``printAud()`` and ``Delete()`` functions to rooter. The ``Delete()`` function includes api check.
+- Added ``cls`` command
+- Implemented python's ``strip()`` function to get rid of the input commands unessessary whitespaces
