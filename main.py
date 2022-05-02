@@ -459,7 +459,7 @@ def Delete(input):
                 else:
                     print("I see no name")
             else:
-                print(f"{fg('red_1')}The given item does not exist{attr('reset')}")
+                print(f"{fg('red_1')}fatal: Mentioned file [{input[3::]}] not found{attr('reset')}")
     except Exception as e:
         print(e)
         print(f"{fg('red_1')}Unable to access file.{attr('reset')}")
@@ -1077,8 +1077,10 @@ if __name__ == '__main__':
         #file_stat = os.stat("Bigwave.exe")
         #print(file_stat.st_size / (1024*1024))
         d = os.getcwd()
+        
         # if color == False:
         comd = input(f"{fg('46')}{d}: {attr('reset')}")
+        comd = comd.strip()
         commands = ["ls", "ls --docs", "ls --imgs", "ls --aud" , "ls --med", "ls --progs", "delf","deld","crf","crd","sys --info", "mv", "rm", "cd", "sr", "bash --sys 0","process --uid", "hide", "uhd","read","write","rm -rf", "exit", "help"]
         if comd == "ls":
             AllFiles()
