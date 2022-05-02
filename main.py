@@ -57,7 +57,7 @@ import math
 import shutil
 import multiprocessing
 
-version = "v0.7.1"
+version = "v0.7.2"
 
 now = datetime.now()
 

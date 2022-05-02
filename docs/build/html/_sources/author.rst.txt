@@ -12,3 +12,11 @@ I made some cool projects in python as well as other Languages. Unfortunately mo
 I think this enough knowledge about me. Thank You :)
 
 *(Don't ask for my pic, my handsome face might kill you)*
+
+
+Some of my projects:
+
+- https://github.com/Sannidhya127/Text-To-Speech-in-Python
+- https://github.com/Sannidhya127/FIle-Bash
+- https://github.com/Sannidhya127/Game-Of-Life
+- https://github.com/Sannidhya127/CO2-Emission-Tracker
