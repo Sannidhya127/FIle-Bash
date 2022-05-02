@@ -16,13 +16,32 @@ Source Code
 Installation
 ------------
 
-.. important::
-   The File Bash Installation Wizard is under development and is expected in an ETA of 3-4 months (might change). We appreciate your patience and cooperation.
+For installing File Bash in your pc, you will need to have the following requirments satisfied:
 
-Support Me
-----------
+- The latest version of Python installed
+- The latest version of Git installed (reccommended)
+- Windows 10 or higher prefered
 
-If you found File Bash an interesting project, it would be worth a million blessings for me if you oblige to follow me on GitHub at github.com/Sannidhya127 and if possible, propose an idea in the form of pull request in the repository. Refer to :doc:`contribute` for details on pull requests.
+To install File Bash, follow the steps accordingly (For users installing with git):
+
+- Copy the github link of File Bash (given above)
+- Open your Git Terminal and type *git clone https://github.com/Sannidhya127/FIle-Bash*
+- The File Bash repository is now cloned to your local pc
+- Open the File Bash directory which includes all the files
+- Launch the *main.py* file
+- DONE :)
+
+*You can also use pyinstaller to convert the .py file to .exe*
+
+To install File Bash, follow the steps accordingly (For users installing with github .zip download):
+
+- Open https://github.com/Sannidhya127/FIle-Bash in your web browser
+- Click on the the dropdown menu on the ``code`` button
+- Select download as zip
+- Extract the downloaded zip file
+- Open the File Bash directory which includes all the files
+- Launch the *main.py* file
+- DONE :)
 
 
 .. toctree::
@@ -74,3 +93,9 @@ This section documents changes that have been planned and drafted for implementa
 - Configuration system for users, like login and password [ETA - 30/05/2022]
 - Complete the Documentation :) [ETA - ¯\\_(ツ)_/¯]
 
+Support Me
+----------
+
+If you found File Bash an interesting project, it would be worth a million blessings for me if you oblige to follow me on GitHub at github.com/Sannidhya127 and if possible, propose an idea in the form of pull request in the repository. Refer to :doc:`contribute` for details on pull requests.
+
+*This documentation is written and maintained by Sannidhya127*
