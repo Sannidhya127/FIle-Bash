@@ -74,6 +74,7 @@ Contents
    liscense
    updates
    author
+   acknowledgements
 
 
 Documentation Acknowledgements

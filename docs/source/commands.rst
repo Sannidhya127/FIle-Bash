@@ -6,8 +6,8 @@ A detailed list of commands and their functionalities for the ease of users.
 
 .. _ls:
 
-1. ls (List Directory items)
-----------------------------
+ls
+--
 
 
 
@@ -35,9 +35,8 @@ The ``ls`` command attributes can only track files with specifiend extensions. O
 .. _rm:
 
 
-2. rm (Remove Item)
--------------------
-
+rm
+--
 
 
 .. py:function:: delete(arg=item)
@@ -58,8 +57,8 @@ To delete a file/folder, use the ``rm`` command:
 
 .. _mv:
 
-3. mv (Rename Item)
--------------------
+mv
+--
 
 .. py:function:: FileRename(arg=item)
 
@@ -83,8 +82,8 @@ If seperated with whitespaces, the index[1] argument is the current name and the
 
 .. _crf:
 
-4. crf (Create File)
---------------------
+crf
+---
 
 .. py:function:: CreateFile(arg=file)
 
@@ -102,8 +101,8 @@ Here the file name with extension supplied after the command is created in the c
 
 .. _crd:
 
-5. crd (Create Directory)
--------------------------
+crd
+---
 
 .. py:function:: CreateDir(arg=directory)
 
@@ -125,8 +124,8 @@ This creates a new folder named *NewFolder* in the path ``C: -> Users -> Desktop
 
 .. _cd:
 
-6. cd (Current Directory/Change Directory)
-------------------------------------------
+cd
+--
 
 .. py:function:: cwdPrint(arg=None)
 .. py:function:: cwdChange(arg=path)
@@ -150,8 +149,8 @@ If user enters command ``cd`` and then a valid path on the local disk, the bash'
 
 .. _sysinfo:
 
-7. sys --info (System Information Printer)
-------------------------------------------
+sys --info
+----------
 
 .. py:function:: sys_info(arg=None)
 
@@ -193,8 +192,8 @@ The output couldn't be fit in a single screenshot
 
 .. _sr:
 
-8. sr (Search Directory)
-------------------------
+sr
+--
 
 .. py:function:: searchDir(arg=path)
 
@@ -222,8 +221,8 @@ When *query* recieves an operand with no existence in the currrent working direc
 
 .. _delf:
 
-9. delf (Deletes only files)
-----------------------------
+delf
+----
 
 .. py:function:: DelFile(command)
 
@@ -250,9 +249,8 @@ For a non-existen file,
 
 .. _deld:
 
-
-10. deld (Delete Directory)
----------------------------
+deld
+----
 
 .. py:function:: DelDir(arg=directory)
 
@@ -275,8 +273,8 @@ Here the operand ``MyDocs`` is the target directory to be deleted.
 
 .. _bash0:
 
-11. bash --sys 0 (shutdown system)
-----------------------------------
+bash --sys 0 
+------------
 
 .. py:function:: shutdown(arg=None)
 
@@ -284,8 +282,8 @@ The ``bash --sys 0`` command shuts down the system.
 
 .. _uid:
 
-12. process --uid (lists running process)
------------------------------------------
+process --uid
+-------------
 
 .. py:function:: processes(arg=None)
 
@@ -494,8 +492,8 @@ b'HandleCount  Name                         Priority  ProcessId  ThreadCount  Wo
 
 .. _hide:
 
-13. hide (hides any item)
--------------------------
+hide
+----
 
 .. py:function:: hide(arg=item)
 
@@ -515,8 +513,8 @@ DoIExistsLol.bf does not exist
 
 .. _uhd:
 
-14 uhd (unhide)
----------------
+uhd
+---
 
 .. py:function:: unide(arg=HiddenItem)
 
@@ -536,8 +534,8 @@ The above command unhides the file ``superSecretLol.c``
 
 .. _read:
 
-15. read (prints file content)
-------------------------------
+read
+----
 
 .. py:function:: read(arg=File)
 
@@ -575,8 +573,8 @@ The output will be:
 .. _write:
 
 
-16. write (write to a file)
----------------------------
+write
+-----
 
 The ``write`` command is used for editing a file. The default text editor is Notepad.
 
@@ -604,8 +602,8 @@ If a non-existent file is targeted, File Bash prompts the user if he/she wants t
 
 .. _rmrf:
 
-17. rm -rf (Delete a git repository)
-------------------------------------
+rm -rf
+------
 
 **This is a Git Software Command, but due to certain unspecifiable reasons, it is mentioned individually here**
 
@@ -614,15 +612,15 @@ The ``rm -rf`` command simply deletes the git repository, if the cwd is one
 For details of this command, visit the Git Documentation at https://git-scm.com/doc
 
 
-18. cls (clear screen)
-----------------------
+cls
+---
 
 Clears the screen
 
 .. _cpy:
 
-19. cp (copy paste)
--------------------
+cp
+--
 .. py:function:: CopyPaste(src,dest)
 
 The ``cp`` command copies a file and pastes it to the passed destination folder. The item to be copied can be both a file or folder. In case of a file the function simply copies it and pasted in the target location. For directories, the directory as well as its inner contents (the files) are moved to the target location. 
@@ -648,16 +646,19 @@ This copies the file *src* directory to *C:\dest* with all its children
 .. py:exception:: FileExistsError()
     Raised when source already exists in destination
 
+20. curt user
+-------------
+
+Displays the current active user in the local os.
 
 
-
-19. help (help text)
--------------------------
+help
+----
 
 Prints the help text. (what else do you expect it to do??)
 
-20. exit (Exits bash)
----------------------
+exit
+----
 
 Exits File Bash, my friend
 

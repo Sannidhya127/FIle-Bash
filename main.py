@@ -1176,8 +1176,6 @@ if __name__ == '__main__':
             unhide(comd)
         elif comd[0:2] == "cd":
             cwdChange(comd)
-        elif "cpy" in comd:
-            Copy(comd)
         elif comd[0:5] == "write":
             editFile(comd)
         elif comd == "ls --check":
