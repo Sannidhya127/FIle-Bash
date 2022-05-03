@@ -619,6 +619,37 @@ For details of this command, visit the Git Documentation at https://git-scm.com/
 
 Clears the screen
 
+.. _cpy:
+
+19. cp (copy paste)
+-------------------
+.. py:function:: CopyPaste(src,dest)
+
+The ``cp`` command copies a file and pastes it to the passed destination folder. The item to be copied can be both a file or folder. In case of a file the function simply copies it and pasted in the target location. For directories, the directory as well as its inner contents (the files) are moved to the target location. 
+
+To copy a file:
+
+>>> C:\Users\Desktop\MyTestDir: cp C:\src\SomeTextFile.txt C:\dest
+
+This copies the file *SomeTextFile.txt* to *C:\dest*
+
+To copy a Directory:
+
+>>> C:\Users\Desktop\MyTestDir: cp C:\src C:\dest
+
+This copies the file *src* directory to *C:\dest* with all its children
+
+.. py:exception:: InvalidSourceError()
+    Raised when the source path is invalid
+
+.. py:exception:: InvalidDestinationError()
+    Raised when destination path is invalid
+
+.. py:exception:: FileExistsError()
+    Raised when source already exists in destination
+
+
+
 
 19. help (help text)
 -------------------------

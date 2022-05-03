@@ -6,6 +6,7 @@ import os
 import sys
 import shutil
 import time as t
+from typing import ParamSpec
 import webbrowser
 import pathlib
 import json
@@ -873,6 +874,15 @@ def ShutDown():
 # def HackerTheme():
 #     name = input("En")
 
+
+# Disable print
+def blockPrint():
+    sys.stdout = open(os.devnull, 'w')
+
+# Restore print
+def enablePrint():
+    sys.stdout = sys.__stdout__
+
 def license():
     licenseFile = open('LICENSE', 'r')
     licenseData = licenseFile.read()
@@ -884,19 +894,24 @@ def coc():
     print(content)
 
 def CopyPaste(input):
-    input = input.replace("cp","")
-    input = input.strip()
-    params = input.split(">>")
-    currentDirectory=  os.getcwd()
-    if os.path.isfile(params[0]) == True:
-        shutil.copy(params[0],params[1])
-    else:
-        os.chdir(params[1])
-        os.mkdir(params[0])
-        for i in os.listdir(params[0]):
-            shutil.copy(i, params[0])
-        os.chdir(currentDirectory)
-
+    try:
+        input = input.replace("cp","")
+        input = input.strip()
+        params = input.split(">>")
+        currentDirectory=  os.getcwd()
+        if os.path.exists(params[0]) == True and os.path.exists(params[1]) == True:
+            if os.path.isfile(params[0]) == True:
+                shutil.copy(params[0],params[1])
+                print(f"Copied file {params[0]} and pasted in {params[1]}")
+            else:
+                shutil.copytree(params[0],params[1],dirs_exist_ok=True)
+                print(f"Copied directory {params[0]} and pasted in {params[1]}")
+        elif os.path.exists(params[0]) == False and os.path.exists(params[1]) == True:
+            print(f"{fg('red_1')}Invalid path {params[0]}")
+        elif os.path.exists(params[0]) == True and os.path.exists(params[1]) == False:
+            print(f"{fg('red_1')}Invalid path {params[1]}")
+    except Exception as e:
+        print(f"Failed to copy item with error statement: {e}")
 
 def InstallationCheck():
     files = os.listdir()

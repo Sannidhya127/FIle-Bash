@@ -624,6 +624,46 @@ accusantium earum commodi hic voluptatem officia culpa optio atque. Quaerat sed 
 <h2>18. cls (clear screen)<a class="headerlink" href="#cls-clear-screen" title="Permalink to this headline">¶</a></h2>
 <p>Clears the screen</p>
 </section>
+<section id="cp-copy-paste">
+<span id="cpy"></span><h2>19. cp (copy paste)<a class="headerlink" href="#cp-copy-paste" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="CopyPaste">
+<span class="sig-name descname"><span class="pre">CopyPaste</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CopyPaste" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>The <code class="docutils literal notranslate"><span class="pre">cp</span></code> command copies a file and pastes it to the passed destination folder. The item to be copied can be both a file or folder. In case of a file the function simply copies it and pasted in the target location. For directories, the directory as well as its inner contents (the files) are moved to the target location.</p>
+<p>To copy a file:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">cp</span> <span class="n">C</span><span class="p">:</span>\<span class="n">src</span>\<span class="n">SomeTextFile</span><span class="o">.</span><span class="n">txt</span> <span class="n">C</span><span class="p">:</span>\<span class="n">dest</span>
+</pre></div>
+</div>
+<p>This copies the file <em>SomeTextFile.txt</em> to <em>C:dest</em></p>
+<p>To copy a Directory:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Desktop</span>\<span class="n">MyTestDir</span><span class="p">:</span> <span class="n">cp</span> <span class="n">C</span><span class="p">:</span>\<span class="n">src</span> <span class="n">C</span><span class="p">:</span>\<span class="n">dest</span>
+</pre></div>
+</div>
+<p>This copies the file <em>src</em> directory to <em>C:dest</em> with all its children</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="InvalidSourceError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidSourceError</span></span><a class="headerlink" href="#InvalidSourceError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Raised</span> <span class="pre">when</span> <span class="pre">the</span> <span class="pre">source</span> <span class="pre">path</span> <span class="pre">is</span> <span class="pre">invalid</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="InvalidDestinationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidDestinationError</span></span><a class="headerlink" href="#InvalidDestinationError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Raised</span> <span class="pre">when</span> <span class="pre">destination</span> <span class="pre">path</span> <span class="pre">is</span> <span class="pre">invalid</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="FileExistsError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FileExistsError</span></span><a class="headerlink" href="#FileExistsError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Raised</span> <span class="pre">when</span> <span class="pre">source</span> <span class="pre">already</span> <span class="pre">exists</span> <span class="pre">in</span> <span class="pre">destination</span></span></dt>
+<dd></dd></dl>
+
+</section>
 <section id="help-help-text">
 <h2>19. help (help text)<a class="headerlink" href="#help-help-text" title="Permalink to this headline">¶</a></h2>
 <p>Prints the help text. (what else do you expect it to do??)</p>
@@ -664,6 +704,7 @@ accusantium earum commodi hic voluptatem officia culpa optio atque. Quaerat sed 
 <li><a class="reference internal" href="#write-write-to-a-file">16. write (write to a file)</a></li>
 <li><a class="reference internal" href="#rm-rf-delete-a-git-repository">17. rm -rf (Delete a git repository)</a></li>
 <li><a class="reference internal" href="#cls-clear-screen">18. cls (clear screen)</a></li>
+<li><a class="reference internal" href="#cp-copy-paste">19. cp (copy paste)</a></li>
 <li><a class="reference internal" href="#help-help-text">19. help (help text)</a></li>
 <li><a class="reference internal" href="#exit-exits-bash">20. exit (Exits bash)</a></li>
 </ul>
