@@ -613,18 +613,21 @@ The ``rm -rf`` command simply deletes the git repository, if the cwd is one
 
 For details of this command, visit the Git Documentation at https://git-scm.com/doc
 
-18. help (Use your brain)
+
+18. cls (clear screen)
+----------------------
+
+Clears the screen
+
+
+19. help (help text)
 -------------------------
 
 Prints the help text. (what else do you expect it to do??)
-
-19. Git and python commands (selective)
----------------------------------------
-
-Supports 99% of the Git commands and 74% of the Python commands.
-
 
 20. exit (Exits bash)
 ---------------------
 
 Exits File Bash, my friend
+
+Git and Python commands are also supported

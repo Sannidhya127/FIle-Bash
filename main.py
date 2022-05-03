@@ -1,5 +1,6 @@
 # copyright @github.com/Sannidhya127
 
+import cProfile
 from ensurepip import version
 import os  
 import sys
@@ -882,12 +883,26 @@ def coc():
     content =  code_of_coduct.read()
     print(content)
 
+def CopyPaste(input):
+    input = input.replace("cp","")
+    input = input.strip()
+    params = input.split(">>")
+    currentDirectory=  os.getcwd()
+    if os.path.isfile(params[0]) == True:
+        shutil.copy(params[0],params[1])
+    else:
+        os.chdir(params[1])
+        os.mkdir(params[0])
+        for i in os.listdir(params[0]):
+            shutil.copy(i, params[0])
+        os.chdir(currentDirectory)
+
+
 def InstallationCheck():
     files = os.listdir()
     if "reload.py" not in files:
         reloadFileCrt = open("reload.py", "w")
         reloadFileWriting = reloadFileCrt.write('''import os
-
 os.system("main.py")''')
     elif "sys_info.py" not in files:
         sysInfoCrt = open("sys_info.py", "w")
@@ -1172,6 +1187,8 @@ if __name__ == '__main__':
             readFile(comd)
         elif comd == "":
             pass
+        elif comd[0:2] == "cp":
+            CopyPaste(comd)
         elif comd == "good":
             print("Thanks :)")
         elif comd[0:3] == "git":

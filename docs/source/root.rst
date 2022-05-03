@@ -1,7 +1,4 @@
-Rooter: An efficient application for testing File Bash
-=======================================================
+Rooter
+======
 
-Rooter is an efficient application developed for in depth testing of File Bash with several types of testing tools and functionalities
-
-.. important::
-   The Rooter Testing System is currently under planning and will be launched in an ETA of 6 months or higher (or lesser?).
+Rooter is an issue tracking utility written in Python for testing File Bash. The development of Rooter has recently begun and shall require some time to complete. The full scan command for File Bash, *rooter -sc 0* is under development. A lot of functions have been added to the scanner but some are yet to be done. APIs are also tested in this procedure.

@@ -107,3 +107,45 @@ Support Me
 If you found File Bash an interesting project, it would be worth a million blessings for me if you oblige to follow me on GitHub at github.com/Sannidhya127 and if possible, propose an idea in the form of pull request in the repository. Refer to :doc:`contribute` for details on pull requests.
 
 *This documentation is written and maintained by Sannidhya127*
+
+
+FAQs
+----
+
+**What Language is File Bash written in?**
+
+File Bash is coded completely in python
+
+**Why not use modules that make functions executions so easy instead of the detailed code written?**
+
+File Bash was made with the intentions of learning and exploring the core basics of python. If I just used a single module that would do all the stuffs for the entire function, it would be of no credit for me
+
+
+**What would happen if I enter extra whitespaces in a command?**
+
+Nothing, the compiler is written such that it ignores the extra whitespaces.
+
+**Why isn't all the File Bash not well commented?**
+
+I had tried to provide comments for as much of the functions possible, I have probably missed some. But that should not be a problem as a detailed description is provided in this documentation
+
+**What is Rooter?**
+
+Rooter is File Bash software testing utility. It is still under development and intends to serve as an in-depth issue traced for File Bash.
+
+**What Language is Rooter written in?**
+
+Rooter is also written in Python
+
+**How does the File Bash API work?**
+
+The File Bash API simply functions by retrieving a list of requested data in JSON format. It has no web connection and only treats GET requests.
+
+
+**How was the documentation developed**
+
+The Documentation is developed and maintained using Sphinx. The code is written in RestructeredText.
+
+**What kind of a documentation is this?**
+
+The File Bash documentation is not of a particular type. It is mixed product of system-user documentation

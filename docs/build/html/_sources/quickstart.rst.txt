@@ -1,7 +1,8 @@
-Quickstart Guide to the use of a Bash
-=====================================
+Quickstart Manual to the use of a Bash
+======================================
 
-The following tutorial will help you understand how a terminal system or a bash works and how to use it. For reference, we will use File Bash as the default terminal of learning
+For none cli users File Bash can be quite of a hectic to be used. The basic concept of any command prompt is to provide the end-user with a command line interface that intakes commands. The commands are pre defined and entering an undefined command would result in the bash showing an error. If the correct commmand is entered with required parameters and arguments (not nessescary that all commands will have parameters and arguments) the command will be executed and the desired result can be collected.
+The following tutorial will help you understand how a terminal system or a bash works and how to use it. 
 
 The Interface
 -------------
@@ -30,7 +31,20 @@ Result
     main.c
     image.png
 
+The ``ls`` command lists the items of a dire
+
+ 
+>>> C:\Users\Desktop\MyTestDir: rm SomeUnluckyFile.txt
+
+The ``rm`` command deletes a File
+
+>>> C:\Users\Desktop\MyTestDir: mv OriginalFile.txt NewFileName.txt
+
+The ``mv`` command renames a file
+
 Visit :doc:`commands` for further details.
+
+
 
 We believe you have gained a standard command prompt knowledge from the following introductory tutorial. For more details, refer to the documentation.
 
