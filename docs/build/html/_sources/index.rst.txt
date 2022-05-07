@@ -28,30 +28,32 @@ Installation
 
 For installing File Bash in your pc, you will need to have the following requirments satisfied:
 
-- The latest version of Python installed
-- The latest version of Git installed (reccommended)
-- Windows 10 or higher prefered
+1. The latest version of Python installed
+2. The latest version of Git installed (reccommended)
+3. Windows 10 or higher prefered
 
 To install File Bash, follow the steps accordingly (For users installing with git):
 
-- Copy the github link of File Bash (given above)
-- Open your Git Terminal and type *git clone https://github.com/Sannidhya127/FIle-Bash*
-- The File Bash repository is now cloned to your local pc
-- Open the File Bash directory which includes all the files
-- Launch the *main.py* file
-- DONE :)
+1. Copy the github link of File Bash (given above)
+
+2. Open your Git Terminal and type *git clone https://github.com/Sannidhya127/FIle-Bash*
+
+3. The File Bash repository is now cloned to your local pc
+4. Open the File Bash directory which includes all the files
+5. Launch the *main.py* file
+6. DONE :)
 
 *You can also use pyinstaller to convert the .py file to .exe*
 
 To install File Bash, follow the steps accordingly (For users installing with github .zip download):
 
-- Open https://github.com/Sannidhya127/FIle-Bash in your web browser
-- Click on the the dropdown menu on the ``code`` button
-- Select download as zip
-- Extract the downloaded zip file
-- Open the File Bash directory which includes all the files
-- Launch the *main.py* file
-- DONE :)
+1. Open https://github.com/Sannidhya127/FIle-Bash in your web browser
+2. Click on the the dropdown menu on the ``code`` button
+3. Select download as zip
+4. Extract the downloaded zip file
+5. Open the File Bash directory which includes all the files
+6. Launch the *main.py* file
+7. DONE :)
 
 
 .. toctree::
@@ -94,6 +96,7 @@ This section documents changes that have been planned and drafted for implementa
 - Standard API for all functions (with exceptions) [ETA - 12/08/2022]
 - Complete the development of Rooter [ETA - 15/07/2022]
 - Configuration system for users, like login and password [ETA - 30/05/2022]
+- Make everything dynamic [ETA - 30/05/2022]
 - Complete the Documentation :) [ETA - ¯\\_(ツ)_/¯]
 
 
@@ -126,7 +129,7 @@ File Bash was made with the intentions of learning and exploring the core basics
 
 Nothing, the compiler is written such that it ignores the extra whitespaces.
 
-**Why isn't all the File Bash not well commented?**
+**Why isn't all the File Bash code not well commented?**
 
 I had tried to provide comments for as much of the functions possible, I have probably missed some. But that should not be a problem as a detailed description is provided in this documentation
 
@@ -150,3 +153,8 @@ The Documentation is developed and maintained using Sphinx. The code is written 
 **What kind of a documentation is this?**
 
 The File Bash documentation is not of a particular type. It is mixed product of system-user documentation
+
+
+**Is the project dynamic?**
+
+I have made as much possible of the project dynamic, but some gaps still remain. Development is in progress in converting the project to a fully dynamic one, capable of running in any pc.

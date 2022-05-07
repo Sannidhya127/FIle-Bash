@@ -898,7 +898,6 @@ def CopyPaste(input):
         input = input.replace("cp","")
         input = input.strip()
         params = input.split(">>")
-        currentDirectory=  os.getcwd()
         if os.path.exists(params[0]) == True and os.path.exists(params[1]) == True:
             if os.path.isfile(params[0]) == True:
                 shutil.copy(params[0],params[1])
@@ -1116,7 +1115,7 @@ if __name__ == '__main__':
             AllFiles()
         elif comd == "code of conduct" or comd == "Code Of Conduct":
             coc()
-        elif comd == "license":
+        elif comd == "license ":
             license()
         elif comd == "^f":
             print("#WORKING")
@@ -1229,6 +1228,6 @@ if __name__ == '__main__':
             for i in items:
                 data = i
                 print(
-                    f"{fg('red')}{attr('blink')}\t{data}{attr('reset')}")
+                    f"{fg('red_1')}\t{data}{attr('reset')}")
                 continue
             print("\nType Help for commands list")

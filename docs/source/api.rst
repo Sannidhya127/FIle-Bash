@@ -40,7 +40,7 @@ Retrieves set of interpreted data by the ``crf`` command during runtime
 
 The above request retrieves the following data in format ``json``
 
-.. code-block:: json
+.. code-block::
 
     {
         "item" : "name",

@@ -19,6 +19,7 @@ import alabaster
 import sphinx_adc_theme
 import sys
 sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
+import sphinx_theme
 import murray
 
 # -- Project information -----------------------------------------------------
@@ -54,8 +55,8 @@ exclude_patterns = []
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'tt'
-html_theme_path = [tibas.tt.get_path(), alabaster.get_path()]
+html_theme = 'sphinx_book_theme'
+# html_theme_path = [tibas.tt.get_path(), alabaster.get_path()]
 
 
 # Add any paths that contain custom static files (such as style sheets) here,

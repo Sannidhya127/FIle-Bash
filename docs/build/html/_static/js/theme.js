@@ -1,68 +1,156 @@
-$(document).ready(function(){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"sphinx-rtd-theme":[function(require,module,exports){
+var jQuery = (typeof(window) != 'undefined') ? window.jQuery : require('jquery');
 
-    var $header = $('header');
-    var $body = $('body');
-    var $window = $(window);
+// Sphinx theme nav state
+function ThemeNav () {
 
-    // scrolling variables
-	var scrolling = false,
-    previousTop = 0,
-    currentTop = 0,
-    scrollDelta = 10,
-    scrollOffset = 150;
+    var nav = {
+        navBar: null,
+        win: null,
+        winScroll: false,
+        winResize: false,
+        linkScroll: false,
+        winPosition: 0,
+        winHeight: null,
+        docHeight: null,
+        isRunning: false
+    };
 
-    // scroll event to show / hide header
-    $window.on('scroll', function(){
-		if( !scrolling ) {
-			scrolling = true;
-			(!window.requestAnimationFrame) ? setTimeout(autoHideHeader, 250) : requestAnimationFrame(autoHideHeader);
-		}
-    });
-    
-    function autoHideHeader() {
-		var currentTop = $window.scrollTop();
-        var isNavOpen = $body.hasClass('nav-in');
-        if (!isNavOpen) {
-            if (previousTop - currentTop > scrollDelta) {
-                // if scrolling up...
-                $header.removeClass('up');
-            } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
-                // if scrolling down...
-                $header.addClass('up');
+    nav.enable = function () {
+        var self = this;
+
+        if (!self.isRunning) {
+            self.isRunning = true;
+            jQuery(function ($) {
+                self.init($);
+
+                self.reset();
+                self.win.on('hashchange', self.reset);
+
+                // Set scroll monitor
+                self.win.on('scroll', function () {
+                    if (!self.linkScroll) {
+                        self.winScroll = true;
+                    }
+                });
+                setInterval(function () { if (self.winScroll) self.onScroll(); }, 25);
+
+                // Set resize monitor
+                self.win.on('resize', function () {
+                    self.winResize = true;
+                });
+                setInterval(function () { if (self.winResize) self.onResize(); }, 25);
+                self.onResize();
+            });
+        };
+    };
+
+    nav.init = function ($) {
+        var doc = $(document),
+            self = this;
+
+        this.navBar = $('div.wy-side-scroll:first');
+        this.win = $(window);
+
+        // Set up javascript UX bits
+        $(document)
+            // Shift nav in mobile when clicking the menu.
+            .on('click', "[data-toggle='wy-nav-top']", function() {
+                $("[data-toggle='wy-nav-shift']").toggleClass("shift");
+                $("[data-toggle='rst-versions']").toggleClass("shift");
+            })
+
+            // Nav menu link click operations
+            .on('click', ".wy-menu-vertical .current ul li a", function() {
+                var target = $(this);
+                // Close menu when you click a link.
+                $("[data-toggle='wy-nav-shift']").removeClass("shift");
+                $("[data-toggle='rst-versions']").toggleClass("shift");
+                // Handle dynamic display of l3 and l4 nav lists
+                self.toggleCurrent(target);
+                self.hashChange();
+            })
+            .on('click', "[data-toggle='rst-current-version']", function() {
+                $("[data-toggle='rst-versions']").toggleClass("shift-up");
+            })
+
+        // Make tables responsive
+        $("table.docutils:not(.field-list)")
+            .wrap("<div class='wy-table-responsive'></div>");
+
+        // Add expand links to all parents of nested ul
+        $('.wy-menu-vertical ul').not('.simple').siblings('a').each(function () {
+            var link = $(this);
+                expand = $('<span class="toctree-expand"></span>');
+            expand.on('click', function (ev) {
+                self.toggleCurrent(link);
+                ev.stopPropagation();
+                return false;
+            });
+            link.prepend(expand);
+        });
+    };
+
+    nav.reset = function () {
+        // Get anchor from URL and open up nested nav
+        var anchor = encodeURI(window.location.hash);
+        if (anchor) {
+            try {
+                var link = $('.wy-menu-vertical')
+                    .find('[href="' + anchor + '"]');
+                $('.wy-menu-vertical li.toctree-l1 li.current')
+                    .removeClass('current');
+                link.closest('li.toctree-l2').addClass('current');
+                link.closest('li.toctree-l3').addClass('current');
+                link.closest('li.toctree-l4').addClass('current');
+            }
+            catch (err) {
+                console.log("Error expanding nav for anchor", err);
             }
         }
-	   	previousTop = currentTop;
-		scrolling = false;
-	}
+    };
 
-    // toggle sidebar
-    $(document).on('click', '.site-nav-toggle, .site-nav a', function() {
-        $body.toggleClass('nav-in');
-    });
-
-    // replace anchor scroll to offset the fixed header on mobile
-    $("a[href^='#']").on('click', function(e) {
-        // prevent default anchor click behavior
-        e.preventDefault();
-     
-        var width = $window.width();
-        var headerHeight = $header.outerHeight();
-        var mobileMaxWidth = 991;
-        var offset = 0;
-
-        if (width <= mobileMaxWidth) {
-            offset = headerHeight + 10;
+    nav.onScroll = function () {
+        this.winScroll = false;
+        var newWinPosition = this.win.scrollTop(),
+            winBottom = newWinPosition + this.winHeight,
+            navPosition = this.navBar.scrollTop(),
+            newNavPosition = navPosition + (newWinPosition - this.winPosition);
+        if (newWinPosition < 0 || winBottom > this.docHeight) {
+            return;
         }
+        this.navBar.scrollTop(newNavPosition);
+        this.winPosition = newWinPosition;
+    };
 
-        // animate scroll
-        $('html, body').animate({
-            scrollTop: $(this.hash).offset().top - offset
-          }, 200, function(){
+    nav.onResize = function () {
+        this.winResize = false;
+        this.winHeight = this.win.height();
+        this.docHeight = $(document).height();
+    };
+
+    nav.hashChange = function () {
+        this.linkScroll = true;
+        this.win.one('hashchange', function () {
+            this.linkScroll = false;
         });
-    });
+    };
 
-    // wrap tables so we can make responsive
-    $("table.docutils:not(.field-list,.footnote,.citation)")
-        .wrap("<div class='scroll-x'></div>");
+    nav.toggleCurrent = function (elem) {
+        var parent_li = elem.closest('li');
+        parent_li.siblings('li.current').removeClass('current');
+        parent_li.siblings().find('li.current').removeClass('current');
+        parent_li.find('> ul li.current').removeClass('current');
+        parent_li.toggleClass('current');
+    }
 
-});
+    return nav;
+};
+
+module.exports.ThemeNav = ThemeNav();
+
+if (typeof(window) != 'undefined') {
+    window.SphinxRtdTheme = { StickyNav: module.exports.ThemeNav };
+}
+
+},{"jquery":"jquery"}]},{},["sphinx-rtd-theme"]);

@@ -15,6 +15,7 @@ To print a list of all items in the current directory, use the ``ls`` command:
 
 .. py:function:: ls(arg=None)
 
+
    Return a list of all items in current directory
 
    :param --docs: lists all items in directory with extensions .docs, .txt, .doc, .docxs, .rtf
@@ -28,6 +29,8 @@ To print a list of all items in the current directory, use the ``ls`` command:
    :param --med: lists all items in directory with extensions .mp4, .webm, .gif, .wmv, .wav
    
    :param --progs: lists all items in directory with extensions .py, .c, .c++, .cpp, .exe, .rb, .r, .php, .js, .html, .java, .css
+
+   :param --check: prompts user for a path which would be sent for checking if exists in drive or not. Returns similar results for the same.
 
 
 The ``ls`` command attributes can only track files with specifiend extensions. Other extensions will be *ignored* even if they fall in the requested category
@@ -646,10 +649,34 @@ This copies the file *src* directory to *C:\dest* with all its children
 .. py:exception:: FileExistsError()
     Raised when source already exists in destination
 
-20. curt user
--------------
+curt user
+---------
 
 Displays the current active user in the local os.
+
+
+install --check
+---------------
+
+``install --check`` runs a rough check of the installation of File Bash and makes nessecary changes if needed. Its main purpose is to check for errors in installation of the ``sys_info.py`` and ``reload.py`` files. 
+
+
+reload --colored
+----------------
+
+On running the ``git push`` command the colored module for some reason fails to keep up its color and shows some raw C code. To fix this run the ``reload --colored`` command which reloads the module and fixes the problem. The issue has been reported to the Developers of Colored but no response has been recieved.
+
+
+license 
+-------
+
+Returns a the File Bash License in the terminal
+
+code of conduct
+---------------
+
+Returns the File Bash Code of Conduct in the terminal
+
 
 
 help
