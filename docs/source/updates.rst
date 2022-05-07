@@ -167,3 +167,23 @@ v0.7.2 [02/05/2022 18:48]
 - Added  ``printImg()``, ``printMed()``, ``printAud()`` and ``Delete()`` functions to rooter. The ``Delete()`` function includes api check.
 - Added ``cls`` command
 - Implemented python's ``strip()`` function to get rid of the input commands unessessary whitespaces
+
+
+v0.7.3 [07/05/2022 16:57]
+-------------------------
+
+- Added an **Acknowledgements** section in index
+- Added an **Expected Upcoming Changes** section in index
+- Added installation intructions in index for git clone and .zip file download
+- Changed **About** page content
+- Added an **About Author** page
+- Added links for my projects in **About Author** page
+- Added a new ``cp`` command for copy pasting items
+- Added a **FAQs** section to answer some commonly asked questions
+- Removed number bullet from **commands** page
+- Added ``curt user`` command to **commands** page
+- Added ``install --check`` command to **commands** page
+- Added ``reload --colored`` command to **commands** page
+- Added ``license`` command to **commands** page
+- Added ``code of conduct`` command to **commands** page
+
