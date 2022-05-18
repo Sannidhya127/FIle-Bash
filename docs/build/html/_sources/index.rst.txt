@@ -77,6 +77,7 @@ Contents
    updates
    author
    acknowledgements
+   drama
 
 
 Documentation Acknowledgements
