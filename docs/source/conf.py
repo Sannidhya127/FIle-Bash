@@ -29,7 +29,7 @@ copyright = '2022, Sannnidhya127'
 author = '@ github.com/Sannnidhya127'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.1.1'
+release = 'v0.7.3'
 
 
 # -- General configuration ---------------------------------------------------
