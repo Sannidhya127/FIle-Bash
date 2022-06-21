@@ -1,23 +1,22 @@
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-05-18] 21:24:23 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-
-[2022-05-06] 16:22:13 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-ls
-[2022-05-03] 15:14:00 -  INFO   - AllFiles - main.py - 240 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-06-21] 11:26:31 -  INFO   - CreateFile - main.py - 525 - Opened file new.txt in append mode
+all files
 [2022-05-03] 15:14:00 -  INFO   - AllFiles - main.py - 240 - ls command successfully printed all files
 [2022-05-03] 15:14:12 -  INFO   - CreateFile - main.py - 564 - Opened file test.txt in append mode
 [2022-05-03] 15:14:52 -  INFO   - CreateFile - main.py - 564 - Opened file main.py in append mode
