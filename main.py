@@ -1063,6 +1063,11 @@ print(tabulate(list_gpus, headers=("id", "name", "load", "free memory", "used me
                                    "temperature", "uuid")))
 ''')
 
+def promptEdit(promptString):
+    prompt = promptString[6::]
+    comd = input(prompt)
+
+
 if __name__ == '__main__':
     current_user = getpass.getuser()
     bootstrap()
@@ -1113,6 +1118,8 @@ if __name__ == '__main__':
         commands = ["ls", "ls --docs", "ls --imgs", "ls --aud" , "ls --med", "ls --progs", "delf","deld","crf","crd","sys --info", "mv", "rm", "cd", "sr", "bash --sys 0","process --uid", "hide", "uhd","read","write","rm -rf", "exit", "help"]
         if comd == "ls":
             AllFiles()
+        elif comd[0:6] == "prompt":
+            promptEdit(comd)
         elif comd == "code of conduct" or comd == "Code Of Conduct":
             coc()
         elif comd == "license ":

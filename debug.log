@@ -1,19 +1,19 @@
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
-[2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-11-10] 21:20:35 -  INFO   - DelFile  - main.py - 360 - File  does not exist. Proceeding to further checks
+10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 244 - Succesfully printed all directories with ls
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
+[2022-11-10] 21:13:39 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
 [2022-06-21] 11:26:16 -  INFO   - AllFiles - main.py - 241 - ls command successfully printed all files
 [2022-06-21] 11:26:31 -  INFO   - CreateFile - main.py - 525 - Opened file new.txt in append mode
 all files
